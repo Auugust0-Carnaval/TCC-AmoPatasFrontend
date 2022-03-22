@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 *{
   margin: 0;
   padding: 0;
@@ -7,7 +8,8 @@
 }
 
 body{
-  background-color:#1f1558;
+  background-color: lightslategrey;
+  /* background-color:#1f1558; */
   height: 100vh;
   overflow: hidden;
 }

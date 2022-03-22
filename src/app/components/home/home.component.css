@@ -1,4 +1,81 @@
-p{
-  color: white;
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    align-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* O Card */
+.card {
+  display: flex;
+  justify-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 2px 23px #1a222c38;
+  margin-left: 20px;
+  margin-bottom:100px;
+  width: 450px;
+}
+
+/* Parte de cima do card */
+.top__card {
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.title {
+  font-weight: 500;
+  color: #2b3d59;
+  margin-top: 20px;
+}
+
+/* Texto secundario */
+.topText {
+  color: #828fa1;
+}
+
+/* Imagem */
+.media__card {
+  background: url('https://www.petz.com.br/blog/wp-content/uploads/2019/06/raca-de-cachorro-japones.jpg') center/cover;
+  height: 300px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.media__card_2 {
+  background: url('https://static1.patasdacasa.com.br/articles/9/33/69/@/16727-o-ragdoll-e-um-gatinho-com-muitas-peculi-articles_media_desktop-2.jpg') center/cover;
+  height: 300px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.media__card_3{
+  background: url('https://www.stoodi.com.br/wp-content/uploads/2019/11/capivaras-2.jpg');
+  height: 300px;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Parte de baixo do card */
+.bottom__card {
+  padding: 20px
+}
+
+/* Texto da parte de baixo do card */
+.bottomText {
   font-size: 1rem;
+  color: #828fa1;
+}
+
+/* Botões da parte de baixo do card */
+.actions > button {
+  background: none;
+  border: none;
+  color: red;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 5px;
 }
