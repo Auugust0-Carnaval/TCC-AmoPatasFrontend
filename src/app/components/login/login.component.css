@@ -5,7 +5,8 @@ body{
 }
 
 .media__card{
-  background: url('https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/social_share_large/public/purina-dia-mundial-dos-animais-protecao-bem-estar-e-saude-do-seu-pet.jpg?itok=wDV_gDHU') center/cover;
+  /* background: url('https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/social_share_large/public/purina-dia-mundial-dos-animais-protecao-bem-estar-e-saude-do-seu-pet.jpg?itok=wDV_gDHU') center/cover;*/
+  background: url('https://images.theconversation.com/files/385014/original/file-20210218-17-1fx1dvr.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop') center/cover;
   height: 125px;
   width: 100%;
 }
@@ -29,7 +30,7 @@ h1{
   font-size: 1.5rem;
   text-align: left;
   padding: 3px;
-  margin: 3px;
+  margin: 5px;
 }
 
 .card form{
@@ -38,7 +39,7 @@ h1{
 
 form .txt_field{
   position: relative;
-  border-bottom: 2px solid #1f1558;
+  border-bottom: 2px solid #a6a6a6;
   margin: 18px 3px;
 }
 
@@ -105,17 +106,36 @@ input[type="submit"]{
   display:flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 160px;
+  margin-left: 50px;
 }
 
+.content_tit{
+  letter-spacing: 2.8px;
+  font-size: 2.1rem;
+  margin-bottom: 25px;
+  color: white;
+  font-weight: 700;
+}
+
+/* Conteudo apresentação */
 .content_ap{
-  margin-left: 20px;
+  /* margin-left: 20px; */
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 500;
+}
+/* Conteudo apresentação secundaria */
+.content_ap_sec{
+  margin-left: 10px;
   font-size: 2rem;
   color: #fff;
   font-weight: 500;
 }
 
 .content_ap_p{
-  margin-left: 45px;
+  margin-top: 12px;
+  margin-left: 10px;
   font-size: 1rem;
   color: #fff;
   font-weight: 300;
