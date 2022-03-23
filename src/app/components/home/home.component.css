@@ -53,7 +53,7 @@
 }
 
 .media__card_3{
-  background: url('https://www.stoodi.com.br/wp-content/uploads/2019/11/capivaras-2.jpg');
+  background: url('https://doglife.sydle.one/api/1/blog/doglife/blogFacade/getImage?objId=614cdaadde29ad2daa2d3fc2&fileId=614cda2ade29ad2daa2b9286') center/cover;
   height: 300px;
   width: 100%;
   cursor: pointer;
