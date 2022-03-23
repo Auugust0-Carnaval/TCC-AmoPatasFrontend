@@ -13,3 +13,27 @@ body{
   height: 100vh;
   overflow: hidden;
 }
+
+.table{
+  display: table;
+}
+
+.col{
+  /* background-color: pink; */
+ padding:10px;
+}
+
+
+h1{
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+}
+
+.card{
+  background-color: white;
+  border-radius: 8px;
+  border-color: white;
+}

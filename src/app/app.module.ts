@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CadastrarPetsComponent } from './components/pets/cadastrar-pets/cadastrar-pets.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { CardComponent } from './components/home/card/card.component';
+import { CarrosselComponent } from './components/home/carrossel/carrossel.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     HomeComponent,
     LoginComponent,
     CadastrarPetsComponent,
-    PerfilComponent
+    PerfilComponent,
+    CardComponent,
+    CarrosselComponent
   ],
   imports: [
     BrowserModule,
