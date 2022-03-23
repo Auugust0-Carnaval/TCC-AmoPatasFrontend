@@ -12,6 +12,8 @@ import { CadastrarPetsComponent } from './components/pets/cadastrar-pets/cadastr
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { CardComponent } from './components/home/card/card.component';
 import { CarrosselComponent } from './components/home/carrossel/carrossel.component';
+import { FavoritosComponent } from './components/favoritos/favoritos.component';
+import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CarrosselComponent } from './components/home/carrossel/carrossel.compon
     CadastrarPetsComponent,
     PerfilComponent,
     CardComponent,
-    CarrosselComponent
+    CarrosselComponent,
+    FavoritosComponent,
+    NotificacoesComponent
   ],
   imports: [
     BrowserModule,

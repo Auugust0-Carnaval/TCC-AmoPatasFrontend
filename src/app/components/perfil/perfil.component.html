@@ -1,3 +1,26 @@
 <app-header></app-header>
 
-<p>perfil works!</p>
+<ul>
+  <!--  Link para cadastrar os pets -->
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">
+      <h2>Cadastrar Pets</h2>
+    </a>
+  </li>
+
+  <!-- Link para os favoritos -->
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/favoritos']" routerLinkActive="active">
+      <h2>Favoritos</h2>
+    </a>
+  </li>
+  <!-- Link para as notificações -->
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/notificacoes']" routerLinkActive="active">
+      <h2>Notificações</h2>
+    </a>
+  </li>
+
+</ul>
+
+<p>Conteudo Perfil !</p>
