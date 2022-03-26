@@ -14,6 +14,7 @@ import { CardComponent } from './components/home/card/card.component';
 import { CarrosselComponent } from './components/home/carrossel/carrossel.component';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
+import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cadastro-pessoa.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NotificacoesComponent } from './components/notificacoes/notificacoes.co
     CardComponent,
     CarrosselComponent,
     FavoritosComponent,
-    NotificacoesComponent
+    NotificacoesComponent,
+    CadastroPessoaComponent
   ],
   imports: [
     BrowserModule,
