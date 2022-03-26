@@ -1,3 +1,4 @@
+import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cadastro-pessoa.component';
 import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { CadastrarPetsComponent } from './components/pets/cadastrar-pets/cadastrar-pets.component';
@@ -14,7 +15,9 @@ const routes: Routes = [
   { path: 'perfil', component: PerfilComponent },
   { path: 'pets', component: CadastrarPetsComponent },
   { path: 'favoritos', component: FavoritosComponent},
-  { path: 'notificacoes', component: NotificacoesComponent}
+  { path: 'notificacoes', component: NotificacoesComponent},
+  { path: 'pessoa', component: CadastroPessoaComponent}
+
 ];
 
 @NgModule({
