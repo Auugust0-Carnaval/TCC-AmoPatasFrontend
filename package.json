@@ -23,8 +23,10 @@
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
+    "ngx-owl-carousel-o": "^7.0.2",
+    "owl.carousel": "^2.3.4",
     "rxjs": "~7.5.0",
-    "tslib": "^2.3.0",
+    "tslib": "^2.3.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

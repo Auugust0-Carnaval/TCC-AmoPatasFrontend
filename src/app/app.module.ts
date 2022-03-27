@@ -16,6 +16,9 @@ import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
 import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cadastro-pessoa.component';
 
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,8 @@ import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cad
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
