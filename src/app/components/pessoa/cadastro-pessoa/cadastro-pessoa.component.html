@@ -1,7 +1,30 @@
+<div class="class cadastro">
+
+  <div class="card" style="width: 20rem;">
+    <img class="card-img-top" src="./assets/doggato.jpg" >
+    <div class="card-body">
+      <h5 class="card-title">Cadastra</h5>
+      <div class="txt_field">
+        <input class="form-control" type="email" placeholder="Email" required >
+    </div>
+
+    <div class="txt_field">
+        <input class="form-control"  type="password" placeholder="Password" required>
+    </div>
+    <div class="txt_field">
+      <input class="form-control"  type="password" placeholder="confirme Password" required>
+  </div>
+
+  <div class="container">
+    <br><br>
+    <a [routerLink]="['/home']">
+      <button type="button" class="btn text-white" style="width: 200px; height: 40px;"> CRIAR CONTA</button>
+    </a>
+  </div>
 
 
-
-<div class="container">
+<!--<div class="container">
   <br><br>
   <button type="button" class="btn text-white" style="width: 360px; height: 40px;">CRIAR CONTA</button>
+</div>-->
 </div>

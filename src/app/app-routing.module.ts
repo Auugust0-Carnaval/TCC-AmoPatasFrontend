@@ -1,4 +1,3 @@
-import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cadastro-pessoa.component';
 import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { CadastrarPetsComponent } from './components/pets/cadastrar-pets/cadastrar-pets.component';
@@ -7,6 +6,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cadastro-pessoa.component';
+import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -16,7 +17,9 @@ const routes: Routes = [
   { path: 'pets', component: CadastrarPetsComponent },
   { path: 'favoritos', component: FavoritosComponent},
   { path: 'notificacoes', component: NotificacoesComponent},
-  { path: 'pessoa', component: CadastroPessoaComponent}
+  { path: 'cadastro', component: CadastroPessoaComponent},
+  {  path: 'sobre', component: SobreNosComponent }
+
 
 ];
 

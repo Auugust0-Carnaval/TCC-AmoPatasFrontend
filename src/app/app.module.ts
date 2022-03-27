@@ -17,6 +17,7 @@ import { NotificacoesComponent } from './components/notificacoes/notificacoes.co
 import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cadastro-pessoa.component';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     CarrosselComponent,
     FavoritosComponent,
     NotificacoesComponent,
-    CadastroPessoaComponent
+    CadastroPessoaComponent,
+    SobreNosComponent
   ],
   imports: [
     BrowserModule,

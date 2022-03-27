@@ -4,3 +4,21 @@ button{
   border: none;
   border-radius: 7px;
 }
+.cadastro{
+  background-image: url('https://t2.uc.ltmcdn.com/pt/posts/7/8/9/como_mudar_o_nome_do_meu_cachorro_14987_orig.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+.card{
+
+}
+
