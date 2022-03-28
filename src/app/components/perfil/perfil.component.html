@@ -1,26 +1,53 @@
 <app-header></app-header>
 
-<ul>
-  <!--  Link para cadastrar os pets -->
-  <li class="nav-item">
-    <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">
-      <h2>Cadastrar Pets</h2>
-    </a>
-  </li>
 
-  <!-- Link para os favoritos -->
-  <li class="nav-item">
-    <a class="nav-link" [routerLink]="['/favoritos']" routerLinkActive="active">
-      <h2>Favoritos</h2>
-    </a>
-  </li>
-  <!-- Link para as notificações -->
-  <li class="nav-item">
-    <a class="nav-link" [routerLink]="['/notificacoes']" routerLinkActive="active">
-      <h2>Notificações</h2>
-    </a>
-  </li>
+<div class="text-center">
+  <div class="bg-container mb-5 p-3">
+    <img
+      src="https://media-exp1.licdn.com/dms/image/C4E03AQGLsMukPtqqcg/profile-displayphoto-shrink_200_200/0/1622047474868?e=1654128000&v=beta&t=plOMn7tPhOA68SyzgoFm3cnToJ5L_F_q_rHeobt7NWs"
+      alt="">
+    <h3>Carlos Kauan Costa de Brito</h3>
+    <p>Aqui é corinthians</p>
+    <hr />
 
-</ul>
 
-<p>Conteudo Perfil !</p>
+    <ul class="flex-row justify-content-center navbar-nav mr-auto p-3 mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">Cadastrar Pets</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">Notificações</a>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">Mensagens</a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <app-card foto="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/02/09/nju-20553465.jpg"></app-card>
+      </div>
+      <div class="col">
+        <app-card foto="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/02/09/nju-20553465.jpg"></app-card>
+      </div>
+      <div class="col">
+        <app-card foto="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/02/09/nju-20553465.jpg"></app-card>
+      </div>
+      <div class="col">
+        <app-card foto="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/02/09/nju-20553465.jpg"></app-card>
+      </div>
+      <div class="col">
+        <app-card foto="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/02/09/nju-20553465.jpg"></app-card>
+      </div>
+      <div class="col">
+        <app-card foto="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2022/02/09/nju-20553465.jpg"></app-card>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -10,7 +10,6 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CadastrarPetsComponent } from './components/pets/cadastrar-pets/cadastrar-pets.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
-import { CardComponent } from './components/home/card/card.component';
 import { CarrosselComponent } from './components/home/carrossel/carrossel.component';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
@@ -18,6 +17,7 @@ import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cad
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
+import { CardComponent } from './components/home/card/card.component';
 
 
 @NgModule({
@@ -29,12 +29,12 @@ import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
     LoginComponent,
     CadastrarPetsComponent,
     PerfilComponent,
-    CardComponent,
     CarrosselComponent,
     FavoritosComponent,
     NotificacoesComponent,
     CadastroPessoaComponent,
-    SobreNosComponent
+    SobreNosComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
