@@ -15,7 +15,7 @@ import { CarrosselComponent } from './components/home/carrossel/carrossel.compon
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
 import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cadastro-pessoa.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
 
@@ -40,7 +40,8 @@ import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    CarouselModule
+    CarouselModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
