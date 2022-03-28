@@ -22,6 +22,7 @@
     "@fortawesome/angular-fontawesome": "^0.10.2",
     "@ng-bootstrap/ng-bootstrap": "^12.0.0",
     "@popperjs/core": "^2.10.2",
+    "@sweetalert2/ngx-sweetalert2": "^11.0.0",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.6.0",
     "font-awesome": "^4.7.0",
@@ -29,6 +30,7 @@
     "ngx-owl-carousel-o": "^7.0.2",
     "owl.carousel": "^2.3.4",
     "rxjs": "~7.5.0",
+    "sweetalert2": "^11.4.7",
     "tslib": "^2.3.1",
     "zone.js": "~0.11.4"
   },

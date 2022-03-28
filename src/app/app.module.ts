@@ -17,6 +17,7 @@ import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cad
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
 import { CardComponent } from './components/home/card/card.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { CardComponent } from './components/home/card/card.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    CarouselModule
+    CarouselModule,
+    [SweetAlert2Module.forRoot()]
 
   ],
   providers: [],
