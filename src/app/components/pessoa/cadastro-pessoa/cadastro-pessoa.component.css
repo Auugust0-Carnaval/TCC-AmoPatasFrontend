@@ -3,9 +3,10 @@ button{
                               #FFAA1B, #FFAA1B, #FF8F24, #FF792B,#FF5D34, #FF5641,#FF4F4F,#FF495B, #FF4368,#EB388B,#D73799,#C337A7,#BB37AD,#b438a8, #b13da3, #A336BD);
   border: none;
   border-radius: 7px;
+
 }
 .cadastro{
-background-image: url('https://t2.uc.ltmcdn.com/pt/posts/7/8/9/como_mudar_o_nome_do_meu_cachorro_14987_orig.jpg');
+background-image: url('/assets/fundoocadastro.jpg');
 background-repeat: no-repeat;
 background-size:100%;
 bottom: 0;
