@@ -8,8 +8,7 @@
 }
 
 body{
-  background-color: lightslategrey;
-  /* background-color:#1f1558; */
+  background-color: #c2c2c2;
   height: 100vh;
 }
 
@@ -18,7 +17,6 @@ body{
 }
 
 .col{
-  /* background-color: pink; */
  padding:10px;
 }
 
@@ -34,5 +32,5 @@ h3{
 .card{
   background-color: white;
   border-radius: 8px;
-  border-color: white;
+  border: 2px solid #c2c2c2;
 }

@@ -6,22 +6,34 @@
     <img
       src="https://media-exp1.licdn.com/dms/image/C4E03AQGLsMukPtqqcg/profile-displayphoto-shrink_200_200/0/1622047474868?e=1654128000&v=beta&t=plOMn7tPhOA68SyzgoFm3cnToJ5L_F_q_rHeobt7NWs"
       alt="">
-    <h3>Carlos Kauan Costa de Brito</h3>
+    <h3 class="mt-3">Carlos Kauan Costa de Brito</h3>
     <p>Aqui é corinthians</p>
     <hr />
 
+    <ul class="flex-row justify-content-center navbar-nav mr-auto">
 
-    <ul class="flex-row justify-content-center navbar-nav mr-auto p-3 mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">Cadastrar Pets</a>
+      <li class="nav-item p-3">
+        <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="router-link-active">
+          <i class="fa fa-bars"></i>
+        </a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">Notificações</a>
+      <li class="nav-item p-3">
+        <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">
+          <i class="fa fa-paper-plane"></i>
+        </a>
       </li>
 
-       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">Mensagens</a>
+      <li class="nav-item p-3">
+        <a class="nav-link" [routerLink]="['/notificacoes']" routerLinkActive="router-link-active">
+          <i class="fa fa-bell"></i>
+        </a>
+      </li>
+
+      <li class="nav-item p-3">
+        <a class="nav-link" [routerLink]="['/favoritos']" routerLinkActive="router-link-active">
+          <i class="fa fa-heart"></i>
+        </a>
       </li>
 
     </ul>

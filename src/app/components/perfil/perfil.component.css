@@ -10,3 +10,8 @@ h2{
 .bg-container{
   background-color: #fff;
 }
+
+i{
+  color: black;
+  width: 80px;
+}

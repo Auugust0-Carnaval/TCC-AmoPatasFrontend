@@ -1,4 +1,41 @@
 <app-header></app-header>
 
-<p>favoritos works!</p>
+<div class="text-center">
+  <div class="bg-container mb-5 p-3">
+    <img
+      src="https://media-exp1.licdn.com/dms/image/C4E03AQGLsMukPtqqcg/profile-displayphoto-shrink_200_200/0/1622047474868?e=1654128000&v=beta&t=plOMn7tPhOA68SyzgoFm3cnToJ5L_F_q_rHeobt7NWs"
+      alt="">
+    <h3 class="mt-3">Carlos Kauan Costa de Brito</h3>
+    <p>Aqui é corinthians</p>
+    <hr />
+
+
+    <ul class="flex-row justify-content-center navbar-nav mr-auto">
+
+      <li class="nav-item p-3">
+        <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="router-link-active">
+          <i class="fa fa-bars"></i>
+        </a>
+      </li>
+
+      <li class="nav-item p-3">
+        <a class="nav-link" [routerLink]="['/mensagens']" routerLinkActive="router-link-active">
+          <i class="fa fa-paper-plane"></i>
+        </a>
+      </li>
+
+      <li class="nav-item p-3">
+        <a class="nav-link" [routerLink]="['/notificacoes']" routerLinkActive="router-link-active">
+          <i class="fa fa-bell"></i>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+
+  <div class="container">
+    <h2 class="text-center my-5">Favoritos em <span class="text-danger">Desenvolvimento</span></h2>
+  </div>
+
 
