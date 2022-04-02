@@ -39,28 +39,66 @@
   </div>
 
   <div class="container my-5 p-5">
-    <h2 class="display-3">Cadastrar <span class="text-danger">Pets</span></h2>
+    <h2 class="display-3">Cadastrar <span class="text-danger">Pets</span> </h2>
     <form class="p-3">
       <div class="form-row mb-2">
         <div class="form-group col-md-6">
-          <label for="inputEmail4">Nome</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Digite o nome do pet !">
+          <label for="inputEmail4">Nome: </label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Digite o nome do pet">
         </div>
         <div class="form-group col-md-6">
-          <label for="inputPassword4">Localização</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Rua dos carecas...">
+          <label for="inputPassword4">Localização: </label>
+          <input type="text" class="form-control" id="inputPassword4" placeholder="Digite a sua localização...">
         </div>
       </div>
 
       <div class="form-row mb-2">
         <div class="form-group col-md-6">
-          <label for="inputAddress2">Sexo</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Digite o sexo do pet !">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputCity">Raça</label>
+          <label for="inputCity">Raça: </label>
           <input type="text" class="form-control" id="inputCity" placeholder="Digite a raça do animal !">
         </div>
+        <div class="form-group col-md-2">
+          <label for="inputAddress2">Sexo: </label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Macho
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Femea
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group col-md-2 text-center">
+          <label for="inputAddress2">Porte: </label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              P.Pequeno
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              P.Mediano
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              P.Grande
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-4">
+        <label for="floatingTextarea2">Descrição: </label>
+        <textarea class="form-control" placeholder="Digita sobre o pet" id="floatingTextarea2" style="height: 100px"></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary">Cadastrar</button>
