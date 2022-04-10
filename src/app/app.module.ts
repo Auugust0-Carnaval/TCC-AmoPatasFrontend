@@ -18,6 +18,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
 import { CardComponent } from './components/home/card/card.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { HttpClient }from '@angular/common/http';
 
 
 @NgModule({
@@ -41,8 +42,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     AppRoutingModule,
     NgbModule,
     CarouselModule,
-    [SweetAlert2Module.forRoot()]
-
+    [SweetAlert2Module.forRoot()],
+    HttpClient
   ],
   providers: [],
   bootstrap: [AppComponent]
