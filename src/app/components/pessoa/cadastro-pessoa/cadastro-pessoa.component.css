@@ -6,7 +6,7 @@ button{
 
 }
 .cadastro{
-background-image: url('/assets/fundoocadastro.jpg');
+background-image: url('/assets/img/home.png');
 background-repeat: no-repeat;
 background-size:100%;
 bottom: 0;
@@ -23,14 +23,23 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 }
-input{
+/*input{
   background-color: #220505;
 }
 
 input::placeholder {
   color: white;
-}
+}*/
 
 #exampleInputEmail1:onclick{
   color: black;
+}
+.card{
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 6px 6px 6px 6px ;
+}
+
+
+#date{
+  float: left;
 }
