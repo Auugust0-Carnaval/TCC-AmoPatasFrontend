@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { data } from 'jquery';
 
 @Component({
   selector: 'app-cadastro-pessoa',
@@ -11,5 +12,9 @@ export class CadastroPessoaComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+
+
 
 }

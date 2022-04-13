@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as $ from "jquery";
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,5 +14,21 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  checkSenha()
+  {
+    if($("senha").val.length)
+    {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Insira uma senha',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }
+  }
+
+
+
 
 }

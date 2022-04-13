@@ -95,8 +95,13 @@ form .txt_field{
 
 
 #facebook{
-  padding: 2%;
-  opacity: 1;
+  padding: 5%;
+  background-color: white;
+  border-color: #1877F2;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+
 }
 
 .signup_link{
@@ -150,7 +155,7 @@ form .txt_field{
   font-weight: 300;
 }
 .log{
-background-image: url('/assets/img/logon.jpeg');
+background-image: url('/assets/img/login.jpg');
 background-repeat: no-repeat;
 background-size:100%;
 bottom: 0;
@@ -166,6 +171,39 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
+}
+
+
+button {
+  padding: 4%;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  height: 32px;       /* altura c/ base na imagem do AP */
+  position: relative;
+  width: 140px;   /* largura c/ base na imagem do AP*/
+}
+
+button span {
+  color: #fff;
+  position: absolute;
+  line-height: 32px !important; /*obs: sobrepondo a regra de line-height do 'font-awesome'*/
+  top:0; bottom: 0
+}
+
+button .icon {
+  border-radius: 55%;
+  background: #0A62C4;
+  font-size: 1.1em;
+  left: 0; width: 40px
+}
+
+button .title {
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #0971E4 ;
+  right: 0; width: 100px
 }
 
 
