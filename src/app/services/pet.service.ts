@@ -1,7 +1,8 @@
+import Swal from 'sweetalert2';
 import { Pet } from './../models/Pet.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { catchError, EMPTY, empty, map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +17,27 @@ export class PetService {
   buscarTodos() : Observable<Pet[]> {
     //Retornar e listar com Get.
     return this.http.get<Pet[]>(this.URL).pipe(
-      map(retorno => retorno)
+      map(retorno => retorno),
+      catchError(erro => this.exibeErro(erro))
     );
+  }
+
+
+  exibeErro(e: any): Observable<any>
+  {
+    this.mensagemErro();
+    return EMPTY;
+  }
+
+  mensagemErro()
+  {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'warning',
+      title: 'Não foi possivel realizar as operações',
+      showConfirmButton: false,
+      timer: 3000
+    })
   }
 
 
