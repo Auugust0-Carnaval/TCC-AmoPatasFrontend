@@ -42,7 +42,7 @@
 .card {
   /* tamanho do card */
   width: 400px;
-  height: 575px;
+  height: 600px;
 
   background-color: #fff;
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5)
@@ -91,7 +91,7 @@ form .txt_field {
 #submit {
   /* button de ${Login} */
   width: 100%;
-  height: 50px;
+  height: 45px;
   border: none;
   border-radius: 8px;
   font-weight: 500;
@@ -137,54 +137,43 @@ form .txt_field {
   color: black;
 }
 
+/* Button Facebook - Instagram */
 
-
-
-
-
-
-
-
-
-
-
-/*  !desenvolvendo  */
-
-.btn_face{
-  text-align: center;
-}
-
-button {
-  width: 100%;
-  position: relative;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  height: 32px;
-  padding: 4%;
-}
-
-/* Icon facebook */
-button > span {
-  color: #fff;
-  position: absolute;
-  line-height: 32px !important;
-  /*obs: sobrepondo a regra de line-height do 'font-awesome'*/
-  top: 0;
-  bottom:0;
-}
-
-.facebook{
+.icon{
   display: flex;
+  flex-direction: column;
+}
+
+.icon > span{
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.8rem;
   text-align: center;
-  justify-content: center;
 }
 
-
-button .icon {
-  width: 50px;
-  border-radius: 8px;
-  background: #0A62C4;
-  font-size: 1.1em;
-  left: 0;
+.icon .social-field {
+  padding: .45rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  width: 100%;
+  cursor: pointer;
+  margin-top: .5rem;
 }
+
+.icon .social-field > a {
+  text-decoration: none;
+  color: white;
+}
+
+.icon .social-field > a > i {
+  margin: 0 0.5rem;
+  width: 15px;
+}
+
+.icon .social-field.facebook{
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.icon .social-field.instagram{
+  background: linear-gradient(to right, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+}
+
