@@ -17,14 +17,10 @@ export class CadastrarPetsComponent implements OnInit {
     this.carregarPets();
   }
 
-
   carregarPets() : void
   {
-
     this.petService.buscarTodos().subscribe(returno => [
       this.listaPets = returno
     ])
   };
-
-
 }

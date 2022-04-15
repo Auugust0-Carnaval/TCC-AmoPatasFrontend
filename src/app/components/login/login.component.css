@@ -1,51 +1,78 @@
-body{
-  background-color:#ffff;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.media__card{
-  /* background: url('https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/social_share_large/public/purina-dia-mundial-dos-animais-protecao-bem-estar-e-saude-do-seu-pet.jpg?itok=wDV_gDHU') center/cover;*/
-  background: url('https://images.theconversation.com/files/385014/original/file-20210218-17-1fx1dvr.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop') center/cover;
-  height: 185px;
-  width: 100%;
-}
-
-.container{
+.container {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   justify-items: center;
-  align-items:center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 160px;
+  margin-left: 50px;
+}
+
+.log {
+  background-image: url('/assets/img/login.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: black;
+  overflow: auto;
+  padding: 2em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.media__card {
+  background: url('https://images.theconversation.com/files/385014/original/file-20210218-17-1fx1dvr.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop') center/cover;
+  height: 170px;
   width: 100%;
-  height: 100vh;
-  border-radius: 2px;
 }
 
-.card{
+.card {
+  /* tamanho do card */
+  width: 400px;
+  height: 575px;
+
   background-color: #fff;
-  width: 350px;
-  box-shadow: 6px 6px 6px 6px black;
-
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5)
 }
 
-h1{
+.card_titulo{
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+h1 {
+  /* tamanho do titulo do conteudo */
   font-size: 1.5rem;
   text-align: left;
-  padding: 3px;
-  margin: 5px;
+  padding: 2px;
 }
 
-.card form{
-  padding: 0 40px;
+.card form {
+  /* padding do form > card*/
+  padding: 0 30px;
 }
 
-form .txt_field{
+form .txt_field {
+  /* txt_field, parte interior do form */
   position: relative;
   border-bottom: 2px solid #a6a6a6;
   margin: 18px 3px;
 }
 
-.txt_field input{
+.txt_field input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -54,160 +81,110 @@ form .txt_field{
   outline: none;
 }
 
-.txt_field label{
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  color: #adadad;
-  transform: translateY(-50%);
-  font-size: 1rem;
-  pointer-events: none;
-  transition: .5s;
-}
-
-.txt_field span::before{
-  content: '';
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #1f1558;
-
-}
-
-.pass{
-  margin: -5px 0 20px 5px;
+.pass {
+  /* forgot password ? */
+  margin: 5px 0 20px 5px;
   color: #a6a6a6;
   cursor: pointer;
 }
 
-#submit{
+#submit {
+  /* button de ${Login} */
   width: 100%;
   height: 50px;
-  border: 1px solid;
-  background: linear-gradient(90deg, rgba(255,170,27,1) 10%, rgba(255,93,52,1) 30%, rgba(255,56,125,1) 60%, rgba(163,54,189,1) 90%);
-  border-radius: 6px;
+  border: none;
+  border-radius: 8px;
   font-weight: 500;
   color: #e9f4fb;
   cursor: pointer;
+  background: linear-gradient(90deg, rgba(255, 170, 27, 1) 10%, rgba(255, 93, 52, 1) 30%, rgba(255, 56, 125, 1) 60%, rgba(163, 54, 189, 1) 90%);
 }
 
-
-#facebook{
-  padding: 5%;
-  background-color: white;
-  border-color: #1877F2;
-  border-radius: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-
-}
-
-.signup_link{
+.signup_link {
+  /* Link que leva para o ${cadastro} */
   margin: 30px 0;
   text-align: center;
   font-size: 16px;
   color: #6666;
 }
 
-.signup_link a{
+.signup_link > a {
   color: #2691d9;
   text-decoration: none;
 }
 
-.content{
-  display:flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 160px;
-  margin-left: 50px;
-}
-
-.content_tit{
-  letter-spacing: 2.8px;
+.content_title {
+  /* Titulo do conteudo ! */
   font-size: 2.1rem;
   margin-bottom: 25px;
-  color: white;
   font-weight: 700;
+  color: black;
 }
 
-/* Conteudo apresentação */
-.content_ap{
-  /* margin-left: 20px; */
-  font-size: 2rem;
-  color: black;
-  font-weight: 500;
-}
-/* Conteudo apresentação secundaria */
-.content_ap_sec{
-  margin-left: 10px;
+.content_apresentacao {
+  /* Conteudo apresentação */
   font-size: 2rem;
   color: black;
   font-weight: 500;
 }
 
-.content_ap_p{
-  margin-top: 12px;
-  margin-left: 10px;
-  font-size: 1rem;
-  color: #fff;
-  font-weight: 300;
-}
-.log{
-background-image: url('/assets/img/login.jpg');
-background-repeat: no-repeat;
-background-size:100%;
-bottom: 0;
-color: black;
-left: 0;
-overflow: auto;
-padding: 3em;
-position: absolute;
-right: 0;
-text-align: center;
-top: 0;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+.content_descricao {
+  /* Conteudo descrição ! */
+  font-size: 1.1rem;
+  margin-top: 8px;
+  margin-right: 8.5rem;
+  font-weight: 500;
+  color: black;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/*  !desenvolvendo  */
+
+.btn_face{
+  text-align: center;
+}
 
 button {
-  padding: 4%;
+  width: 100%;
+  position: relative;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  height: 32px;       /* altura c/ base na imagem do AP */
-  position: relative;
-  width: 140px;   /* largura c/ base na imagem do AP*/
+  height: 32px;
+  padding: 4%;
 }
 
-button span {
+/* Icon facebook */
+button > span {
   color: #fff;
   position: absolute;
-  line-height: 32px !important; /*obs: sobrepondo a regra de line-height do 'font-awesome'*/
-  top:0; bottom: 0
+  line-height: 32px !important;
+  /*obs: sobrepondo a regra de line-height do 'font-awesome'*/
+  top: 0;
+  bottom:0;
 }
+
+.facebook{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 
 button .icon {
-  border-radius: 55%;
+  width: 50px;
+  border-radius: 8px;
   background: #0A62C4;
   font-size: 1.1em;
-  left: 0; width: 40px
+  left: 0;
 }
-
-button .title {
-  background: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: #0971E4 ;
-  right: 0; width: 100px
-}
-
-
-
-
-
-
