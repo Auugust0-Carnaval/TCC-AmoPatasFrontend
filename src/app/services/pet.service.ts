@@ -22,6 +22,20 @@ export class PetService {
     );
   }
 
+  /*buscarPorId(id: number) : Observable<Pet> {
+    //Retornar e listar com Get.
+    return this.http.get<Pet>(`${this.URL}/${id}`).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+    );
+  }*/
+
+  cadastrar(pet: Pet) : Observable<Pet> {
+    return this.http.post<Pet>(this.URL, pet).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibeErro(erro))
+    );
+  }
 
   exibeErro(e: any): Observable<any>
   {
@@ -34,11 +48,13 @@ export class PetService {
     Swal.fire({
       position: 'top-end',
       icon: 'warning',
-      title: 'Não foi possivel realizar as operações',
+      title: 'Ohh não esta funfando :(',
       showConfirmButton: false,
       timer: 3000
     })
   }
+
+  //copia tudo? sim sim pode
 
 
 }
