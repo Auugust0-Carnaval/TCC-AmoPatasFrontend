@@ -36,21 +36,21 @@ export class CadastrarPetsComponent implements OnInit {
 
 
   pet: Pet = {
-    nmAnimal: '',//
-    dsAnimal: '',//
-    dtPublicacao: new Date(),//
-    dtAdocao: new Date(),//
-    cdAnimal: '',//
-    UfAnimal: '',//'
-    Idade: 0,//
-    IdPorte: 0, //
-    IdPessoa: 0,
-    IdRaca: 0, //
-    IdCategoria: 0,//
-    IdSituacao: 0,//
-    IdSexo : 0,//
-    IdDoador: 0, //
-    IdTutor: 0//
+    nmAnimal: 'bysteka',//
+    dsAnimal: 'ele é super fofo',//
+    dtPublicacao: new Date("2022-02-22"),//
+    dtAdocao: new Date("2022-02-22"),//
+    cdAnimal: 'São Paulo',//
+    UfAnimal: 'SP',//'
+    Idade: 8,//
+    IdPorte: 1, //
+    IdPessoa: 1,
+    IdRaca: 1, //
+    IdCategoria: 1,//
+    IdSituacao: 1,//
+    IdSexo : 1,//
+    IdDoador: 1, //
+    IdTutor: 1//
   };
 
   raca : Raca = {
@@ -95,7 +95,6 @@ export class CadastrarPetsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-<<<<<<< HEAD
   /*carregarPets() : void
   {
     this.PetService.buscarTodos().subscribe(returno => [
@@ -189,18 +188,4 @@ salvaPessoa() : void{
 }
 
 }
-  /*carregarPets() : void
-=======
-  carregarPets() : void
->>>>>>> 96533f408a94ee51564ab78180f0de02bc02b32a
-  {
-    this.petService.buscarTodos().subscribe(returno => [
-      this.listaPets = returno
-    ])
-<<<<<<< HEAD
-  };*/ //esse aqui ele tava buscando aquele metodo la buscartodos que é de pet
 
-=======
-  };
-}
->>>>>>> 96533f408a94ee51564ab78180f0de02bc02b32a
