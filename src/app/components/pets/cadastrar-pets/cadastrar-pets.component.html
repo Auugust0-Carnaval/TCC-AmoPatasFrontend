@@ -1,53 +1,137 @@
+<app-header></app-header>
 
-<h1 class="my-3 text-primary">
-  Lista de animais
-</h1>
-<!-- Card -->
-<div class="card shadow">
-  <table class="table table-responsive table-striped">
-    <thead>
-      <tr>
-        <th>Id</th>
-        <th>Nome animal</th>
-        <th>Descricao</th>
-        <th>Data de publicacao</th>
-        <th>Data de doação</th>
-        <th>Cidade</th>
-        <th>UF</th>
-        <th>Idade</th>
-        <th>#</th>
-        <th>#</th>
-        <th>#</th>
-        <th>#</th>
-        <th>#</th>
-        <th>#</th>
-        <th>#</th>
-        <th>#</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor = "let prod of listaPets">
-        <td>{{this.prod.IdAnimal}}</td>
-        <td>{{this.prod.nmAnimal}}</td>
-        <td>{{this.prod.dsAnimal}}</td>
-        <td>{{this.prod.dtPublicacao | date}}</td>
-        <td>{{this.prod.dtAdocao | date}}</td>
-        <td>{{this.prod.cdAnimal}}</td>
-        <td>{{this.prod.UfAnimal}}</td>
-        <td>{{this.prod.Idade}}</td>
-        <td>{{this.prod.IdPorte}}</td>
-        <td>{{this.prod.IdPessoa}}</td>
-        <td>{{this.prod.IdRaca}}</td>
-        <td>{{this.prod.IdCategoria}}</td>
-        <td>{{this.prod.IdSituacao}}</td>
-        <td>{{this.prod.IdTutor}}</td>
-        <td>{{this.prod.IdSexo}}</td>
-        <td>{{this.prod.IdDoador}}</td>
-        <td>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<div class="text-center">
+  <div class="bg-container mb-5 p-3">
+    <img
+      src="https://media-exp1.licdn.com/dms/image/C4E03AQGLsMukPtqqcg/profile-displayphoto-shrink_200_200/0/1622047474868?e=1654128000&v=beta&t=plOMn7tPhOA68SyzgoFm3cnToJ5L_F_q_rHeobt7NWs"
+      alt="">
+    <h3 class="mt-3">Carlos Kauan Costa de Brito</h3>
+    <p>Aqui é corinthians</p>
+    <hr />
+
+    <ul class="flex-row justify-content-center navbar-nav mr-auto">
+
+      <li class="nav-item p-3">
+        <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="router-link-active">
+          <i class="fa fa-bars"></i>
+        </a>
+      </li>
+
+      <li class="nav-item p-3">
+        <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">
+          <i class="fa fa-paper-plane"></i>
+        </a>
+      </li>
+
+      <li class="nav-item p-3">
+        <a class="nav-link" [routerLink]="['/notificacoes']" routerLinkActive="router-link-active">
+          <i class="fa fa-bell"></i>
+        </a>
+      </li>
+
+      <li class="nav-item p-3">
+        <a class="nav-link" [routerLink]="['/favoritos']" routerLinkActive="router-link-active">
+          <i class="fa fa-heart"></i>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="container my-5 p-5">
+    <h2 class="display-3">Cadastrar <span class="text-danger">Pets</span> </h2>
+    <form class="p-3">
+      <div class="form-row mb-2">
+        <div class="form-group col-md-12">
+          <label for="inputEmail4">Nome: </label>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="Digite o nome do pet" [(ngModel)]="pet.nmAnimal"/>
+        </div>
+      </div>
+      <div class="form-row mb-2">
+        <div class="form-group col-md-12">
+          <label for="inputEmail4">Nome Pessoa: </label>
+          <input type="number" class="form-control" id="inputEmail4" placeholder="Digite o nome da pessoa" [(ngModel)]="pet.IdPessoa"/>
+        </div>
+      </div>
+
+      <div class="form-row mb-2">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Raça: </label>
+          <input type="number" class="form-control" id="inputCity" placeholder="Digite a raça do animal !" [(ngModel)]="pet.IdRaca">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCity">Porte: </label>
+          <input type="number" class="form-control" id="inputCity" placeholder="Digite a Porteo animal !" [(ngModel)]="pet.IdPorte">
+        </div>
+      </div>
+
+      <div class="form-row mb-2">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Tutor</label>
+          <input type="number" class="form-control" id="inputCity" placeholder="Digite a tutor do animal !" [(ngModel)]="pet.IdTutor">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCity">Doador </label>
+          <input type="number" class="form-control" id="inputCity" placeholder="Digite a doador do animal !" [(ngModel)]="pet.IdDoador">
+        </div>
+      </div>
+
+      <div class="form-row mb-2">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Data de publicacao: </label>
+          <input type="text" class="form-control" id="inputCity" placeholder="Digite a data de doacao do animal !" [(ngModel)]="pet.dtPublicacao">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCity">Data de doação: </label>
+          <input type="text" class="form-control" id="inputCity" placeholder="Digite a data de adocao do animal !" [(ngModel)]="pet.dtAdocao">
+        </div>
+      </div>
+
+      <div class="form-row mb-2">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Cidade: </label>
+          <input type="text" class="form-control" id="inputCity" placeholder="Digite a cidade do animal !" [(ngModel)]="pet.cdAnimal">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCity">Uf </label>
+          <input type="text" class="form-control" id="inputCity" placeholder="Digite a UF do animal !" [(ngModel)]="pet.UfAnimal">
+        </div>
+      </div>
+
+      <div class="form-row mb-2">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Idade: </label>
+          <input type="number" class="form-control" id="inputCity" placeholder="Digite a idade do animal !" [(ngModel)]="pet.Idade">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCity">Categoria </label>
+          <input type="number" class="form-control" id="inputCity" placeholder="Digite a categoria do animal !" [(ngModel)]="pet.IdCategoria">
+        </div>
+      </div>
+
+      <div class="form-row mb-2">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Situacao: </label>
+          <input type="number" class="form-control" id="inputCity" placeholder="Digite a Situacaodo animal !" [(ngModel)]="pet.IdSituacao">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCity">Sexo: </label>
+          <input type="number" class="form-control" id="inputCity" placeholder="Digite a sexo do animal !" [(ngModel)]="pet.IdSexo">
+        </div>
+      </div>
 
 
+
+
+      <div class="form-floating mb-4">
+        <label for="floatingTextarea2">Descrição: </label>
+        <textarea class="form-control" placeholder="Digita sobre o pet" id="floatingTextarea2" style="height: 100px"  [(ngModel)]="pet.dsAnimal"></textarea>
+      </div>
+
+    <button type="submit" class="btn btn-primary" (click)="salvarPet()">Cadastrar</button>
+
+
+
+    <!-- <input [(ngModel)]="name" #ctrl="ngModel" required>: -->
+    </form>
+  </div>
