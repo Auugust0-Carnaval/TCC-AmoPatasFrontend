@@ -3,6 +3,7 @@ button{
                               #FFAA1B, #FFAA1B, #FF8F24, #FF792B,#FF5D34, #FF5641,#FF4F4F,#FF495B, #FF4368,#EB388B,#D73799,#C337A7,#BB37AD,#b438a8, #b13da3, #A336BD);
   border: none;
   border-radius: 7px;
+  height: 40px;
 
 }
 .cadastro{
@@ -23,11 +24,14 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 }
-/*input{
-  background-color: #220505;
+input{
+  background-color: rgba(175, 167, 142, 0.575);
+  height: 40px;
+  border-radius: 4px;
+
 }
 
-input::placeholder {
+/*input::placeholder {
   color: white;
 }*/
 
@@ -37,8 +41,60 @@ input::placeholder {
 .card{
   border-radius: 6px 6px 6px 6px;
   box-shadow: 6px 6px 6px 6px ;
+  position: relative;
+  z-index: 10;
+
+
 }
 
+.icon{
+  display: flex;
+  flex-direction: column;
+}
+
+.icon > span{
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.icon .social-field {
+  padding: .35rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  width: 80%;
+  cursor: pointer;
+  margin-top: .5rem;
+}
+
+.icon .social-field > a {
+  text-decoration: none;
+  color: white;
+}
+
+.icon .social-field > a > i {
+  margin: 0 0.5rem;
+  width: 15px;
+}
+
+
+.icon .social-field.facebook{
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+/* Google */
+
+.icon .social-field.google{
+  background: #333333;
+}
+
+.icon .social-field.google{
+  border: 1px solid #333333;
+}
+
+.icon .social-field.google a{
+  color: white;
+}
 
 #date{
   float: left;
