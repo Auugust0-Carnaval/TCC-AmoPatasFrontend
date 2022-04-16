@@ -95,6 +95,7 @@ export class CadastrarPetsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+<<<<<<< HEAD
   /*carregarPets() : void
   {
     this.PetService.buscarTodos().subscribe(returno => [
@@ -189,10 +190,17 @@ salvaPessoa() : void{
 
 }
   /*carregarPets() : void
+=======
+  carregarPets() : void
+>>>>>>> 96533f408a94ee51564ab78180f0de02bc02b32a
   {
-
     this.petService.buscarTodos().subscribe(returno => [
       this.listaPets = returno
     ])
+<<<<<<< HEAD
   };*/ //esse aqui ele tava buscando aquele metodo la buscartodos que é de pet
 
+=======
+  };
+}
+>>>>>>> 96533f408a94ee51564ab78180f0de02bc02b32a

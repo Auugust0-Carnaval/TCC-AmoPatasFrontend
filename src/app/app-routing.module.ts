@@ -19,8 +19,6 @@ const routes: Routes = [
   { path: 'notificacoes', component: NotificacoesComponent},
   { path: 'cadastro', component: CadastroPessoaComponent},
   {  path: 'sobre', component: SobreNosComponent }
-
-
 ];
 
 @NgModule({
