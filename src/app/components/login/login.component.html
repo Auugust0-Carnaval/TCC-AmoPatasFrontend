@@ -14,11 +14,11 @@
         </div>
         <!-- Input de Senha -->
         <div class="txt_field">
-          <input type="password" id="senha" placeholder="Password" (blur)="checkSenha()" required>
+          <input type="password" id="senha" placeholder="Senha" (blur)="checkSenha()" required>
         </div>
 
         <div class="pass">
-          Forgot Password ?
+         Esqueceu a senha ?
         </div>
         <a [routerLink]="['/home']">
           <input type="submit" value="Login" id="submit" class="btnlogin"><br><br>
@@ -27,19 +27,20 @@
         <!--  dev -->
 
         <div class="icon">
-          <span>Connect With Social Media</span>
+         <!-- <span>Entra com </span>-->
           <div class="social-fields">
             <div class="social-field facebook">
               <a href="#">
                 <i class="fa fa-facebook"></i>
-                Sign in with Facebook
+               Fazer Login com o Facebook
+
               </a>
             </div>
 
             <div class="social-field google">
               <a href="#">
                 <i class="fa fa-google"></i>
-                Sign in with Google
+                Fazer Login com o Google
               </a>
             </div>
           </div>
@@ -49,7 +50,7 @@
 
         <a [routerLink]="['/cadastro']">
           <div class="signup_link">
-            Not a member ? <a href="#">Signup</a>
+           Não tem uma conta? <a href="#">Cadastre-se</a>
           </div>
         </a>
       </form>

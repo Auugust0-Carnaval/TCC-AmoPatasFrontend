@@ -40,13 +40,13 @@ input{
 }
 .card{
   border-radius: 6px 6px 6px 6px;
-  box-shadow: 6px 6px 6px 6px ;
+  box-shadow: 8px 8px 8px 8px ;
   position: relative;
   z-index: 10;
 
 
 }
-
+/*
 .icon{
   display: flex;
   flex-direction: column;
@@ -79,10 +79,10 @@ span{
 
 
 .icon .social-field.facebook{
-  background: linear-gradient(to right, #1e3c72, #2a5298);
+
 }
 
-/* Google */
+/* Google
 
 .icon .social-field.google{
   background: #333333;
@@ -167,4 +167,4 @@ body
   background: #ddd;
 }
 
-
+*/
