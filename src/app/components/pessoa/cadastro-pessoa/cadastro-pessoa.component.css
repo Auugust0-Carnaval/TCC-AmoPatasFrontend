@@ -1,51 +1,57 @@
-button{
-  background: linear-gradient( to right,
-                              #FFAA1B, #FFAA1B, #FF8F24, #FF792B,#FF5D34, #FF5641,#FF4F4F,#FF495B, #FF4368,#EB388B,#D73799,#C337A7,#BB37AD,#b438a8, #b13da3, #A336BD);
-  border: none;
-  border-radius: 7px;
-  height: 40px;
-
-}
 .cadastro{
-background-image: url('/assets/img/cadastro.jpg');
-background-repeat: no-repeat;
-background-size:100%;
-bottom: 0;
-color: black;
-left: 0;
-overflow: auto;
-padding: 3em;
-position: absolute;
-right: 0;
-text-align: center;
-top: 0;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+    background-image: url('/assets/img/cadastro.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
+.card{
+  box-sizing: border-box;
+  box-shadow: 0 30px 30px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 10;
+}
+
 input{
   background-color: rgba(175, 167, 142, 0.575);
   height: 40px;
   border-radius: 4px;
-
 }
+
+#exampleInputEmail1:onclick{
+  color: black;
+}
+
+button{
+  background: linear-gradient( to right,#FFAA1B, #FFAA1B, #FF8F24, #FF792B,#FF5D34, #FF5641,#FF4F4F,#FF495B, #FF4368,#EB388B,#D73799,#C337A7,#BB37AD,#b438a8, #b13da3, #A336BD);
+  border: none;
+  border-radius: 1000px;
+  height: 40px;
+  color: white;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: white;
+  transform: translateY(-6px);
+}
+
 
 /*input::placeholder {
   color: white;
 }*/
 
-#exampleInputEmail1:onclick{
-  color: black;
-}
-.card{
-  border-radius: 6px 6px 6px 6px;
-  box-shadow: 8px 8px 8px 8px ;
-  position: relative;
-  z-index: 10;
-
-
-}
 /*
 .icon{
   display: flex;
