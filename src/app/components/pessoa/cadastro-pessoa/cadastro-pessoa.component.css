@@ -23,17 +23,33 @@
   z-index: 10;
 }
 
-input{
-  background-color: rgba(175, 167, 142, 0.575);
-  height: 40px;
-  border-radius: 4px;
+.card form {
+  padding: 0 30px;
+
 }
+
+.txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+form .txt_field {
+  position: relative;
+  border-bottom: 2px solid #a6a6a6;
+  margin: 18px 3px;
+}
+
 
 #exampleInputEmail1:onclick{
   color: black;
 }
 
 button{
+  margin-top: 10px;
   background: linear-gradient( to right,#FFAA1B, #FFAA1B, #FF8F24, #FF792B,#FF5D34, #FF5641,#FF4F4F,#FF495B, #FF4368,#EB388B,#D73799,#C337A7,#BB37AD,#b438a8, #b13da3, #A336BD);
   border: none;
   border-radius: 1000px;
