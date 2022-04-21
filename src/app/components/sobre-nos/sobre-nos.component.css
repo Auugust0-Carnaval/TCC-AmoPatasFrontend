@@ -7,7 +7,7 @@
 
 .containerft{
   width: 1150px;
-  height: 280px;
+  height: 340px;
   display: flex;
   border-radius: 10px;
   background-color: rgba(116, 115, 115, 0.329);
@@ -23,8 +23,26 @@
   background-image: linear-gradient(180deg, rgba(246, 73, 73, 0) 0%, rgba(246, 73, 73, 0.9) 138.76%);
   /*background-image: linear-gradient(180deg, rgba(246, 73, 73, 0) 0%, rgba(246, 73, 73, 0.9) 138.76%), url("https://media-exp1.licdn.com/dms/image/C4E03AQGLsMukPtqqcg/profile-displayphoto-shrink_200_200/0/1622047474868?e=1654128000&v=beta&t=plOMn7tPhOA68SyzgoFm3cnToJ5L_F_q_rHeobt7NWs");*/
   background-size: 250px;
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
 
+.cardtxt1{
+  margin-top: 165px;
+  font-size: 20px;
+  color: white;
+}
+
+.social-area1{
+  width: 200px;
+  height: 60px;
+  margin-right: 45px;
+  background-color: rgba(246, 73, 73, 0.9);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.card1:hover, .card1:focus {
+  transform: translateY(-6px);
 }
 
 .card2{
@@ -33,10 +51,29 @@
   margin-left: 20px;
   margin-top: 40px;
   background-color: azure;
-  background-image: linear-gradient(180deg, rgba(191, 73, 246, 0) 0%, rgba(88, 247, 73, 0.9) 138.76%);
+  background-image: linear-gradient(180deg, rgba(191, 73, 246, 0) 0%, rgba(247, 201, 73, 0.9) 138.76%);
   background-size: 250px;
   border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
 
+.cardtxt2{
+  margin-top: 165px;
+  font-size: 20px;
+  color: white;
+}
+
+.social-area2{
+  width: 200px;
+  height: 60px;
+  margin-right: 45px;
+  background-color: rgba(247, 201, 73, 0.9);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.card2:hover, .card2:focus {
+  transform: translateY(-6px);
 }
 
 .card3{
@@ -47,7 +84,26 @@
   background-color: azure;
   background-image: linear-gradient(180deg, rgba(191, 73, 246, 0) 0%, rgba(73, 99, 247, 0.9) 138.76%);
   border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
 
+.cardtxt3{
+  margin-top: 165px;
+  font-size: 20px;
+  color: white;
+}
+
+.social-area3{
+  width: 200px;
+  height: 60px;
+  margin-right: 45px;
+  background-color: rgba(73, 99, 247, 0.9);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.card3:hover, .card3:focus {
+  transform: translateY(-6px);
 }
 
 .card4{
@@ -58,38 +114,8 @@
   background-color: azure;
   background-image: linear-gradient(180deg, rgba(191, 73, 246, 0) 0%, rgba(191, 73, 247, 0.9) 138.76%);
   border-radius: 10px;
-
-}
-
-.card5{
-  width: 200px;
-  height: 200px;
-  margin-left: 20px;
-  margin-top: 40px;
-  background-color: azure;
-  background-image: linear-gradient(180deg, rgba(191, 73, 246, 0) 0%, rgba(73, 247, 247, 0.9) 138.76%);
-  background-size: 250px;
-  border-radius: 10px;
-
-}
-
-
-.cardtxt1{
-  margin-top: 165px;
-  font-size: 20px;
-  color: white;
-}
-
-.cardtxt2{
-  margin-top: 165px;
-  font-size: 20px;
-  color: white;
-}
-
-.cardtxt3{
-  margin-top: 165px;
-  font-size: 20px;
-  color: white;
+  border-radius: 10px 10px 0px 0px;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .cardtxt4{
@@ -98,9 +124,55 @@
   color: white;
 }
 
+.social-area4{
+  width: 200px;
+  height: 60px;
+  margin-right: 45px;
+  background-color: rgba(191, 73, 247, 0.9);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.card4:hover, .card4:focus {
+  transform: translateY(-6px);
+}
+
+.card5{
+  width: 200px;
+  height: 200px;
+  margin-left: 20px;
+  margin-top: 40px;
+  background-color: azure;
+  background-image: linear-gradient(180deg, rgba(191, 73, 246, 0) 0%, rgba(247, 73, 160, 0.9) 138.76%);
+  background-size: 250px;
+  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
 .cardtxt5{
   margin-top: 165px;
   font-size: 20px;
   color: white;
 }
+
+.social-area5{
+  width: 200px;
+  height: 60px;
+  margin-right: 45px;
+  background-color: rgba(247, 73, 160, 0.9);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.card5:hover, .card5:focus {
+  transform: translateY(-6px);
+}
+
+
+
+
+
+
+
+
+
 
