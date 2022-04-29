@@ -8,11 +8,11 @@ import { catchError, EMPTY, empty, map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PetService {
-  //variável que conterá a URL de onde ele irá buscar as informações do nossos pets;
-  private URL: string = "http://localhost:5186/Pets"
-  // criação da variável que irá fazer a auto instanciação do meu objeto HttpClient;
+
+  private URL: string = "http://xyz" //TODO arrumar consumo da API (URL DO NODE)
+
   constructor(private http: HttpClient) {}
-  // métodos, Observable vai esperar alguma ação ehehe muitaooooo siiim olha
+
 
   buscarTodos() : Observable<Pet[]> {
     //Retornar e listar com Get.
