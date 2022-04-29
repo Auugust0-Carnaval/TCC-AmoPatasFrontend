@@ -14,10 +14,11 @@ export class HomeComponent implements OnInit {
   constructor(private petService : PetService) { }
 
   ngOnInit(): void {
+    this.BuscarPets(); // Ao iniciar a aplicação (COMPONENT) vai acionar o metodo de busca
   }
 
 
-  QueryAll() : void{
+  BuscarPets() : void{
     this.petService.buscarTodos().subscribe(retorno =>
       this.ListaPet = retorno
     )
