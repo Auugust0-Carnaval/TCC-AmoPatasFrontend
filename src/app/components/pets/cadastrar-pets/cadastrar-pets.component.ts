@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { CategoriaService } from './../../../services/categoria.service';
 import { SexoService } from './../../../services/sexo.service';
 import { PorteService } from './../../../services/porte.service';
@@ -90,7 +91,8 @@ export class CadastrarPetsComponent implements OnInit {
 
   // nmRaca : string = ""; // o que é isso kakakak queria testar aglo
 
-  constructor(private PetService: PetService, private router: Router, private RacaService: RacaService, private PessoaService : PessoaService,  private PorteService : PorteService, private SexoService: SexoService , private CategoriaService: CategoriaService) { }
+  constructor(private PetService: PetService, private router: Router, private RacaService: RacaService, private PessoaService : PessoaService,  private PorteService : PorteService, private SexoService: SexoService , private CategoriaService: CategoriaService, private http: HttpClient) { }
+
 
   ngOnInit(): void {
   }
@@ -101,6 +103,21 @@ export class CadastrarPetsComponent implements OnInit {
       this.listaPets = returno
     ])
   };*/
+//metodo pra inserir imagem
+  inputFileChange(event:any)
+  {
+
+    if(event.target.files && event.target.files[0] )
+    {
+      const foto = event.target.files[0];
+
+      const formData = new FormData();
+      formData.append('foto', foto);
+
+      this.http.post('http://locahost:3333/xyz', formData)
+      .subscribe(resposta => console.log('upload ok'));
+    }
+  }
 
 
   salvarPet(): void {
