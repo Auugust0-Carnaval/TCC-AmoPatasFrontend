@@ -1,4 +1,15 @@
 <div class="container">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <script>
+    function teste(){
+      if(document.getElementById("senha").nodeValue == ""){
+    alert("Porfavor preencha o comapo senha");
+    document.getElementById("senha").focus();
+    return false;
+  }
+    }
+  </script>
 
   <div class="log">
     <!-- Card -->
@@ -14,7 +25,7 @@
         </div>
         <!-- Input de Senha -->
         <div class="txt_field">
-          <input type="password" id="senha" placeholder="Senha" (blur)="checkSenha()" required>
+          <input type="password" id="senha" placeholder="Senha" onblur="teste()" required>
         </div>
 
         <div class="pass">
@@ -29,15 +40,14 @@
         <div class="icon">
          <!-- <span>Entra com </span>-->
           <div class="social-fields">
-            <div class="social-field facebook">
+            <div class="social-field facebook" id="face">
               <a href="#">
                 <i class="fa fa-facebook"></i>
-               Fazer Login com o Facebook
-
+              <strong> Fazer Login com o Facebook</strong>
               </a>
             </div>
 
-            <div class="social-field google">
+            <div class="social-field google" id="google">
               <a href="#">
                 <i class="fa fa-google"></i>
                 Fazer Login com o Google
@@ -67,3 +77,5 @@
 
   </div>
 </div>
+
+
