@@ -3,8 +3,19 @@
                               #FFAA1B, #FFAA1B, #FF8F24, #FF792B,#FF5D34, #FF5641,#FF4F4F,#FF495B, #FF4368,#EB388B,#D73799,#C337A7,#BB37AD,#b438a8, #b13da3, #A336BD);
   border: none;
   border-radius: 7px;
+  margin-right: 20px;
 }
 
 i{
-  padding: 3px;
+  padding: 10px;
+
+}
+#btnSair{
+  background: linear-gradient( to right,
+                              #FFAA1B, #FFAA1B, #FF8F24, #FF792B,#FF5D34, #FF5641,#FF4F4F,#FF495B, #FF4368,#EB388B,#D73799,#C337A7,#BB37AD,#b438a8, #b13da3, #A336BD);
+    width: 60px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+
 }
