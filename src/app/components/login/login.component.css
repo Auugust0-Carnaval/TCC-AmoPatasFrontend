@@ -90,7 +90,7 @@ form .txt_field {
 
 #submit {
   /* button de ${Login} */
-  width: 100%;
+  width: 78%;
   height: 39px;
   border: none;
   border-radius: 8px;
@@ -154,14 +154,15 @@ form .txt_field {
   padding: .45rem;
   border-radius: 4px;
   font-size: 0.85rem;
-  width: 100%;
+  width: 95%;
   cursor: pointer;
   margin-top: .5rem;
+  margin-left: 9px;
 }
 
 .icon .social-field > a {
   text-decoration: none;
-  color: white;
+  color: blue;
 }
 
 .icon .social-field > a > i {
@@ -172,7 +173,8 @@ form .txt_field {
 /* Facebook */
 
 .icon .social-field.facebook{
-  background: linear-gradient(to right, #1e3c72, #2a5298);
+  background: linear-gradient(to right, white, white);
+  border:2px solid blue;
 }
 
 /* Google */
@@ -187,6 +189,53 @@ form .txt_field {
 
 .icon .social-field.google a{
   color: white;
+}
+
+a{
+  text-decoration: none;
+}
+
+#submit:hover{
+  transform: scale(1.1);
+  transition: all 0.7s;
+
+
+
+}
+
+#submit{
+  -moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+#face{
+  -moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+  border-radius: 8px;
+  background-color: white;
+}
+
+#face:hover{
+  transform: scale(1.1);
+  transition: all 0.7s;
+  -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+}
+
+#google{
+  -moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+  border-radius: 8px;
+}
+
+#google:hover{
+  transform: scale(1.1);
+  transition: all 0.7s;
+  -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
 }
 
 
