@@ -19,7 +19,7 @@
 
       <li class="nav-item p-3">
         <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">
-          <i class="fa fa-paper-plane"></i>
+          <i class="fa fa-plus" aria-hidden="true"></i>
         </a>
       </li>
 
@@ -51,28 +51,28 @@
 
           <div class="form-group col-md-12">
           <label for="inputEmail4">Nome: </label>
-          <input type="text" class="form-control" id="inputEmail4" placeholder="Digite o nome do pet" [(ngModel)]="pet.nmAnimal"/>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="Digite o nome do pet" [(ngModel)]="pet.name"/>
         </div>
       </div>
-      <div class="form-row mb-2">
+      <!-- <div class="form-row mb-2">
         <div class="form-group col-md-12">
           <label for="inputEmail4">Nome Pessoa: </label>
           <input type="number" class="form-control" id="inputEmail4" placeholder="Digite o nome da pessoa" [(ngModel)]="pet.IdPessoa"/>
         </div>
-      </div>
+      </div> -->
 
       <div class="form-row mb-2">
         <div class="form-group col-md-6">
           <label for="inputCity">Raça: </label>
-          <input type="number" class="form-control" id="inputCity" placeholder="Digite a raça do animal !" [(ngModel)]="pet.IdRaca">
+          <input type="text" class="form-control" id="inputCity" placeholder="Digite a raça do animal !" [(ngModel)]="pet.breed">
         </div>
         <div class="form-group col-md-6">
           <label for="inputCity">Porte: </label>
-          <input type="number" class="form-control" id="inputCity" placeholder="Digite a Porteo animal !" [(ngModel)]="pet.IdPorte">
+          <input type="text" class="form-control" id="inputCity" placeholder="Digite a Porteo animal !" [(ngModel)]="pet.porte">
         </div>
       </div>
 
-      <div class="form-row mb-2">
+      <!-- <div class="form-row mb-2">
         <div class="form-group col-md-6">
           <label for="inputCity">Tutor</label>
           <input type="number" class="form-control" id="inputCity" placeholder="Digite a tutor do animal !" [(ngModel)]="pet.IdTutor">
@@ -81,9 +81,9 @@
           <label for="inputCity">Doador </label>
           <input type="number" class="form-control" id="inputCity" placeholder="Digite a doador do animal !" [(ngModel)]="pet.IdDoador">
         </div>
-      </div>
+      </div> -->
 
-      <div class="form-row mb-2">
+      <!-- <div class="form-row mb-2">
         <div class="form-group col-md-6">
           <label for="inputCity">Data de publicacao: </label>
           <input type="text" class="form-control" id="inputCity" placeholder="Digite a data de doacao do animal !" [(ngModel)]="pet.dtPublicacao">
@@ -92,38 +92,38 @@
           <label for="inputCity">Data de doação: </label>
           <input type="text" class="form-control" id="inputCity" placeholder="Digite a data de adocao do animal !" [(ngModel)]="pet.dtAdocao">
         </div>
-      </div>
+      </div> -->
 
       <div class="form-row mb-2">
-        <div class="form-group col-md-6">
+        <!-- <div class="form-group col-md-6">
           <label for="inputCity">Cidade: </label>
           <input type="text" class="form-control" id="inputCity" placeholder="Digite a cidade do animal !" [(ngModel)]="pet.cdAnimal">
-        </div>
+        </div> -->
         <div class="form-group col-md-6">
           <label for="inputCity">Uf </label>
-          <input type="text" class="form-control" id="inputCity" placeholder="Digite a UF do animal !" [(ngModel)]="pet.UfAnimal">
+          <input type="text" class="form-control" id="inputCity" placeholder="Digite a UF do animal !" [(ngModel)]="pet.uf">
         </div>
       </div>
 
       <div class="form-row mb-2">
         <div class="form-group col-md-6">
           <label for="inputCity">Idade: </label>
-          <input type="number" class="form-control" id="inputCity" placeholder="Digite a idade do animal !" [(ngModel)]="pet.Idade">
+          <input type="number" class="form-control" id="inputCity" placeholder="Digite a idade do animal !" [(ngModel)]="pet.age">
         </div>
-        <div class="form-group col-md-6">
+        <!-- <div class="form-group col-md-6">
           <label for="inputCity">Categoria </label>
           <input type="number" class="form-control" id="inputCity" placeholder="Digite a categoria do animal !" [(ngModel)]="pet.IdCategoria">
-        </div>
+        </div> -->
       </div>
 
       <div class="form-row mb-2">
         <div class="form-group col-md-6">
           <label for="inputCity">Situacao: </label>
-          <input type="number" class="form-control" id="inputCity" placeholder="Digite a Situacaodo animal !" [(ngModel)]="pet.IdSituacao">
+          <input type="text" class="form-control" id="inputCity" placeholder="Digite a Situacaodo animal !" [(ngModel)]="pet.situacao">
         </div>
         <div class="form-group col-md-6">
           <label for="inputCity">Sexo: </label>
-          <input type="number" class="form-control" id="inputCity" placeholder="Digite a sexo do animal !" [(ngModel)]="pet.IdSexo">
+          <input type="number" class="form-control" id="inputCity" placeholder="Digite a sexo do animal !" [(ngModel)]="pet.sexo">
         </div>
       </div>
 
@@ -132,7 +132,7 @@
 
       <div class="form-floating mb-4">
         <label for="floatingTextarea2">Descrição: </label>
-        <textarea class="form-control" placeholder="Digita sobre o pet" id="floatingTextarea2" style="height: 100px"  [(ngModel)]="pet.dsAnimal"></textarea>
+        <textarea class="form-control" placeholder="Digita sobre o pet" id="floatingTextarea2" style="height: 100px"  [(ngModel)]="pet.descricao"></textarea>
       </div>
 
     <button type="submit" class="btn btn-primary" (click)="salvarPet()">Cadastrar</button>
