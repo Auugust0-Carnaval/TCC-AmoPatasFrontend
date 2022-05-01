@@ -24,8 +24,11 @@ import { CardComponent } from './components/home/card/card.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { HttpClientModule }from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+
+import { EditarPerfilComponent } from './components/pessoa/editar-perfil/editar-perfil.component';
 
 
 @NgModule({
@@ -42,7 +45,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     NotificacoesComponent,
     CadastroPessoaComponent,
     SobreNosComponent,
-    CardComponent
+    CardComponent,
+    EditarPerfilComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatSliderModule, 
+    MatSliderModule,
     MatDatepickerModule
     // MatInputHarness
 

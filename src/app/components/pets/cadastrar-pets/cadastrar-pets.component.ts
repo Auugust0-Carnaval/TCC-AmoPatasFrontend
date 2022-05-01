@@ -37,21 +37,15 @@ export class CadastrarPetsComponent implements OnInit {
 
 
   pet: Pet = {
-    nmAnimal: 'bysteka',//
-    dsAnimal: 'ele é super fofo',//
-    dtPublicacao: new Date("2022-02-22"),//
-    dtAdocao: new Date("2022-02-22"),//
-    cdAnimal: 'São Paulo',//
-    UfAnimal: 'SP',//'
-    Idade: 8,//
-    IdPorte: 1, //
-    IdPessoa: 1,
-    IdRaca: 1, //
-    IdCategoria: 1,//
-    IdSituacao: 1,//
-    IdSexo : 1,//
-    IdDoador: 1, //
-    IdTutor: 1//
+    name: '',
+    age: 0,
+    breed: '',
+    imagem: '',
+    descricao: '',
+    uf: '',
+    sexo: '',
+    porte: '',
+    situacao: ''
   };
 
   raca : Raca = {
@@ -97,13 +91,7 @@ export class CadastrarPetsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /*carregarPets() : void
-  {
-    this.PetService.buscarTodos().subscribe(returno => [
-      this.listaPets = returno
-    ])
-  };*/
-//metodo pra inserir imagem
+  //METODO DE INSERIR IMAGEM
   inputFileChange(event:any)
   {
 
@@ -126,25 +114,26 @@ export class CadastrarPetsComponent implements OnInit {
       this.exibirSucesso();
     });
   }
+
   exibirSucesso()
   {
      //`${this.pet.nmAnimal} foi cadastrado com sucesso. ID: ${this.pet.IdAnimal}`,
-    Swal.fire(`${this.pet.nmAnimal} foi cadastrado com sucesso. ID: ${this.pet.IdAnimal}`);
+    Swal.fire(`${this.pet.name} foi cadastrado com sucesso.`);
   }
 
   carregarRaca() : void
-{
+  {
  this.RacaService.buscarTodos().subscribe(ra => [
    this.listaRaca = ra
- ])
-};
+   ])
+  };
 
-  salvaRaca() : void{
-
+  salvaRaca() : void
+  {
     this.RacaService.cadastrar(this.raca).subscribe(retorno => {
       this.raca = retorno;
-   });
- }
+    });
+  }
 
 
  carregarPorte() : void
@@ -154,12 +143,12 @@ export class CadastrarPetsComponent implements OnInit {
    ])
  };
 
- salvaPorte() : void{
-
+ salvaPorte() : void
+ {
   this.PorteService.cadastrar(this.porte).subscribe(retorno => {
     this.porte = retorno;
- });
-}
+    });
+  }
 
 
 carregarSexo() : void
@@ -204,4 +193,9 @@ salvaPessoa() : void{
  });
 }
 
+
+
+
+
 }
+
