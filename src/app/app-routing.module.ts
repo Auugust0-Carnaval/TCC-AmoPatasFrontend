@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cadastro-pessoa.component';
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
+import { EditarPerfilComponent } from './components/pessoa/editar-perfil/editar-perfil.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'favoritos', component: FavoritosComponent},
   { path: 'notificacoes', component: NotificacoesComponent},
   { path: 'cadastro', component: CadastroPessoaComponent},
-  {  path: 'sobre', component: SobreNosComponent }
+  { path: 'sobre', component: SobreNosComponent },
+  { path: 'editar', component: EditarPerfilComponent}
 ];
 
 @NgModule({

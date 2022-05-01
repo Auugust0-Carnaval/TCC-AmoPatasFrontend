@@ -23,9 +23,16 @@
       <input class="form-control mr-sm-2" type="search" placeholder="escolha o seu animal.." aria-label="Search">
       <div class="class btn">
         <button type="button" id="btn" class="btn text-white" disabled>
-          <i class="fa fa-search"></i>
+          <i class="fa fa-search" id="BarraDePesquisa"></i>
         </button>
       </div>
     </form>
+
+      <br>
+      <a [routerLink]="['/login']">
+      
+        <button type="button" id="btnSair" class="btn text-white"> Sair </button>
+      </a>
+    
   </div>
 </nav>
