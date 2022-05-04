@@ -9,7 +9,7 @@ import { catchError, EMPTY, empty, map, Observable } from 'rxjs';
 })
 export class PetService {
 
-  private URL: string = "http://xyz" //TODO arrumar consumo da API (URL DO NODE)
+  private URL: string = "http://localhost:3333/users/pets" //TODO arrumar consumo da API (URL DO NODE)
 
   constructor(private http: HttpClient) {}
 

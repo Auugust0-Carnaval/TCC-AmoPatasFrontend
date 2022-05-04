@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  ListaPet : Pet[] = []
+  Pets : Pet[] = []
 
   constructor(private petService : PetService) { }
 
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   BuscarPets() : void{
     this.petService.buscarTodos().subscribe(retorno =>
-      this.ListaPet = retorno
+      this.Pets = retorno
     )
   }
 }
