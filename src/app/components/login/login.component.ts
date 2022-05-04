@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   checkSenha()
   {
-    if($("senha").val.length)
+    if($("senha") == null)
     {
       Swal.fire({
         icon: 'warning',
