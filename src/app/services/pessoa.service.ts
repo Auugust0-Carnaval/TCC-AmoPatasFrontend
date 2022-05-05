@@ -1,4 +1,4 @@
-import { Pessoa } from './../models/Pessoa.model';
+import { Pessoa } from '../models/Pessoa.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, EMPTY, map, Observable } from 'rxjs';
