@@ -1,63 +1,48 @@
-<script
-  type="text/javascript"
-  src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
->
 
-  function teste()
-  {
-    alert("fodase")
-  }
-</script>
 <div class="cadastro">
   <!--div de conteudo-->
-  <div class="card" style="width: 30rem; height: 45rem;">
+  <div class="card" style="width: 30rem; height: 58rem; margin-top: 18%;">
     <img
       class="card-img-top"
       src="https://chacarapet.com.br/blog/wp-content/uploads/2020/04/16-04blog-750x410.png" style="height: 260px;"
     />
     <div class="card-body">
-      <form>
+      <form >
        <div class="form-group">
           <h3 class="">Crie sua conta para acessar as informaçoes</h3>
-        </div>
+       </div>
         <div class="txt_field">
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="E-mail: "
-          />
+          <input type="text" class="form-control" name="senha" id="senha" placeholder="Nome:"  [(ngModel)]="user.name">
           <div class="underline"></div>
         </div>
-       <div class="txt_field">
-          <label for="DigiteSenha" id="date"> Data de Nascimento : </label>
-          <input
-            type="date"
-            class="form-control"
-            id="exampleInputData"
-            required
-          />
+        <div class="txt_field">
+          <input type="email" class="form-control" name="senha" id="senha" placeholder="E-mail:" [(ngModel)]="user.email">
+          <div class="underline"></div>
         </div>
         <div class="txt_field">
-          <input
-            type="password"
-            class="form-control"
-            name="pass"
-            id="exampleInputPassword1"
-            placeholder="Senha:"
-          />
+          <input type="tel" class="form-control" name="senha" id="senha" placeholder="Telefone:" [(ngModel)]="user.telefone"/>
+          <div class="underline"></div>
         </div>
         <div class="txt_field">
-          <input
-            type="password"
-            class="form-control"
-            id=""
-            placeholder="Confirmar Senha: "
-          />
+          <input type="text" class="form-control" name="senha" id="senha" placeholder="Sua descricao:" [(ngModel)]="user.descricao" />
+          <div class="underline"></div>
+        </div>
+        <div class="txt_field">
+          <input type="text" class="form-control" name="senha" id="senha"  placeholder="Rede social: " [(ngModel)]="user.rede_social"/>
+          <div class="underline"></div>
+        </div>
+        <div class="txt_field">
+          <label id="date"> Data de Nascimento : </label>
+          <input type="text" class="form-control" name="senha" id="senha" placeholder="xx/xx/xxxx"  [(ngModel)]="user.data_nascimento"/>
+        </div>
+        <div class="txt_field">
+          <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha:"  [(ngModel)]="user.senha"/>
+        </div>
+        <div class="txt_field">
+          <input type="password"  class="form-control"id="" placeholder="Confirmar Senha: "/>
         </div>
         <!-- <a [routerLink]="['/home']"> -->
-        <button type="button" class="button" style="width: 230px; height: 40px" (click)="inputPassword()">
+        <button type="submit" class="button" style="width: 230px; height: 40px" (click)="criar()">
           CRIAR CONTA
         </button>
         <!-- <button type="button" class="btn text-white" style="width: 200px; height: 40px;"> CRIAR CONTA</button> -->
