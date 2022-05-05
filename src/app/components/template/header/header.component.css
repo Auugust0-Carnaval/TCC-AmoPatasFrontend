@@ -3,7 +3,7 @@
   border: none;
   border-radius: 7px;
   margin-right: 20px;
-} 
+}
 
 i{
   padding: 10px;
@@ -15,12 +15,14 @@ i{
   color: bisque;
   font-size: 25px;
   width: 100px;
- 
+
 }
 nav{
-  background-color: #008aad;
+  background-color: #f37f55;
+  /* background-color: #008aad; */
+
   height: 150px;
- 
+
 }
 .nav-link{
   color: bisque;
