@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { UserService } from './../../../services/user.service';
+import { User } from './../../../models/User.model';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { data } from 'jquery';
+import { FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro-pessoa',
@@ -8,43 +11,39 @@ import { data } from 'jquery';
 })
 export class CadastroPessoaComponent implements OnInit {
 
-  constructor() { }
 
+  user : User ={
+    name : '',
+    email : '',
+    senha : '',
+    descricao : '',
+    telefone : '',
+    data_nascimento : '',
+    rede_social : '',
+  }
+
+
+
+
+  constructor(private userService : UserService) {
+  }
   ngOnInit(): void {
+
   }
 
-  inputPassword()
-  {
-    $(document).ready(function(){
 
-      // Click event of the showPassword button
-      $('#senha').on('click', function(){
+  // salvarUsuario(): void{
+  //   this.userService.cadastrarUsuario(this.user).subscribe(retorno =>{
+  //     this.user = retorno;
+  //   })
+  // }
 
-        // Get the password field
-        var passwordField = $('#senha');
 
-        // Get the current type of the password field will be password or text
-        var passwordFieldType = passwordField.attr('type');
-
-        // Check to see if the type is a password field
-        if(passwordFieldType == 'senha')
-        {
-            // Change the password field to text
-            passwordField.attr('type', 'text');
-
-            // Change the Text on the show password button to Hide
-            $(this).val('Hide');
-        } else {
-            // If the password field type is not a password field then set it to password
-            passwordField.attr('type', 'password');
-
-            // Change the value of the show password button to Show
-            $(this).val('Show');
-        }
-      });
+  criar(){
+    this.userService.cadastrarUsuario(this.user).subscribe(retorno =>{
+      this.user = retorno;
     });
+    console.log(this.user);
+    // frm.reset();
   }
-
-
-
 }
