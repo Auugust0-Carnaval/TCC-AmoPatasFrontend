@@ -31,9 +31,9 @@ export class UserService {
   mensagemErro()
   {
     Swal.fire({
-      position: 'top-end',
+      position: 'top',
       icon: 'warning',
-      title: 'Ohh não esta funfando :(',
+      title: 'Nome de usuário existente（＞人＜；）',
       showConfirmButton: false,
       timer: 3000
     })
