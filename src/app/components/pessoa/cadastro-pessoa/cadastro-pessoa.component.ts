@@ -3,6 +3,7 @@ import { User } from './../../../models/User.model';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { data } from 'jquery';
 import { FormGroup, NgForm } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cadastro-pessoa',
@@ -43,7 +44,23 @@ export class CadastroPessoaComponent implements OnInit {
     this.userService.cadastrarUsuario(this.user).subscribe(retorno =>{
       this.user = retorno;
     });
+    this.ToastSucess();
     console.log(this.user);
     // frm.reset();
   }
+
+
+  ToastSucess(){
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: `${this.user.name} cadastrado com sucesso (づ￣ 3￣)づ`,
+      showConfirmButton: false,
+      timer: 4500
+    })
+  }
+
+
+
+
 }
