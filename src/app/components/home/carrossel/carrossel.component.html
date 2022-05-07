@@ -1,19 +1,23 @@
-<div id="DivCarrosel" class="my-5 container text-center">
-  <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide class="mb-4">
-      <img src="https://www.vetmetodo.com.br/wp-content/uploads/2017/07/oftalmologista-veterinario-cachorro-e-gato-medico-dos-olhos.jpg">
+
+<div class="spacing" style="padding:1% ;">
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper" >
+        <img src="/assets/img/anuncio.png" alt="Angular Carousel 1" style="border-radius:60px ;">
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="/assets/img/anuncio.png" alt="Angular Carousel 2" style="border-radius:60px ;">
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="/assets/img/anuncio.png" alt="Angular Carousel 3" style="border-radius:60px ;">
+      </div>
     </ng-template>
 
-    <ng-template carouselSlide class="mb-4">
-      <img src="https://www.desenvolvimentosocial.sp.gov.br/wp-content/uploads/2021/10/kit_drads_s1_final_29_09_2021.png">
-    </ng-template>
 
-    <ng-template carouselSlide class="mb-4">
-      <img src="https://imgs.jusbr.com/publications/images/a1a5075deb10d8821ffbe828013d89da">
-    </ng-template>
-
-    <ng-template carouselSlide class="mb-4">
-      <img src="https://www.redeagropop.com.br/wp-content/uploads/2019/10/post-outubro-rosa_Prancheta-1_Prancheta-1_Prancheta-1-1200x675.png">
-    </ng-template>
-  </owl-carousel-o>
+  </ngb-carousel>
 </div>
+
