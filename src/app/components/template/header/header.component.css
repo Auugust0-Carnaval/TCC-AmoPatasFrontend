@@ -1,5 +1,5 @@
  #btn{
-  background-color: black;
+  background-color: white;
   border: none;
   border-radius: 7px;
   margin-right: 20px;
@@ -8,23 +8,24 @@
 i{
   padding: 10px;
   width: 50px;
-  color: bisque;
+  color: black;
 
 }
 #btnSair{
-  color: bisque;
+  color: #006d9c;
   font-size: 25px;
   width: 100px;
+  background-color: white;
 
 }
 nav{
-  background-color: #f37f55;
+  background-color: rgb(255, 212, 0);
   /* background-color: #008aad; */
 
   height: 150px;
 
 }
 .nav-link{
-  color: bisque;
-  font-size: 25px;
+  color: #006d9c;
+  font-size: 30px;
 }
