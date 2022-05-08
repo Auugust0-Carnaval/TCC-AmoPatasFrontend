@@ -2,8 +2,8 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" [routerLink]="[' ']">
-    <i class="fa fa-paw"></i>
+  <a class="navbar-brand" [routerLink]="['/']">
+    <img src="/assets/img/logo3.png" id="logo">
   </a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -22,6 +22,7 @@
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="escolha o seu animal.." aria-label="Search">
       <div class="class btn">
+
         <button type="button" id="btn" class="btn text-black" disabled>
           <i class="fa fa-search" id="BarraDePesquisa"></i>
         </button>
@@ -29,9 +30,9 @@
     </form>
 
       <br>
-      <a [routerLink]="['/login']">
-        <button type="button" id="btnSair" class="btn btn"> <b>Sair </b> </button>
-      </a>
+      <!-- <a [routerLink]="['/login']"> -->
+        <button type="button" id="btnSair" class="btn btn" (click)="exit()"><b>Sair </b> </button>
+      <!-- </a> -->
 
   </div>
 </nav>
