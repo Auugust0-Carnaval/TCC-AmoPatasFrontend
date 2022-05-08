@@ -25,3 +25,56 @@ i{
 label{
   font-size:20px;
 }
+
+
+h2{
+  font-weight: 500;
+}
+
+.container{
+  background-color: #fff;
+  border-radius: 8px;
+}
+h2{
+  color: black;
+}
+
+.text-center img{
+  border-radius: 50%;
+}
+
+.bg-container{
+  background-color: #fff;
+}
+
+i{
+  color: black;
+  width: 80px;
+}
+label{
+  font-size:20px;
+}
+
+
+#form{
+  /* border-color: red; */
+  border-width: 1px;
+  border: solid;
+  margin-bottom: 50px;
+  padding: 3%;
+  /* margin-top: 3%; */
+  border-color: white;
+  border-radius: 3%;
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+#form:hover{
+  border-color: rgb(177, 165, 165);
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
