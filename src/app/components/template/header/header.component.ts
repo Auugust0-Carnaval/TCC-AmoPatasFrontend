@@ -29,14 +29,25 @@ export class HeaderComponent implements OnInit {
     }).then((result)=>{
       if(result.isConfirmed){
         Swal.fire({
-          iconHtml: '<i class="fa fa-smile-o" aria-hidden="true"></i>',
-          title:' <strong>VOLTE SEMPRE À <strong class="text-danger">AMOPATAS!</strong></strong>  (. ❛ ᴗ ❛.) '
+          imageUrl : '/assets/img/cute.jpg',
+          imageWidth: 450,
+          imageHeight: 340,
+          // iconHtml: '<i class="fa fa-smile-o" aria-hidden="true"></i>',
+          title:' <strong>VOLTE SEMPRE À <strong class="text-danger">AMOPATAS!</strong></strong>  (. ❛ ᴗ ❛.)',
+          timer: 4000,
+          showCancelButton: false,
+          showConfirmButton :false
         })
       }
-      else if(result.isDenied){
+      else if(result.isDismissed){
         Swal.fire({
-          iconHtml : '<i class="fa fa-frown-o" aria-hidden="true"></i>',
-          title: 'IREMOS MELHORAR NOSSO PROJETO (。_。)'
+          imageUrl : '/assets/img/cat.jpg',
+          imageWidth: 450,
+          imageHeight: 340,
+          title: 'IREMOS MELHORAR NOSSO PROJETO (。_。)',
+          timer: 4000,
+          showCancelButton: false,
+          showConfirmButton :false
         })
       }
     })
