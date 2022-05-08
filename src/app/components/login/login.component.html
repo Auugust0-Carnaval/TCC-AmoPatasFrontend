@@ -1,39 +1,34 @@
 <div class="container">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 
-  <script>
-    function teste(){
-      if(document.getElementById("senha").nodeValue == ""){
-    alert("Porfavor preencha o comapo senha");
-    document.getElementById("senha").focus();
-    return false;
-  }
-    }
-  </script>
+
 
   <div class="log">
     <!-- Card -->
-    <div class="card">
-      <div class="media__card"></div>
+    <div class="card" style="height: 31rem;">
+      <!-- <div class="media__card"></div> -->
+
+
+
       <!-- Form -->
       <form method="post">
         <!-- Titulo do Form -->
-        <h1 class="card_titulo">AmoPatas</h1>
+        <img src="/assets/img/logo4.png"  class="img-fluid" id="logo">
         <!-- input Email -->
         <div class="txt_field">
-          <input type="email" placeholder="E-mail" required>
+          <input type="email" class="form-control" name="senha" id="Email" placeholder="E-mail"  [(ngModel)]="login.email"/>
         </div>
         <!-- Input de Senha -->
         <div class="txt_field">
-          <input type="password" id="senha" placeholder="Senha" onblur="teste()" required>
+          <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha:"  [(ngModel)]="login.senha"/>
         </div>
 
         <div class="pass">
           <a href="#"> Esqueceu a senha ? </a>
         </div>
-        <a [routerLink]="['/home']">
-          <input type="submit" value="Login" id="submit" class="btnlogin"><br><br>
-        </a>
+        <!-- <a [routerLink]="['/home']"> -->
+          <input type="submit" value="Login" id="submit" class="btnlogin" (click)="LoginUser()"><br><br>
+        <!-- </a> -->
 
         <!--  dev -->
 
@@ -77,5 +72,3 @@
 
   </div>
 </div>
-
-
