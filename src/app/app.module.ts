@@ -4,6 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatInputHarness} from '@angular/material/input/testing';
 
+import { HeaderComponent } from './components/template/header/header.component';
+
+
+
 // import { MDBBootstrapModulesPro, MDBSpinningPreloader } from 'ng-uikit-pro-standard';
 
 
@@ -11,7 +15,6 @@ import {MatInputHarness} from '@angular/material/input/testing';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
