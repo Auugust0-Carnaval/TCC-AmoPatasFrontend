@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -8,7 +9,7 @@ import Swal from 'sweetalert2';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
   }
@@ -37,7 +38,9 @@ export class HeaderComponent implements OnInit {
           timer: 4000,
           showCancelButton: false,
           showConfirmButton :false
-        })
+        }),
+        this.router.navigate(['login']);
+
       }
       else if(result.isDismissed){
         Swal.fire({
@@ -49,6 +52,7 @@ export class HeaderComponent implements OnInit {
           showCancelButton: false,
           showConfirmButton :false
         })
+        this.router.navigate(['login']);
       }
     })
 
