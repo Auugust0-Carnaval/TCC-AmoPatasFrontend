@@ -19,13 +19,46 @@ i{
 
 }
 nav{
-  background-color: rgb(255, 212, 0);
-  /* background-color: #008aad; */
+  /* background-color: rgb(255, 212, 0); */
+  background-color: #008aad;
+  /* background-image: url('/assets/img/backgroud.png'); */
 
   height: 150px;
 
 }
 .nav-link{
-  color: #006d9c;
+  color: white;
   font-size: 30px;
+  margin-left: 34px;
+}
+
+.nav-link :hover{
+  /* ESTILIZAÇÃO PARA MUDAR DE COR AO PASSAR O MOUSE = hover */
+  color: #B0C4DE;
+  transform: scale(1.1);
+  transition: all 0.7s;
+}
+
+
+#logo{
+  width: 160px;
+  height: 140px;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+#logo:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#btnSair:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #483D8B;
+}
+
+#btnSair{
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
 }
