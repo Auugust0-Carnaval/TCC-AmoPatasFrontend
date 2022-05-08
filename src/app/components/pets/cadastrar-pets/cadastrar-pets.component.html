@@ -1,6 +1,7 @@
+
 <app-header></app-header>
 
-<div class="text-center" style="margin-bottom: 20%;">
+<div class="text-center" style="margin-bottom: 20%;margin-top: 4%;">
   <div class="bg-container mb-5 p-3">
     <img
       src="https://media-exp1.licdn.com/dms/image/C4E03AQGLsMukPtqqcg/profile-displayphoto-shrink_200_200/0/1622047474868?e=1654128000&v=beta&t=plOMn7tPhOA68SyzgoFm3cnToJ5L_F_q_rHeobt7NWs"
@@ -71,7 +72,11 @@
       Cadastrar
       <span class="text-danger">Pets</span>
     </h2>
-    <form class="p-3">
+
+
+
+
+    <form class="p-3" id="form">
       <!--inserir imagem-->
       <div class="form-row mb-2">
         <div class="form-group col-md-12">
@@ -101,10 +106,11 @@
               placeholder="Digite a Porteo animal !"
             /> -->
             <label for="inputCategoria"> Qual o tipo do animal: </label><br>
-            <select name="select">
-                <option value="animal0">Nenhuma das opções </option>
-                <option value="animal1">Cachorro</option>
-                <option value="animal2" selected>Gato</option>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
             </select>
             </div>
           </div>
