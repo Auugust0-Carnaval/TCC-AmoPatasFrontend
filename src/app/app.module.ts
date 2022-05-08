@@ -1,13 +1,16 @@
+import { UserService } from './services/user.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatInputHarness} from '@angular/material/input/testing';
 
+// import { MDBBootstrapModulesPro, MDBSpinningPreloader } from 'ng-uikit-pro-standard';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
@@ -24,6 +27,10 @@ import { CardComponent } from './components/home/card/card.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { HttpClientModule }from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HttpInterceptor } from '@angular/common/http';
+
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -58,11 +65,11 @@ import { EditarPerfilComponent } from './components/pessoa/editar-perfil/editar-
     FormsModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatDatepickerModule
+    MatDatepickerModule,
     // MatInputHarness
 
   ],
-  providers: [],
+  providers: [UserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
