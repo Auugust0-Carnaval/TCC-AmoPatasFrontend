@@ -48,7 +48,7 @@ form .txt_field {
   color: black;
 }
 
-button{
+#submit{
   margin-top: 10px;
   background: linear-gradient( to right,#FFAA1B, #FFAA1B, #FF8F24, #FF792B,#FF5D34, #FF5641,#FF4F4F,#FF495B, #FF4368,#EB388B,#D73799,#C337A7,#BB37AD,#b438a8, #b13da3, #A336BD);
   border: none;
@@ -62,6 +62,40 @@ button{
   color: white;
   transform: translateY(-6px);
 }
+
+#logo{
+  width: 100px;
+  height: 85px;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  /* margin-top: 1%; */
+  /* float: left; */
+}
+
+#logo:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+
+}
+
+
+#back{
+  float: left;
+  margin-right: 400px;
+  /* border-color: black; */
+  /* border: solid; */
+  /* border-width: 4px; */
+  width: 38%;
+}
+
+
+#back:hover{
+  border-color: rgb(223, 213, 213);
+  border: solid;
+  border-width: 1px;
+}
+
+
 
 
 /*input::placeholder {
