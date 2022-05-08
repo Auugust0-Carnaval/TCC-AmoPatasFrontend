@@ -2,7 +2,7 @@ import { UserService } from './../../../services/user.service';
 import { User } from './../../../models/User.model';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { data } from 'jquery';
-import { FormGroup, NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -13,41 +13,41 @@ import Swal from 'sweetalert2';
 export class CadastroPessoaComponent implements OnInit {
 
 
+  //propriedade herdada da classe User
   user : User ={
     name : '',
     email : '',
     senha : '',
-    descricao : '',
-    telefone : '',
-    data_nascimento : '',
-    rede_social : '',
+    // descricao : '',
+    // telefone : '',
+    data_nascimento : new Date(),
+    // rede_social : '',
   }
-
-
-
 
   constructor(private userService : UserService) {
   }
+
   ngOnInit(): void {
-
   }
-
-
-  // salvarUsuario(): void{
-  //   this.userService.cadastrarUsuario(this.user).subscribe(retorno =>{
-  //     this.user = retorno;
-  //   })
-  // }
-
 
   criar(){
     this.userService.cadastrarUsuario(this.user).subscribe(retorno =>{
       this.user = retorno;
     });
     this.ToastSucess();
-    console.log(this.user);
+    console.log(this.user); // TESTE NO CONSOLE DAS INFO
     // frm.reset();
   }
+
+  validatePass(): void{
+
+    if($("senha").val != $("confirmPassword").val){
+      Swal.fire("Senha esta diferenter");
+    }
+  }
+
+
+
 
 
   ToastSucess(){
