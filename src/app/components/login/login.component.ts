@@ -1,4 +1,9 @@
+import { UserService } from './../../services/user.service';
+import { HttpClient } from '@angular/common/http';
+import { User } from './../../models/User.model';
 import { Component, OnInit } from '@angular/core';
+
+import { HttpInterceptor } from '@angular/common/http';
 
 import * as $ from "jquery";
 import Swal from 'sweetalert2';
@@ -10,25 +15,24 @@ import Swal from 'sweetalert2';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+
+
+  login : User = {
+    email : '',
+    senha : ''
+  }
+
+  constructor(private http : HttpClient, private userService: UserService) { }
 
   ngOnInit(): void {
   }
 
-  checkSenha()
-  {
-    if($("senha") == null)
-    {
-      Swal.fire({
-        icon: 'warning',
-        title: 'Insira uma senha',
-        showConfirmButton: false,
-        timer: 1500
-      })
-    }
+  LoginUser(){
+    this.userService.loginUsuario(this.login).subscribe(retorno =>{
+      this.login = retorno;
+    });
+    console.log(this.login);
   }
-
-
 
 
 }
