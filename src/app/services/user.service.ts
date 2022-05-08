@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpEvent, HttpHandler, HttpRequest } from '@angular/common/http';
 import { catchError, EMPTY, empty, map, Observable } from 'rxjs';
 import { User } from './../models/User.model';
 import Swal from 'sweetalert2';
+
+// import { HttpInterceptor } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +13,24 @@ import Swal from 'sweetalert2';
 
 export class UserService {
 
+
+
   private URL: string = "http://localhost:3333/users"
+
+  private URLLOGIN : string = "http://localhost:3333/login"
 
   constructor(private http: HttpClient) { }
 
   cadastrarUsuario(user: any) : Observable<User> {
     return this.http.post<User>(this.URL, user).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibeErro(erro))
+    );
+  }
+
+
+  loginUsuario(user: User) : Observable<User> {
+    return this.http.post<User>(this.URLLOGIN, user).pipe(
       map(retorno => retorno),
       catchError(erro => this.exibeErro(erro))
     );
