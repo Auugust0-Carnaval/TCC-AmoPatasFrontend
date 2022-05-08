@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg">
+<!-- <nav class="navbar navbar-expand-lg">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -29,10 +29,44 @@
       </div>
     </form>
 
-      <br>
-      <!-- <a [routerLink]="['/login']"> -->
-        <button type="button" id="btnSair" class="btn btn" (click)="exit()"><b>Sair </b> </button>
-      <!-- </a> -->
+      <br> -->
+  <nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img src="/assets/img/logo3.png" id="logo">
+    </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="router-link-active" >Perfil </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/sobre']" routerLinkActive="router-link-active" >Sobre</a>
+
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+          <button id="btn" class="btn text-black" disabled>
+          <i class="fa fa-search" id="BarraDePesquisa"></i>
+          </button>
+        </form>
+
+    <div class="class btn">
+      <a [routerLink]="['/login']">
+        <button type="button" id="btnSair" class="btn text-black" (click)="exit()">
+        <i class="fa-thin fa-arrow-right-from-bracket"></i>
+        </button>
+    </a>
 
   </div>
+
+</div>
 </nav>
+  <hr>

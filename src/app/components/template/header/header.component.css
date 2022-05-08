@@ -8,28 +8,28 @@
 i{
   padding: 10px;
   width: 50px;
-  color: black;
+  color: #16479d;
 
 }
 #btnSair{
-  color: #006d9c;
+  color: black;
   font-size: 25px;
-  width: 100px;
-  background-color: white;
+  /* width: 100px; */
 
 }
 nav{
   /* background-color: rgb(255, 212, 0); */
-  background-color: #008aad;
+  background-color: #ffd400;
   /* background-image: url('/assets/img/backgroud.png'); */
 
-  height: 300px;
+  height: 250px;
 
 }
 .nav-link{
-  color: white;
-  font-size: 30px;
+  color: #16479d;
+  font-size: 50px;
   margin-left: 34px;
+  font-family: cursive;
 }
 
 .nav-link :hover{
