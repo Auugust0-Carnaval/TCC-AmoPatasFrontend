@@ -243,7 +243,8 @@ a{
 }
 #logo{
   width: 100px;
-  height: 85px;
+  height: 80px;
+  margin-top: 2%;
   -webkit-transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   /* margin-top: 1%; */
