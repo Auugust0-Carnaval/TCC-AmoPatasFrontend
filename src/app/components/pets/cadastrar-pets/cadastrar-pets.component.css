@@ -3,7 +3,7 @@ h2{
 }
 
 .container{
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 8px;
 }
 h2{
@@ -15,7 +15,7 @@ h2{
 }
 
 .bg-container{
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 i{
@@ -32,7 +32,7 @@ h2{
 }
 
 .container{
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 8px;
 }
 h2{
@@ -44,7 +44,7 @@ h2{
 }
 
 .bg-container{
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 i{
@@ -72,7 +72,7 @@ label{
 }
 
 #form:hover{
-  border-color: #16479d;
+  border-color: #b0c4e7;
   -webkit-transition: 0.5s ease-in;
   -moz-transition: 0.5s ease-in;
   -o-transition: 0.5s ease-in;
