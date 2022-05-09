@@ -22,12 +22,12 @@ nav{
   background-color: #ffd400;
   /* background-image: url('/assets/img/backgroud.png'); */
 
-  height: 250px;
+  height: 240px;
 
 }
 .nav-link{
   color: #16479d;
-  font-size: 50px;
+  font-size: 35px;
   margin-left: 34px;
   font-family: cursive;
 }
@@ -41,8 +41,8 @@ nav{
 
 
 #logo{
-  width: 160px;
-  height: 140px;
+  width: 140px;
+  height: 123px;
   -webkit-transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
 }
