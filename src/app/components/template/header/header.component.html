@@ -30,41 +30,41 @@
     </form>
 
       <br> -->
-  <nav class="navbar navbar-expand-lg">
+
+<nav class="navbar navbar-expand-lg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" [routerLink]="['/']">
-      <img src="/assets/img/logo6.png" id="logo">
+      <img src="/assets/img/logo6.png" id="logo" style="margin-left:3% ;">
     </a>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="router-link-active" >Perfil </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/sobre']" routerLinkActive="router-link-active" >Sobre</a>
-
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input style="width: 400px;" class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+          <div class="ui left icon input" style="margin-right:7px; width:450px; font-size: 16px;">
+            <input type="text" placeholder="Procurar usuários...">
+            <i class="users icon"></i>
+          </div>
           <button id="btn" class="btn text-black" disabled>
-          <i class="fa fa-search" id="BarraDePesquisa"></i>
+            <i class="fa fa-search fa-2x" id="BarraDePesquisa"></i>
           </button>
         </form>
-
-    <div class="class btn">
-        <button type="button" id="btnSair" class="btn text-black" (click)="exit()">
-          <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
-        </button>
-
-  </div>
-
-</div>
+        <div class="class btn" style="margin-right: 3%;">
+          <button type="button" id="btnSair" class="btn text-black" (click)="exit()">
+            <i class="fa fa-sign-out fa-2x" aria-hidden="true" style="color:blue ;"></i>
+          </button>
+        </div>
+      </div>
 </nav>
-  <hr>
+<!-- <hr> -->
