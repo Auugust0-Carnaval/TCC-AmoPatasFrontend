@@ -72,7 +72,7 @@ label{
 }
 
 #form:hover{
-  border-color: rgb(177, 165, 165);
+  border-color: #16479d;
   -webkit-transition: 0.5s ease-in;
   -moz-transition: 0.5s ease-in;
   -o-transition: 0.5s ease-in;
