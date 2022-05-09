@@ -19,17 +19,18 @@ i{
 }
 nav{
   /* background-color: rgb(255, 212, 0); */
-  background-color: #ffd400;
+  background-color: white;
   /* background-image: url('/assets/img/backgroud.png'); */
+  height: 170px;
 
-  height: 240px;
+  margin-bottom: 0%;
 
 }
 .nav-link{
   color: #16479d;
-  font-size: 35px;
-  margin-left: 34px;
-  font-family: cursive;
+  font-size: 260px;
+  margin-left: 90px;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
 }
 
 .nav-link :hover{
@@ -41,8 +42,8 @@ nav{
 
 
 #logo{
-  width: 140px;
-  height: 123px;
+  width: 100px;
+  height: 90px;
   -webkit-transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
 }
