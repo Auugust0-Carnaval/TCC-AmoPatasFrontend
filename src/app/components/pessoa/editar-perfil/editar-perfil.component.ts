@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-editar-perfil',
@@ -26,6 +27,15 @@ export class EditarPerfilComponent implements OnInit {
       this.http.post('http://locahost:3333/xyz', formData)
       .subscribe(resposta => console.log('upload ok'));
     }
+  }
+
+
+  upload(){
+    // Swal.fire({
+    //   showCancelButton: false,
+    //   showConfirmButton : false;
+
+    // });
   }
 
 
