@@ -35,7 +35,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" [routerLink]="['/']">
-      <img src="/assets/img/logo3.png" id="logo">
+      <img src="/assets/img/logo6.png" id="logo">
     </a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -52,18 +52,16 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+          <input style="width: 400px;" class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
           <button id="btn" class="btn text-black" disabled>
           <i class="fa fa-search" id="BarraDePesquisa"></i>
           </button>
         </form>
 
     <div class="class btn">
-      <a [routerLink]="['/login']">
         <button type="button" id="btnSair" class="btn text-black" (click)="exit()">
-        <i class="fa-thin fa-arrow-right-from-bracket"></i>
+          <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
         </button>
-    </a>
 
   </div>
 
