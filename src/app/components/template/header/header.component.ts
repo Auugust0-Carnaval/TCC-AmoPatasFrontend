@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit {
           showCancelButton: false,
           showConfirmButton :false
         })
-        this.router.navigate(['login']);
+        this.router.navigate(['login']); // ROUTERLINK
       }
     })
 
