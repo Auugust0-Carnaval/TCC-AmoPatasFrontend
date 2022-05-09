@@ -10,7 +10,9 @@
 body{
   /* background-color: #00ace9; */
   /* background-image: url('/assets/img/backgroud.png'); */
-  /* background-color:  */
+   /* background-color: white;; */
+
+   background-image: url("assets/img/back.png");
 }
 
 .table{
