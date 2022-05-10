@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/User.model';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -8,6 +9,16 @@ import Swal from 'sweetalert2';
   styleUrls: ['./editar-perfil.component.css']
 })
 export class EditarPerfilComponent implements OnInit {
+
+  user : User ={
+    name : 'Augusto',
+    email : '',
+    senha : '',
+    descricao : '',
+    telefone : '',
+    data_nascimento : new Date(),
+    rede_social : '',
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -31,11 +42,9 @@ export class EditarPerfilComponent implements OnInit {
 
 
   upload(){
-    // Swal.fire({
-    //   showCancelButton: false,
-    //   showConfirmButton : false;
-
-    // });
+    Swal.fire({
+      text : `${this.user.name} alterado com sucesso (o゜▽゜)o☆`
+    })
   }
 
 

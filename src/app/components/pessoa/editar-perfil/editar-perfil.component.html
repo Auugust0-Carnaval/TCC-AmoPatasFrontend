@@ -1,14 +1,17 @@
-<div class="container my-5 p-5">
+<app-header></app-header>
+
+
+<div class="container my-5 p-5 text-center"  >
   <h2 class="display-3">
-    <span style="color: #16479d; font-size: 30px"
-      >Atualize Suas Informações</span
-    >
+    <span  style="color: #16479d; font-size: 30px">
+      ATUALIZE SUAS INFORMAÇÕES
+    </span>
   </h2>
-  <form class="p-3 shadow">
+  <form class="p-3" id="form">
     <!--inserir imagem-->
     <div class="form-row mb-2">
       <div class="form-group col-md-12">
-        <label for="Perfil"><strong class="text-primary">Foto Perfil: </strong></label><br/>
+        <label for="Perfil" style="margin-right:93% ;"><strong class="text-primary">Foto Perfil: </strong></label><br/>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text"><i class="fa fa-camera" aria-hidden="true"></i></span>
@@ -21,13 +24,8 @@
       </div>
 
       <div class="form-group col-md-12">
-        <label for="Nascimento"><strong class="text-primary">Nome</strong></label>
-        <input
-          type="text"
-          class="form-control"
-          id="inputEmail4"
-          placeholder="Editar Nome"
-        />
+        <label for="Nascimento" style="margin-right: 100%;"><strong class="text-primary">Nome</strong></label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="Editar Nome" [(ngModel)]="user.name"/>
       </div>
     </div>
 
@@ -69,10 +67,16 @@
     <div class="form-row mb-2">
       <div class="form-group col-md-6">
         <label for="Nascimento"><strong class="text-primary">Sua Descrição</strong></label>
-
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>      </div>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
     </div>
 
-     <button type="file" class="btn btn-primary" style="margin-left:50% ;" (click)="upload()">Salvar Alterações</button>
+    <div class="ui large buttons">
+      <button class="ui blue basic button" (click)="upload()">ALTERAR</button>
+      <div class="or" ></div>
+      <a [routerLink]="['/perfil']" routerLinkActive="router-link-active">
+        <button class="ui red basic button" id="cancela">CANCELA</button>
+      </a>
+    </div>
   </form>
 </div>

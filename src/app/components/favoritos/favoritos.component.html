@@ -11,10 +11,14 @@
     <br>
     <br>
     <a [routerLink]="['/editar']">
-      <button type="button" class="btn btn-primary">
-        <span>EDITAR PERFIL</span>
-        <i class="fa fa-pencil" aria-hidden="true" style="color:white ;"></i>
-      </button>
+      <div class="ui animated button ui blue basic button" id="edit" tabindex="0" style="width: 150px; height: 40px;">
+        <div class="visible content">
+          <i class="fa fa-pencil" aria-hidden="true" style="color:blue ;"></i>
+        </div>
+        <div class="hidden content">
+          <span>EDITAR PERFIL</span>
+        </div>
+      </div>
     </a>
     <br> <br>
     <hr />

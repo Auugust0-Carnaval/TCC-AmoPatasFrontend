@@ -1,3 +1,18 @@
-#files{
+#form:hover{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: all 0.7s;
+}
 
+#form{
+  transition: all 0.7s;
+}
+
+#cancela :hover{
+  color: white;
+  background-color: red;
+  transition: all 0.7s;
+}
+
+#cancela{
+  transition: all 0.7s;
 }
