@@ -15,3 +15,14 @@ i{
   color: black;
   width: 80px;
 }
+
+#edit{
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+#edit:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  /* color: #483D8B; */
+}
