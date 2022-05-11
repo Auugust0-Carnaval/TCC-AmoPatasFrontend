@@ -30,14 +30,21 @@ nav{
   color: #16479d;
   font-size: 260px;
   margin-left: 90px;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+   font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
 }
 
-.nav-link :hover{
+.nav-link:hover{
   /* ESTILIZAÇÃO PARA MUDAR DE COR AO PASSAR O MOUSE = hover */
-  color: #B0C4DE;
-  transform: scale(1.1);
-  transition: all 0.7s;
+  color: orangered;
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+
 }
 
 
@@ -62,4 +69,22 @@ nav{
 #btnSair{
   -webkit-transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
+}
+
+#BarraDePesquisa:hover{
+  color: #ff4500;
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+
+#BarraDePesquisa{
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+
+
 }

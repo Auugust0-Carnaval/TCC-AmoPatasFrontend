@@ -63,7 +63,7 @@ label{
   margin-bottom: 50px;
   padding: 3%;
   /* margin-top: 3%; */
-  border-color: white;
+  border-color: #16479d;
   border-radius: 3%;
   -webkit-transition: 0.5s ease-in;
   -moz-transition: 0.5s ease-in;
@@ -72,7 +72,7 @@ label{
 }
 
 #form:hover{
-  border-color: #b0c4e7;
+  border-color: orangered;
   -webkit-transition: 0.5s ease-in;
   -moz-transition: 0.5s ease-in;
   -o-transition: 0.5s ease-in;
