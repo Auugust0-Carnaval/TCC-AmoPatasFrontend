@@ -244,7 +244,7 @@ a{
 #logo{
   width: 100px;
   height: 80px;
-  margin-top: 2%;
+  margin-top: 6%;
   -webkit-transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   /* margin-top: 1%; */
