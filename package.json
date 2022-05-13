@@ -28,6 +28,7 @@
     "@sweetalert2/ngx-sweetalert2": "^11.0.0",
     "angular-font-awesome": "^3.1.2",
     "angular-localize": "^2.4.0",
+    "animate.css": "^4.1.1",
     "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.8.1",
     "font-awesome": "^4.7.0",
@@ -38,6 +39,7 @@
     "semantic-ui-css": "^2.4.1",
     "sweetalert2": "^11.4.7",
     "tslib": "^2.3.1",
+    "uikit": "^3.14.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

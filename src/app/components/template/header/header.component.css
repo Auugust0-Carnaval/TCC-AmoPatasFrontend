@@ -27,6 +27,7 @@ nav{
 
 }
 .nav-link{
+
   color: #16479d;
   font-size: 260px;
   margin-left: 90px;
@@ -77,6 +78,7 @@ nav{
   -moz-transition: 0.5s ease-in;
   -o-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
+
 }
 
 
@@ -85,6 +87,7 @@ nav{
   -moz-transition: 0.5s ease-in;
   -o-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
+  cursor: pointer;
 
 
 }

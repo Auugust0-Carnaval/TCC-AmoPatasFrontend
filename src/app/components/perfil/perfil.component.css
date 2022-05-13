@@ -26,3 +26,11 @@ i{
   transform: scale(1.1);
   /* color: #483D8B; */
 }
+
+
+i:hover{
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
