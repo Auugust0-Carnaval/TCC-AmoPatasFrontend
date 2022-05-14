@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: 'notificacoes', component: NotificacoesComponent},
   { path: 'cadastro', component: CadastroPessoaComponent},
   { path: 'sobre', component: SobreNosComponent },
-  { path: 'editar', component: EditarPerfilComponent}
+  { path: 'editar', component: EditarPerfilComponent},
+  {path : '**',component:LoginComponent} // DIGITAR UM ENDPOINT "QUALQUER" VOLTA PARA LOGIN
 ];
 
 @NgModule({
