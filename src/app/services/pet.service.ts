@@ -11,9 +11,8 @@ export class PetService {
 
   private URL: string = "http://localhost:3333/users/pets" //TODO arrumar consumo da API (URL DO NODE)
 
+  private URLCADASTRO : string = "http://localhost:3333/users/1/pets"
   constructor(private http: HttpClient) {}
-
-
   buscarTodos() : Observable<Pet[]> {
     //Retornar e listar com Get.
     return this.http.get<Pet[]>(this.URL).pipe(
@@ -21,7 +20,6 @@ export class PetService {
       catchError(erro => this.exibeErro(erro))
     );
   }
-
   /*buscarPorId(id: number) : Observable<Pet> {
     //Retornar e listar com Get.
     return this.http.get<Pet>(`${this.URL}/${id}`).pipe(
@@ -31,7 +29,7 @@ export class PetService {
   }*/
 
   cadastrar(pet: Pet) : Observable<Pet> {
-    return this.http.post<Pet>(this.URL, pet).pipe(
+    return this.http.post<Pet>(this.URLCADASTRO, pet).pipe(
       map(retorno => retorno),
       catchError(erro => this.exibeErro(erro))
     );
