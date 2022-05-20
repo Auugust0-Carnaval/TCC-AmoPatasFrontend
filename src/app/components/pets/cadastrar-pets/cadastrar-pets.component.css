@@ -58,8 +58,7 @@ label{
 
 #form{
   /* border-color: red; */
-  border-width: 1px;
-  border: solid;
+  border: solid thin;
   margin-bottom: 50px;
   padding: 3%;
   /* margin-top: 3%; */
@@ -148,3 +147,4 @@ i:hover{
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
