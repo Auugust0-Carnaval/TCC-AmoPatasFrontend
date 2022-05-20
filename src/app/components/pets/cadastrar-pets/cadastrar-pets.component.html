@@ -2,23 +2,14 @@
 
 <div class="text-center" style="margin-bottom: 20%; margin-top: 4%">
   <div class="bg-container mb-5 p-3">
-    <div
-      class="ui small circular rotate left reveal image"
-      style="margin-left: 45%"
-    >
-      <img
-        src="https://img.freepik.com/vetores-gratis/coelho-bebe-fofo-ou-animal-de-estimacao-de-lebre-para-design-de-pascoa-coelho-animal-em-estilo-de-desenho-animado-coelho-sentado_352905-774.jpg?w=740"
-        class="visible content"
-      />
-      <img
-        src="https://media-exp1.licdn.com/dms/image/C4E03AQGLsMukPtqqcg/profile-displayphoto-shrink_200_200/0/1622047474868?e=1654128000&v=beta&t=plOMn7tPhOA68SyzgoFm3cnToJ5L_F_q_rHeobt7NWs"
-        class="hidden content"
-      />
+    <div class="ui small circular rotate left reveal image" style="margin-left: 45%">
+      <img src="https://img.freepik.com/vetores-gratis/coelho-bebe-fofo-ou-animal-de-estimacao-de-lebre-para-design-de-pascoa-coelho-animal-em-estilo-de-desenho-animado-coelho-sentado_352905-774.jpg?w=740" class="visible content" />
+      <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGLsMukPtqqcg/profile-displayphoto-shrink_200_200/0/1622047474868?e=1654128000&v=beta&t=plOMn7tPhOA68SyzgoFm3cnToJ5L_F_q_rHeobt7NWs"  class="hidden content"/>
     </div>
     <h2 class="mt-3">Carlos Kauan Costa de Brito</h2>
     <p style="font-size: 15px;">Aqui é corinthians</p>
-    <br />
-    <br />
+    <br/>
+    <br/>
     <a [routerLink]="['/editar']">
       <div class="ui animated button ui blue basic button" id="edit" tabindex="0" style="width: 150px; height: 40px;">
         <div class="visible content">
@@ -29,250 +20,101 @@
         </div>
       </div>
     </a>
-    <br />
-    <br />
-    <hr />
-    <br />
-
+    <br/>
+    <br/>
+    <hr/>
+    <br/>
     <ul class="flex-row justify-content-center navbar-nav mr-auto">
       <li class="nav-item p-3">
-        <a
-          class="nav-link"
-          [routerLink]="['/perfil']"
-          routerLinkActive="router-link-active"
-        >
+        <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="router-link-active" >
           <i class="fa fa-bars fa-2x"></i>
         </a>
       </li>
-
       <li class="nav-item p-3">
-        <a
-          class="nav-link"
-          [routerLink]="['/pets']"
-          routerLinkActive="router-link-active"
-        >
+        <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">
           <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
         </a>
       </li>
-
       <li class="nav-item p-3">
-        <a
-          class="nav-link"
-          [routerLink]="['/notificacoes']"
-          routerLinkActive="router-link-active"
-        >
+        <a class="nav-link" [routerLink]="['/notificacoes']" routerLinkActive="router-link-active">
           <i class="fa fa-bell fa-2x"></i>
         </a>
       </li>
-
       <li class="nav-item p-3">
-        <a
-          class="nav-link"
-          [routerLink]="['/favoritos']"
-          routerLinkActive="router-link-active"
-        >
+        <a class="nav-link" [routerLink]="['/favoritos']" routerLinkActive="router-link-active">
           <i class="fa fa-heart fa-2x"></i>
         </a>
       </li>
     </ul>
   </div>
-
-  <div class="container my-5 p-5" style="background-color: white">
+  <div class="container my-5 p-5" >
     <h2 class="display-3">
       <span style="color: #16479d; font-size: 50px">Cadastrar Pets</span>
     </h2>
 
-    <form class="p-3" id="form">
-      <!--inserir imagem-->
+    <!-- TODO INICIO DO FORMULARIO -->
+    <form class="p-3" id="form" >
       <div class="form-row mb-2">
         <div class="form-group col-md-12">
           <label for="inputFoto">Foto do pet:</label>
-          <br />
+          <br/>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text"
-                ><i class="fa fa-camera fa-2x" aria-hidden="true"></i
-              ></span>
+              <span class="input-group-text">
+                <i class="fa fa-camera fa-2x" aria-hidden="true"></i>
+              </span>
             </div>
             <div class="custom-file">
-              <input
-                type="file"
-                class="custom-file-input"
-                id="inputGroupFile01"
-                (change)="inputFileChange($event)"
-              />
+              <input type="file" class="custom-file-input" id="inputGroupFile01" [(ngModel)]="pets.imagem"/>
               <label class="custom-file-label" for="inputGroupFile01"></label>
             </div>
           </div>
         </div>
       </div>
-
       <div class="form-row mb-2">
         <div class="form-group col-md-6">
           <label for="inputEmail4">Nome:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputEmail4"
-            placeholder="Digite o nome do pet"
-          />
+          <input type="text" class="form-control" name="senha" id="name" placeholder="Digite o nome do pet" [(ngModel)]="pets.name"/>
         </div>
-
-        <div class="two fields">
-          <div class="field">
-            <label>State</label>
-            <select class="ui fluid dropdown">
-              <option value="">State</option>
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-            </select>
-          </div>
+        <div class="form-group col-md-6">
+          <label for="exampleFormControlSelect1" >Porte</label>
+          <select class="form-control" id="situacao" name="situacao" [(ngModel)]="pets.porte">
+            <option value="PEQUENO">PEQUENO</option>
+            <option value="MEDIO">MEDIO</option>
+            <option value="GRANDE">GRANDE</option>
+        </select>
         </div>
-
-
       </div>
-
-      <!-- <div class="form-row mb-2">
-        <div class="form-group col-md-12">
-          <label for="inputEmail4">Nome Pessoa: </label>
-          <input type="number" class="form-control" id="inputEmail4" placeholder="Digite o nome da pessoa" .IdPessoa"/>
-        </div>
-      </div> -->
-
       <div class="form-row mb-2">
         <div class="form-group col-md-6">
           <label for="inputCity">Raça:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputCity"
-            placeholder="Digite a raça do animal !"
-          />
+          <input type="text" class="form-control" name="senha" id="name" placeholder="Digite a raça do animal !"  [(ngModel)]="pets.breed" />
         </div>
-
         <div class="form-group col-md-6">
-          <!-- <label for="inputCity">Porte:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputCity"
-            placeholder="Digite a Porteo animal !"
-          /> -->
-          <label for="inputPorte"> Qual é o porte do animal : </label><br />
-          <select name="select">
-            <option value="animal1">Não sei identificar</option>
-            <option value="porte1">Pequeno</option>
-            <option value="porte2" selected>Médio</option>
-            <option value="porte3">Grande</option>
-          </select>
+          <label for="inputCity">UF:</label>
+          <input type="text" class="form-control" name="senha" id="name" placeholder="QUAL O ESTADO"  [(ngModel)]="pets.uf" />
         </div>
       </div>
-
-      <!-- <div class="form-row mb-2">
-        <div class="form-group col-md-6">
-          <label for="inputCity">Tutor</label>
-          <input type="number" class="form-control" id="inputCity" placeholder="Digite a tutor do animal !" .IdTutor">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputCity">Doador </label>
-          <input type="number" class="form-control" id="inputCity" placeholder="Digite a doador do animal !" .IdDoador">
-        </div>
-      </div> -->
-
-      <!-- <div class="form-row mb-2">
-        <div class="form-group col-md-6">
-          <label for="inputCity">Data de publicacao: </label>
-          <input type="text" class="form-control" id="inputCity" placeholder="Digite a data de doacao do animal !" .dtPublicacao">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputCity">Data de doação: </label>
-          <input type="text" class="form-control" id="inputCity" placeholder="Digite a data de adocao do animal !" .dtAdocao">
-        </div>
-      </div> -->
-
       <div class="form-row mb-2">
-        <!-- <div class="form-group col-md-6">
-          <label for="inputCity">Cidade: </label>
-          <input type="text" class="form-control" id="inputCity" placeholder="Digite a cidade do animal !" .cdAnimal">
-        </div> -->
-        <div class="form-group col-md-6">
-          <label for="inputCity">Qual é o estado: </label><br />
-          <!-- <input
-            type="text"
-            class="form-control"
-            id="inputCity"
-            placeholder="Digite a UF: "
-          /> -->
-          <!-- <select name="select">
-
-              <option value="uf1">AC</option> <option value="uf2" selected>AL</option>
-
-              <option value="uf3">AP </option>  <option value="uf4">AM </option>
-
-              <option value="uf5" selected> BA</option> <option value="uf6">CE</option>
-
-              <option value="uf7">DF</option> <option value="uf8" selected>ES</option>
-
-              <option value="uf9">GO</option>  <option value="uf10">MA</option>
-
-              <option value="uf11" selected> MT</option> <option value="uf12">MS</option>
-
-              <option value="uf13">MG</option> <option value="uf14" selected>PA</option>
-
-              <option value="u15">PB</option>  <option value="u16">PR</option>
-
-              <option value="u17" selected> PE</option> <option value="u18">PI</option>
-
-              <option value="uf19">RJ</option> <option value="uf20" selected>RN</option>
-
-              <option value="uf21">RS</option>  <option value="uf22">RO</option>
-
-              <option value="uf23" selected> RR</option> <option value="uf24">SC</option>
-
-              <option value="uf25">SE</option> <option value="uf26" selected>SP</option>
-
-              <option value="u27">TO</option>
-          </select> -->
-        </div>
         <div class="form-group col-md-6">
           <label for="inputCity"> E a Cidade:</label>
           <div class="ui fluid icon input">
-            <input type="text" placeholder="Pesquisa em um campo amplo" />
-            <!-- <i class="search icon"></i> -->
+            <input type="text" placeholder="INSIRA SUA CIDADE" />
           </div>
         </div>
-      </div>
-
-      <div class="form-row mb-2">
         <div class="form-group col-md-6">
           <label for="inputCity">Idade:</label>
-          <input
-            type="number"
-            class="form-control"
-            id="inputCity"
-            placeholder="Digite a idade do animal !"
-          />
+          <input type="number" class="form-control" placeholder="Digite a idade do animal !" [(ngModel)]="pets.age" />
         </div>
-        <!-- <div class="form-group col-md-6">
-          <label for="inputCity">Categoria </label>
-          <input type="number" class="form-control" id="inputCity" placeholder="Digite a categoria do animal !" .IdCategoria">
-        </div> -->
       </div>
-
       <div class="form-row mb-2">
         <div class="form-group col-md-6">
           <label for="inputituacao">Situacao:</label><br />
           <div class="field">
-            <div class="ui compact selection dropdown">
-              <i class="dropdown icon"></i>
-              <div class="text">Compacto</div>
-              <div class="menu">
-                <div class="item">A</div>
-                <div class="item">B</div>
-                <div class="item">C</div>
-              </div>
-            </div>
-
+          <select class="form-control" id="situacao" name="situacao" [(ngModel)]="pets.situacao">
+              <option value="NÃO ADOTADO">NÃO ADOTADO</option>
+              <option value="ADOTADO">ADOTADO</option>
+          </select>
             <div class="ui pointing red basic label">
               obs:recomendamos que venha declarar a situação caso o animal seja
               adotado, e nos informe o @ da pessoa que o adotou
@@ -280,41 +122,19 @@
           </div>
         </div>
         <div class="form-group col-md-6">
-          <label for="inputPessoa">@ Da pessoa que adotou:</label>
-          <br />
-          <input
-            type="text"
-            class="form-control"
-            id="inputPessoa"
-            placeholder="@Joao!"
-          />
-        </div>
-      </div>
-
-      <div class="form-row mb-2">
-        <div class="form-group col-md-6">
           <label for="inputCity">Sexo:</label>
-          <input
-            type="number"
-            class="form-control"
-            id="inputCity"
-            placeholder="Digite a sexo do animal !"
-          />
+          <select class="form-control" id="situacao" name="situacao" [(ngModel)]="pets.sexo">
+            <option value="MACHO">MACHO</option>
+            <option value="FEMEA">FEMEA</option>
+        </select>
         </div>
       </div>
-
       <div class="form-floating mb-4">
         <label for="floatingTextarea2">Descrição:</label>
-        <textarea
-          class="form-control"
-          placeholder="Digita sobre o pet"
-          id="floatingTextarea2"
-          style="height: 100px"
-        ></textarea>
+        <input type="text" class="form-control" name="textarea" id="textarea" style="height:150px ;" [(ngModel)]="pets.descricao"/>
       </div>
-
       <div class="large ui buttons">
-        <button class="btn cadastro">Cadastrar</button>
+        <button type="submit" class="btn cadastro" (click)="cadastro()">Cadastrar</button>
         <button class="btn cancelar">Cancelar</button>
       </div>
     </form>
