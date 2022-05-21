@@ -1,3 +1,4 @@
+<!-- <div class="container"></div>
 <div class="card-deck">
   <div class="card" *ngFor="let pet of Pets">
     <div class="card-header d-flex align-items-center">
@@ -7,14 +8,66 @@
       />
       <p class="my-2 p-2">User</p>
     </div>
-    <img [src]="foto" alt="Card image cap" />
+    <img [src]="imagem" alt="Card image cap" height="190px"/>
     <div class="card-body p-1">
       <div class="d-flex justify-content-between align-items-center">
-        <i class="fa fa-heart p-3" [routerLink]="['/favoritos']"></i>
+        <button class="ui icon button" style="background-color:white ;" [routerLink]="['/favoritos']">
+          <i class="heart icon"></i>
+        </button>
         <h2 class="mt-3">{{ pet.name }}</h2>
         <i class="fa fa-send p-3" [routerLink]="['/notificacoes']"></i>
       </div>
     </div>
   </div>
 </div>
+ -->
+
+<!-- <div class="container">
+  <div class="row" >
+      <div class="ui card" *ngFor="let pet of Pets" style="margin-left: 3%; margin-top:2% ; margin-bottom: 2%;" >
+        <div class="content" >
+          <div class="right floated meta">{{pet.createdAt | date : 'short' : '' : 'pt-BR'}}</div>
+          <img class="ui avatar image" src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg"> {{pet.name}}
+        </div>
+        <div class="image" >
+        <img [src]="imagem" alt="Card image cap"  alt="">
+        </div>
+        <div class="extra content">
+          <div class="ui large transparent left icon input">
+            <i class="heart outline icon"></i>
+          </div>
+        </div>
+      </div>
+  </div>
+</div> -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="ui special cards" id="cardin"  *ngFor="let pet of Pets" style="margin-left: 3%; margin-top:2% ; margin-bottom: 2%;" >
+      <div class="card" style="width: 31rem;" (click)="exibeinfo(pet)">
+        <div class="blurring dimmable image">
+          <img [src]="imagem" alt="Card image cap"  alt="">
+        </div>
+        <div class="content">
+          <span class="header">{{pet.name | uppercase}}</span>
+          <div class="meta">
+            <span class="date">{{pet.createdAt | date : 'short' : '' : 'pt-BR'}} <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="content">
+            <img class="ui avatar image" id="avatar" src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg">
+            <!-- dar um jeito de chamar o nome do usuariio {{}} -->
+          </div>
+        </div>
+      </div>
+
+
+
+  </div>
+
+
+</div>
+
 
