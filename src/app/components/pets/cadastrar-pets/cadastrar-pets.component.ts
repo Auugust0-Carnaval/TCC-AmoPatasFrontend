@@ -44,7 +44,7 @@ export class CadastrarPetsComponent implements OnInit {
       imageUrl : '/assets/img/funfo.jpg',
       imageWidth: 400,
       imageHeight: 340,
-      title: `${this.pets.name} cadastrado com sucesso (づ￣ 3￣)づ`,
+      title: `${this.pets.name} <strong>BEM VINDO AO<SPAN class ="text-danger">AMOPATAS</SPAN></strong> `,
       showConfirmButton: false,
       timer: 4500
     })
