@@ -5,8 +5,26 @@
   width: 32rem;
 }
 
+/* #cardin {
+  position:relative;top:0;padding:4px;
+}
+
+#cardin :hover {
+  top:-1px;
+
+} */
 i{
   cursor: pointer;
+}
+
+#avatar{
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+#avatar :hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 
