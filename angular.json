@@ -34,6 +34,7 @@
               "node_modules/font-awesome/css/font-awesome.min.css",
               "node_modules/semantic-ui-css/semantic.min.css",
               "node_modules/uikit/dist/css/uikit.min.css",
+              "node_modules/bootstrap-select/dist/css/bootstrap-select.min.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -41,7 +42,8 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/uikit/dist/js/uikit.min.js",
               "node_modules/uikit/dist/js/uikit-icons.min.js",
-              "node_modules/animate.css/animate.min.css"
+              "node_modules/animate.css/animate.min.css",
+              "node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"
             ]
           },
           "configurations": {
