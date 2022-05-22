@@ -16,7 +16,7 @@ export class CadastrarPetsComponent implements OnInit {
     name: '',
     age : 0,
     breed : "", // raca
-    // imagem : '',
+    imagem : '',
     descricao : '',
     uf : '',
     sexo : '',
@@ -31,26 +31,18 @@ export class CadastrarPetsComponent implements OnInit {
 
   cadastro(){
     this.PetService.cadastrar(this.pets).subscribe(retorno =>{
-      this.pets = retorno;
-    });
-    this.ToastSucess();
-    console.log(this.pets); // TESTE NO CONSOLE DAS INFO
+    this.pets = retorno;
+    }),
+
+
+    // this.ToastSucess();
+    console.log(this.pets);
     // frm.reset();
   }
 
-  ToastSucess(){
-    Swal.fire({
-      position: 'top-end',
-      imageUrl : '/assets/img/funfo.jpg',
-      imageWidth: 400,
-      imageHeight: 340,
-      title: `${this.pets.name} <strong>BEM VINDO AO<SPAN class ="text-danger">AMOPATAS</SPAN></strong> `,
-      showConfirmButton: false,
-      timer: 4500
-    })
-  }
 
-  //METODO DE INSERIR IMAGEM
+
+  //METODO DE INSERIR IMAGEMa
   inputFileChange(event:any)
   {
     if(event.target.files && event.target.files[0] )
@@ -60,9 +52,13 @@ export class CadastrarPetsComponent implements OnInit {
       const formData = new FormData();
       formData.append('foto', foto);
 
-      this.http.post('http://locahost:3333/xyz', formData)
+      this.http.post('http://localhost:3333/users/1/pets', formData)
       .subscribe(resposta => console.log('upload ok'));
     }
+
+
   }
+
+
 }
 
