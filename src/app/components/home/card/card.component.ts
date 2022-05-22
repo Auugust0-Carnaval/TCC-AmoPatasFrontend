@@ -24,6 +24,7 @@ export class CardComponent implements OnInit {
     this.petService.buscarTodos().subscribe(retorno =>
       this.Pets = retorno
     );
+
     console.log(this.Pets)
   }
 
@@ -44,5 +45,7 @@ export class CardComponent implements OnInit {
     showConfirmButton: false
     })
   }
+
+
 }
 
