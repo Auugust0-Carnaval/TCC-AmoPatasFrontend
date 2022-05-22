@@ -10,14 +10,4 @@ export interface Pet{
   porte: string;
   situacao: string;
   createdAt? : string;
-
-
-
-//   IdCategoria: number;
-//   IdSituacao: number; // isso int = number /isso mesmo akakka vedda
-//   IdSexo : number;
-//   IdDoador: number;
-//   IdTutor: number;//<3 protin ta certin testar ela hihhih ve se funfa 8 ta certin
-
-
 }
