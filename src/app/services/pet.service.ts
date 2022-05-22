@@ -20,24 +20,23 @@ export class PetService {
       catchError(erro => this.exibeErro(erro))
     );
   }
-  /*buscarPorId(id: number) : Observable<Pet> {
-    //Retornar e listar com Get.
-    return this.http.get<Pet>(`${this.URL}/${id}`).pipe(
-      map(retorno => retorno),
-      catchError(erro => this.exibirErro(erro))
-    );
-  }*/
-
   cadastrar(pet: Pet) : Observable<Pet> {
+
     return this.http.post<Pet>(this.URLCADASTRO, pet).pipe(
-      map(retorno => retorno),
-      catchError(erro => this.exibeErro(erro))
+      map(retorno => this.ToastSucess(pet.name)),
+      catchError(erro => this.cadastroErro(pet.name))
     );
   }
 
   exibeErro(e: any): Observable<any>
   {
     this.mensagemErro();
+    return EMPTY;
+  }
+
+  exibeErroCadastro(e: any): Observable<any>
+  {
+    this.cadastroErro(e);
     return EMPTY;
   }
 
@@ -52,7 +51,29 @@ export class PetService {
     })
   }
 
-  //copia tudo? sim sim pode
+  cadastroErro(name: any) :Observable<any>{
+    Swal.fire({
+      position: 'top-end',
+      imageUrl : 'assets/img/notfound.jpg',
+      imageWidth: 300,
+      imageHeight: 240,
+      title:`<span class="text-success"><strong class="text-danger">ERRO AO CADASTRAR</strong> ${name.toUpperCase()}</span>`,
+      showConfirmButton: false,
+      timer: 3000
+    });
+    return EMPTY;
+  }
 
-
+  ToastSucess(pets : any) :Observable<any>{
+    Swal.fire({
+      position: 'top-end',
+      imageUrl : '/assets/img/funfo.jpg',
+      imageWidth: 400,
+      imageHeight: 340,
+      title: `${pets.toUpperCase()} <strong>BEM VINDO AO <SPAN class ="text-danger">AMOPATAS</SPAN></strong> `,
+      showConfirmButton: false,
+      timer: 4500
+    })
+    return EMPTY;
+  }
 }
