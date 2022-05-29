@@ -1,3 +1,4 @@
+import { AuthService } from './auth.service';
 import { UserService } from './../../services/user.service';
 import { HttpClient } from '@angular/common/http';
 import { User } from './../../models/User.model';
@@ -7,6 +8,7 @@ import { HttpInterceptor } from '@angular/common/http';
 
 import * as $ from "jquery";
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,22 +19,25 @@ export class LoginComponent implements OnInit {
 
 
 
-  login : User = {
-    email : '',
-    senha : ''
-  }
+ public user : User = {
+  email : '',
+  senha : ''
+}
 
-  constructor(private http : HttpClient, private userService: UserService) { }
+//  private user : User = {
+//    email
+//  }
+
+  constructor(private authService : AuthService) { }
 
   ngOnInit(): void {
   }
 
   LoginUser(){
-    this.userService.loginUsuario(this.login).subscribe(retorno =>{
-      this.login = retorno;
-    });
-    console.log(this.login);
+    this.authService.fazerLogin(this.user);
+    }
+
   }
 
 
-}
+
