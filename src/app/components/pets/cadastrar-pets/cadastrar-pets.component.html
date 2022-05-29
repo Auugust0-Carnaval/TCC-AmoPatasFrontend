@@ -53,7 +53,7 @@
     </h2>
 
     <!-- TODO INICIO DO FORMULARIO -->
-    <form class="p-3" id="form" >
+    <form class="p-3" id="form" enctype="multipart/form-data" method="post">
       <div class="form-row mb-2">
         <div class="form-group col-md-12">
           <label for="inputFoto">Foto do pet:</label>
@@ -65,7 +65,7 @@
               </span>
             </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="inputGroupFile01" [(ngModel)]="pets.imagem" [(ngModel)]="pets.imagem"/>
+              <input type="file" class="custom-file-input" id="inputGroupFile01" (change)="selectedImage($event)"  />
               <label class="custom-file-label" id="customFileLabel" for="inputGroupFile01"></label>
             </div>
           </div>
