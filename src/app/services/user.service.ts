@@ -15,7 +15,7 @@ export class UserService {
 
 
 
-  private URL: string = "http://localhost:3333/users"
+  private URL: string = "http://localhost:3333/user/"
 
   private URLLOGIN : string = "http://localhost:3333/login"
 
@@ -28,6 +28,20 @@ export class UserService {
     );
   }
 
+  buscarTodos() : Observable<User[]> {
+    //Retornar e listar com Get.
+    return this.http.get<User[]>(this.URL).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibeErro(erro))
+    );
+  }
+
+
+  buscardId(id: any) : Observable<User[]> {
+    return this.http.get<User[]>(`${this.URL+id}`).pipe(
+      map(retorno => retorno),
+    );
+  }
 
   loginUsuario(user: User) : Observable<User> {
     return this.http.post<User>(this.URLLOGIN, user).pipe(
