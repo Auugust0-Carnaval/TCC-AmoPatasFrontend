@@ -16,19 +16,19 @@
         <img src="/assets/img/logo.png"  class="img-fluid" id="logo">
         <!-- input Email -->
         <div class="txt_field">
-          <input type="email" class="form-control" name="senha" id="Email" placeholder="E-mail"  [(ngModel)]="login.email"/>
+          <input type="email" class="form-control" name="senha" id="Email" placeholder="E-mail"  [(ngModel)]="user.email"/>
         </div>
         <!-- Input de Senha -->
         <div class="txt_field">
-          <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha:"  [(ngModel)]="login.senha"/>
+          <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha:"  [(ngModel)]="user.senha"/>
         </div>
 
         <div class="pass">
           <a href="#"> Esqueceu a senha ? </a>
         </div>
-        <!-- <a [routerLink]="['/home']"> -->
+        <a [routerLink]="['/home']">
           <input type="submit" value="Login" id="submit" class="btnlogin" (click)="LoginUser()"><br><br>
-        <!-- </a> -->
+        </a>
 
         <!--  dev -->
 
@@ -43,7 +43,7 @@
             </div>
 
             <div class="social-field google" id="google">
-              <a href="#">
+              <a [routerLink]="['/home']">
                 <i class="fa fa-google"></i>
                 Fazer Login com o Google
               </a>
