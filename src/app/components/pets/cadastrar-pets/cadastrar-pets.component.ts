@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
 import { Pet } from './../../../models/Pet.model';
 import { PetService } from './../../../services/pet.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule, FormGroup, FormControl } from '@angular/forms';
 
@@ -11,12 +11,15 @@ import { FormsModule, FormGroup, FormControl } from '@angular/forms';
   templateUrl: './cadastrar-pets.component.html',
   styleUrls: ['./cadastrar-pets.component.css']
 })
+
+
+@Input()
 export class CadastrarPetsComponent implements OnInit {
-  pets : Pet ={
+  pets : any ={
     name: '',
     age : 0,
     breed : "", // raca
-    imagem : '',
+    imagem : File,//meu deus :9
     descricao : '',
     uf : '',
     sexo : '',
@@ -24,20 +27,33 @@ export class CadastrarPetsComponent implements OnInit {
     situacao : ''
   }
 
+ private imagens : any
+
   constructor(private PetService: PetService, private http: HttpClient) { }
   ngOnInit(): void {
 
   }
 
   cadastro(){
+    const formData = new FormData();
+    formData.append('imagem', this.pets.imagem[0]);
     this.PetService.cadastrar(this.pets).subscribe(retorno =>{
     this.pets = retorno;
     }),
-
-
-    // this.ToastSucess();
     console.log(this.pets);
-    // frm.reset();
+  }
+
+  selectedImage(event : any){
+    if(event.target.files.length > 0){
+      const file = event.target.files[0];
+      this.pets.imagem = file;
+    }
+    console.log(this.pets.imagem);
+  }
+
+
+  fileUpload(event : any){
+    this.pets.imagem = event.target.files[0];
   }
 
 
@@ -49,16 +65,22 @@ export class CadastrarPetsComponent implements OnInit {
     {
       const foto = event.target.files[0];
 
+      this.pets.imagem = foto;
       const formData = new FormData();
       formData.append('foto', foto);
-
-      this.http.post('http://localhost:3333/users/1/pets', formData)
-      .subscribe(resposta => console.log('upload ok'));
     }
-
-
   }
 
 
+
+  enviarfoto(){
+    const formData = new FormData();
+
+    this.imagens = this.pets.imagem;
+    formData.append('imagem', this.imagens);
+    this.pets.imagem = this.imagens;
+
+    console.log(this.imagens);
+  }
 }
 
