@@ -48,7 +48,7 @@
           <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha:"  [(ngModel)]="user.senha"/>
         </div>
         <div class="txt_field">
-          <input type="password"  class="form-control" id="confirmPassword" placeholder="Confirmar Senha: "/>
+          <input type="password"  class="form-control" name="senha" id="confirmPassword" placeholder="Confirmar Senha: " [(ngModel)]="senhaConf"/>
         </div>
         <!-- <a [routerLink]="['/home']"> -->
         <button type="submit" id="submit" class="button" style="width: 230px; height: 40px; margin-top: 5%;"(click)="criar()">
