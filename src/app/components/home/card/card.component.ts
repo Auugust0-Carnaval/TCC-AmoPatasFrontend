@@ -1,3 +1,5 @@
+import { User } from './../../../models/User.model';
+import { UserService } from './../../../services/user.service';
 import { UpperCasePipe } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Pet } from 'src/app/models/Pet.model';
@@ -15,17 +17,30 @@ export class CardComponent implements OnInit {
 
   Pets : Pet[] = []
 
-  constructor(private petService : PetService) { }
+  Usuario : User[] = []
+
+
+  constructor(private petService : PetService, private user : UserService) { }
 
   ngOnInit(): void {
     this.BuscarPets(); // Ao iniciar a aplicação (COMPONENT) vai acionar o metodo de busca
+    this.buscarUserId();
+    console.log(this.Usuario);
   }
+
   BuscarPets() : void{
     this.petService.buscarTodos().subscribe(retorno =>
       this.Pets = retorno
     );
 
     console.log(this.Pets)
+  }
+
+   // AREA DE TESTE HEHE
+   buscarUserId(){
+    // const idUser = pets.user_id;
+    this.user.buscardId(1).subscribe(retorno =>
+      this.Usuario = retorno)
   }
 
   exibeinfo(pets : any){
@@ -45,6 +60,7 @@ export class CardComponent implements OnInit {
     showConfirmButton: false
     })
   }
+
 
 
 }
