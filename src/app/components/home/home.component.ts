@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.BuscarPets(); // Ao iniciar a aplicação (COMPONENT) vai acionar o metodo de busca
+    // this.teste();
   }
 
 
@@ -22,5 +23,13 @@ export class HomeComponent implements OnInit {
     this.petService.buscarTodos().subscribe(retorno =>
       this.Pets = retorno
     )
+  }
+
+
+
+  teste(){
+    for(var i = 2; i> 0; i++){
+      console.log('fodase');
+    }
   }
 }
