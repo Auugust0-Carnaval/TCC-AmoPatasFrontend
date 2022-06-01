@@ -8,4 +8,5 @@ export interface User{
   descricao?: string;
   data_nascimento?: Date;
   rede_social?: string;
+  token?: string;
 }
