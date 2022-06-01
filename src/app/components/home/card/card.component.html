@@ -1,8 +1,15 @@
 
+<script>
+  function mostrar(){
+    document.getElementById('teste').style.display = 'block';
+    console.log('fodase');
+  }
+</script>
+
 <div class="container">
   <div class="row">
-    <div class="ui special cards" id="cardin"  *ngFor="let pet of Pets" style="margin-left: 3%; margin-top:2% ; margin-bottom: 2%;" >
-      <div class="card" style="width: 31rem;" (click)="exibeinfo(pet)">
+    <div class="ui special cards" id="cardin"  *ngFor="let pet of Pets"  style="margin-left: 3%; margin-top:2% ; margin-bottom: 2%;" >
+      <div class="card" style="width: 31rem;" >
         <div class="blurring dimmable image">
           <img src="http://localhost:3333/files/{{pet.imagem}}" alt="Card image cap"  alt="">
         </div>
@@ -13,10 +20,16 @@
           </div>
         </div>
         <div class="extra content">
-          <div class="content">
-            <img class="ui avatar image" id="avatar" src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg">
-            <!-- dar um jeito de chamar o nome do usuariio {{}} -->
+          <div class="content" >
+            <div class="row" style="padding: 1%;">
+              <img class="ui avatar image" id="avatar" src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg">
+              <i class="fa fa-plus-square-o fa-2x" style="margin-left:88% ;" aria-hidden="true" onclick="mostrar()"></i>
+            </div>
           </div>
+        </div>
+
+        <div id="teste" class="hidden">
+          pq o tcc só eu estou fazendo essa porra do caralho ?
         </div>
       </div>
   </div>
