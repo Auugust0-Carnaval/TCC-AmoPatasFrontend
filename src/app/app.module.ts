@@ -1,3 +1,5 @@
+import { AuthGuard } from './account/shared/auth.guard';
+import { AuthService } from './components/login/auth.service';
 import { materialize } from 'rxjs';
 import { UserService } from './services/user.service';
 import { NgModule } from '@angular/core';
@@ -76,7 +78,9 @@ import { EditarPerfilComponent } from './components/pessoa/editar-perfil/editar-
     // MatInputHarness
 
   ],
-  providers: [UserService ],
+  providers: [UserService, AuthService, AuthGuard],
+
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

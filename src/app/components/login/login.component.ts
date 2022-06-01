@@ -24,20 +24,24 @@ export class LoginComponent implements OnInit {
   senha : ''
 }
 
-//  private user : User = {
-//    email
-//  }
+ public token : any;
 
-  constructor(private authService : AuthService) { }
+  constructor(private authService : AuthService, private userService : UserService) { }
 
   ngOnInit(): void {
   }
 
   LoginUser(){
-    this.authService.fazerLogin(this.user);
-    }
+    this.userService.loginUsuario(this.user).subscribe(retorno =>{
+      this.token = retorno;
+    })
 
+    // console.log(this.user);
+    this.authService.fazerLogin(this.token);
   }
 
 
+
+
+}
 
