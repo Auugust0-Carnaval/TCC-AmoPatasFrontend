@@ -9,7 +9,7 @@
 <div class="container">
   <div class="row">
     <div class="ui special cards" id="cardin"  *ngFor="let pet of Pets"  style="margin-left: 3%; margin-top:2% ; margin-bottom: 2%;" >
-      <div class="card" style="width: 31rem;" >
+      <div class="card" style="width: 31rem;" (click)="exibeinfo(pet)" >
         <div class="blurring dimmable image">
           <img src="http://localhost:3333/files/{{pet.imagem}}" alt="Card image cap"  alt="">
         </div>
@@ -29,7 +29,8 @@
         </div>
 
         <div id="teste" class="hidden">
-          pq o tcc só eu estou fazendo essa porra do caralho ?
+          <span>SOMENTE UM TESTEZIN :)</span>
+
         </div>
       </div>
   </div>
