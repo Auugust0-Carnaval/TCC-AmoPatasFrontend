@@ -35,6 +35,7 @@
               "node_modules/semantic-ui-css/semantic.min.css",
               "node_modules/uikit/dist/css/uikit.min.css",
               "node_modules/bootstrap-select/dist/css/bootstrap-select.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "src/styles.css"
             ],
             "scripts": [
