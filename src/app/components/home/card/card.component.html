@@ -17,7 +17,10 @@
           <div class="content" >
             <div class="row" id="row" style="padding: 1%;">
               <img class="ui avatar image" id="avatar" src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg">
-              <i class="info circle icon" style="margin-left:88% ;" aria-hidden="true" (click)="collapse.toggle()"></i><br><br>
+
+
+              <i class="bi bi-bookmark-plus" id="plus" style="margin-left:88% ; margin-top: 1px;" aria-hidden="true" (click)="collapse.toggle()"></i><br><br>
+
               <div #collapse="ngbCollapse" [(ngbCollapse)]="gfg"><br>
                 <div class="card" style="width:490px ;">
                   <div class="card-body ui segment" id="pop">
