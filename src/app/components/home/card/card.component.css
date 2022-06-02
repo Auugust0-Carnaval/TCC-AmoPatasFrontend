@@ -28,7 +28,25 @@ i{
 }
 
 .hidden{
-  display: none;
+  display: block;
 }
 
+.hidden:hover{
+  display: none;
+
+}
+
+a{
+  text-decoration: none;
+  cursor: auto;
+}
+
+#pop{
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#pop :hover{
+  transform: translateY(-6px);
+  transition: all 0.3s ease-in-out 0s;
+}
 
