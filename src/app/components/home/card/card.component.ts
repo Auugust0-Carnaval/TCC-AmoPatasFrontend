@@ -19,6 +19,8 @@ export class CardComponent implements OnInit {
 
   Usuario : User[] = []
 
+  public gfg = true;
+
 
   constructor(private petService : PetService, private user : UserService) { }
 
@@ -60,6 +62,11 @@ export class CardComponent implements OnInit {
     showConfirmButton: false
     })
   }
+
+
+
+
+
 
 
 
