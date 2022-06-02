@@ -41,12 +41,27 @@ a{
   cursor: auto;
 }
 
-#pop{
-  transition: all 0.3s ease-in-out 0s;
+#plus{
+  font-size: 27px;
+  color: blue;
+  transition: all 0.7s ease-in-out 0s;
+
 }
 
-#pop :hover{
-  transform: translateY(-6px);
-  transition: all 0.3s ease-in-out 0s;
+#plus:hover{
+  transform: translateY(-4px);
+
+  color: orange;
+  transition: all 0.7s ease-in-out 0s;
+
+}
+
+#hidden{
+  display: none;
+}
+
+#row div:hover{
+  display: block;
+
 }
 
