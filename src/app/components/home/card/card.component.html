@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div class="ui special cards" id="cardin"  *ngFor="let pet of Pets"  style="margin-left: 3%; margin-top:2% ; margin-bottom: 2%;" >
-      <div class="card" style="width: 31rem;" >
+      <div class="card" style="width: 30rem;" >
         <div class="blurring dimmable image">
           <img src="http://localhost:3333/files/{{pet.imagem}}" alt="Card image cap"  alt="">
         </div>
@@ -15,26 +15,31 @@
         </div>
         <div class="extra content">
           <div class="content" >
-            <div class="row" id="row" style="padding: 1%;">
-              <img class="ui avatar image" id="avatar" src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg">
-
-
-              <i class="bi bi-bookmark-plus" id="plus" style="margin-left:88% ; margin-top: 1px;" aria-hidden="true" (click)="collapse.toggle()"></i><br><br>
-
-              <div #collapse="ngbCollapse" [(ngbCollapse)]="gfg"><br>
-                <div class="card" style="width:490px ;">
-                  <div class="card-body ui segment" id="pop">
-                    <a class="ui green ribbon label"><h4 class="text-white"><strong>{{pet.breed | uppercase}}</strong></h4></a><br>
-                    <a class="ui pink right ribbon label"><h4 class="text-white"><strong>{{pet.uf | uppercase}}</strong></h4></a><br><br>
-                    <a class="ui blue ribbon label"><h4 class = "text-white"><strong>IDADE: {{pet.age}}</strong></h4></a><br>
-                    <a class="ui teal right ribbon label"><h4 class="text-white"><strong>{{pet.sexo | uppercase}}</strong></h4></a><br><br>
-                    <a class="ui red ribbon label"><h4 class="text-white"><strong>{{pet.descricao | uppercase}}</strong></h4></a><br>
-                    <a class="ui yellow right ribbon label"><h4 class="text-white"><strong>{{pet.porte | uppercase}}</strong></h4></a><br><br>
-                    <a class="ui orange ribbon label"><h4 class="text-white"><strong>{{pet.situacao | uppercase}}</strong></h4></a>
-                  </div>
-                </div>
-             </div>
+            <div class="ui grid" id="row" style="padding: 2%; margin-top: 2%;">
+              <div class="col-6" >
+                <img class="ui avatar image" id="avatar" src="https://png.pngtree.com/png-vector/20190710/ourlarge/pngtree-user-vector-avatar-png-image_1541962.jpg">
+              </div>
+              <div class="col-6" id="teste">
+                <i class="bi bi-bookmark-plus" id="plus" style="margin-left:88% ; margin-top: 1px;" aria-hidden="true" (click)="collapse.toggle()">
+                  <h4 class="ui pointing orange basic label text-orange" id="hidden" style="width:100px ; margin-left:142px ;">
+                    VER MAIS
+                  </h4>
+                </i>
+              </div>
             </div>
+            <div #collapse="ngbCollapse" [(ngbCollapse)]="gfg"><br>
+              <div class="card" style="width:478px ;">
+                <div class="card-body ui segment" id="pop">
+                  <a class="ui green ribbon label"><h4 class="text-white"><strong>{{pet.breed | uppercase}}</strong></h4></a><br>
+                  <a class="ui pink right ribbon label"><h4 class="text-white"><strong>{{pet.uf | uppercase}}</strong></h4></a><br><br>
+                  <a class="ui blue ribbon label"><h4 class = "text-white"><strong>IDADE: {{pet.age}}</strong></h4></a><br>
+                  <a class="ui teal right ribbon label"><h4 class="text-white"><strong>{{pet.sexo | uppercase}}</strong></h4></a><br><br>
+                  <a class="ui red ribbon label"><h4 class="text-white"><strong>{{pet.descricao | uppercase}}</strong></h4></a><br>
+                  <a class="ui yellow right ribbon label"><h4 class="text-white"><strong>{{pet.porte | uppercase}}</strong></h4></a><br><br>
+                  <a class="ui orange ribbon label"><h4 class="text-white"><strong>{{pet.situacao | uppercase}}</strong></h4></a>
+                </div>
+              </div>
+           </div>
           </div>
         </div>
       </div>
