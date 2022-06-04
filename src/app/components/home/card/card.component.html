@@ -28,7 +28,7 @@
               </div>
             </div>
             <div #collapse="ngbCollapse" [(ngbCollapse)]="gfg"><br>
-              <div class="card" style="width:478px ;">
+              <div class="card" style="width:460px ;">
                 <div class="card-body ui segment" id="pop">
                   <a class="ui green ribbon label"><h4 class="text-white"><strong>{{pet.breed | uppercase}}</strong></h4></a><br>
                   <a class="ui pink right ribbon label"><h4 class="text-white"><strong>{{pet.uf | uppercase}}</strong></h4></a><br><br>
@@ -38,7 +38,11 @@
                   <a class="ui yellow right ribbon label"><h4 class="text-white"><strong>{{pet.porte | uppercase}}</strong></h4></a><br><br>
                   <a class="ui orange ribbon label"><h4 class="text-white"><strong>{{pet.situacao | uppercase}}</strong></h4></a>
                 </div>
+              </div><br><br>
+              <div class="ui two column centered grid">
+                <button class="ui inverted orange button" id="adotar" style="margin-bottom:3% ;">ADOTAR</button>
               </div>
+
            </div>
           </div>
         </div>
@@ -47,7 +51,3 @@
 
   </div>
 </div>
-
-
-
-
