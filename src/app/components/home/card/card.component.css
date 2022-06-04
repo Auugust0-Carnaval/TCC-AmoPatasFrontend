@@ -57,11 +57,13 @@ a{
 }
 
 #hidden{
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
-#row div:hover{
-  display: block;
-
+#teste i:hover h4{
+  visibility: visible;
+  opacity: 1;
 }
 
