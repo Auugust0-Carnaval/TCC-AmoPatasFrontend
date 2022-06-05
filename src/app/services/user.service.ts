@@ -17,6 +17,9 @@ export class UserService {
 
   private URL: string = "http://localhost:3333/users"
 
+  private URLEMAIL: string = "http://localhost:3333/busca"
+
+
   private URLLOGIN : string = "http://localhost:3333/login"
 
   constructor(private http: HttpClient) { }
@@ -66,6 +69,36 @@ export class UserService {
     return EMPTY
 
   }
+
+  BuscaPorEmail(user: any) : Observable<User[]>{
+    return this.http.get<User[]>(`${this.URLEMAIL}/${user}`).pipe(
+      map(retorno => retorno),
+    );
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //TOASTS = MENSAGENS DE SUCESSO OU ERRO
 
   exibeErro(e: any): Observable<any>
   {
