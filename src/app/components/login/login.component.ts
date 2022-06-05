@@ -26,18 +26,33 @@ export class LoginComponent implements OnInit {
 
  public token : any;
 
+ public usuario: any;
+
   constructor(private authService : AuthService, private userService : UserService) { }
 
   ngOnInit(): void {
   }
 
   LoginUser(){
+
     this.userService.loginUsuario(this.user).subscribe(retorno =>{
       this.token = retorno;
     })
 
-    // console.log(this.user);
+    this.userService.BuscaPorEmail(this.user.email).subscribe(retorno =>{
+      this.usuario = retorno;
+    })
     this.authService.fazerLogin(this.token);
+
+
+
+    Swal.fire({
+      title: `<img class="ui small centered circular image" src="http://localhost:3333/files/${this.usuario.imagem}">
+              <span class = "uk-text-bolder text-primary">BEM VINDO AO AMOPATAS <span class= "uk-text-bolder uk-text-warning">${this.usuario.name.toUpperCase()}</span></span>`,
+      showConfirmButton: false,
+      timer : 5000
+
+    })
   }
 
 
