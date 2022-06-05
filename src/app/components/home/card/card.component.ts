@@ -44,31 +44,5 @@ export class CardComponent implements OnInit {
     this.user.buscardId(1).subscribe(retorno =>
       this.Usuario = retorno)
   }
-
-  exibeinfo(pets : any){
-    Swal.fire({
-    title: `<h1><strong class="text-muted">${pets.name.toUpperCase()} DE</strong> <strong class="text-danger">AMOPATAS</strong></h1>`,
-    html : `<div class ="container text-left" style="padding: 3%; border: solid; border-width:1px; border-color: blue; border-radius: 1%;">
-                <span><strong class = "text-primary">DESCRICAO :</strong> ${pets.descricao.toUpperCase()}</span><br>
-                <span><strong class = "text-danger">IDADE DO ${pets.name.toUpperCase()} : </strong>${pets.age}</span><br>
-                <span><strong class = "text-warning">RAÇA : </strong>${pets.breed.toUpperCase()}</span><br>
-                <span><strong class = "text-success">ESTADO QUE O ${pets.name.toUpperCase()} ESTÁ : </strong>${pets.uf.toUpperCase()}</span><br>
-                <span><strong class = "text-primary">SEXO : </strong>${pets.sexo.toUpperCase()}</span><br>
-                <span><strong class = "text-danger">PORTE : </strong>${pets.porte.toUpperCase()}</span><br>
-                <span><strong class = "text-success">SITUACÃO DE ADOÇAO : </strong>${pets.situacao.toUpperCase()}</span><br>
-            </div>`,
-    showCloseButton: false,
-    showCancelButton: false,
-    showConfirmButton: false
-    })
-  }
-
-
-
-
-
-
-
-
 }
 
