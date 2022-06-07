@@ -30,13 +30,26 @@
             <div #collapse="ngbCollapse" [(ngbCollapse)]="gfg"><br>
               <div class="card" style="width:460px ;">
                 <div class="card-body ui segment" id="pop">
-                  <a class="ui green ribbon label"><h4 class="text-white"><strong>{{pet.breed | uppercase}}</strong></h4></a><br>
+                  <!-- <a class="ui green ribbon label"><h4 class="text-white"><strong>{{pet.breed | uppercase}}</strong></h4></a><br>
                   <a class="ui pink right ribbon label"><h4 class="text-white"><strong>{{pet.uf | uppercase}}</strong></h4></a><br><br>
                   <a class="ui blue ribbon label"><h4 class = "text-white"><strong>IDADE: {{pet.age}}</strong></h4></a><br>
                   <a class="ui teal right ribbon label"><h4 class="text-white"><strong>{{pet.sexo | uppercase}}</strong></h4></a><br><br>
                   <a class="ui red ribbon label"><h4 class="text-white"><strong>{{pet.descricao | uppercase}}</strong></h4></a><br>
                   <a class="ui yellow right ribbon label"><h4 class="text-white"><strong>{{pet.porte | uppercase}}</strong></h4></a><br><br>
-                  <a class="ui orange ribbon label"><h4 class="text-white"><strong>{{pet.situacao | uppercase}}</strong></h4></a>
+                  <a class="ui orange ribbon label"><h4 class="text-white"><strong>{{pet.situacao | uppercase}}</strong></h4></a> -->
+
+                <strong>
+                  <h4> Tipo de Raça: {{pet.breed | uppercase}}</h4>
+                  <h4> Estado: {{pet.uf | uppercase}} </h4>
+                  <h4> Idade do pet: {{pet.age}}</h4>
+                  <h4> Sexo: {{pet.sexo | uppercase}}</h4>
+                  <h4> Porte: {{pet.porte | uppercase}}</h4>
+                  <h4> Descriçao: {{pet.descricao | uppercase}}</h4>
+                  <h4> Situação do animal:{{pet.situacao | uppercase}}</h4>
+                  <h4> @</h4>
+                  <h4></h4>
+                  <h4></h4>
+                </strong>
                 </div>
               </div><br><br>
               <div class="ui two column centered grid">
