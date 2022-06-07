@@ -45,6 +45,7 @@ import localePT from '@angular/common/locales/pt';
 registerLocaleData(localePT);
 
 import { EditarPerfilComponent } from './components/pessoa/editar-perfil/editar-perfil.component';
+import { EditarPetsComponent } from './components/pets/cadastrar-pets/editar-pets/editar-pets.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { EditarPerfilComponent } from './components/pessoa/editar-perfil/editar-
     CadastroPessoaComponent,
     SobreNosComponent,
     CardComponent,
-    EditarPerfilComponent
+    EditarPerfilComponent,
+    EditarPetsComponent
   ],
   imports: [
     BrowserModule,

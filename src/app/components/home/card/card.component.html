@@ -8,7 +8,13 @@
           <img src="http://localhost:3333/files/{{pet.imagem}}" alt="Card image cap"  alt="">
         </div>
         <div class="content">
+          <div class="row">
           <span class="header">{{pet.name | uppercase}}</span>
+          <a  [routerLink]="['/editar-pet']" routerLinkActive="router-link-active">
+          <i class="fa fa-pencil-square fa-1x" style="margin-left:2% ; color: orange;" aria-hidden="true"></i>
+          </a>
+
+          </div>
           <div class="meta">
             <span class="date">{{pet.createdAt | date : 'short' : '' : 'pt-BR'}} <i class="fa fa-clock-o" aria-hidden="true"></i></span>
           </div>
@@ -46,9 +52,7 @@
                   <h4> Porte: {{pet.porte | uppercase}}</h4>
                   <h4> Descriçao: {{pet.descricao | uppercase}}</h4>
                   <h4> Situação do animal:{{pet.situacao | uppercase}}</h4>
-                  <h4> @</h4>
-                  <h4></h4>
-                  <h4></h4>
+                  <h4> @</h4>x
                 </strong>
                 </div>
               </div><br><br>

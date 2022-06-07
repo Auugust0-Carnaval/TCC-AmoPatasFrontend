@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cadastro-pessoa.component';
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
 import { EditarPerfilComponent } from './components/pessoa/editar-perfil/editar-perfil.component';
+import { EditarPetsComponent } from './components/pets/cadastrar-pets/editar-pets/editar-pets.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'cadastro', component: CadastroPessoaComponent},
   { path: 'sobre', component: SobreNosComponent, canActivate: [AuthGuard]},
   { path: 'editar', component: EditarPerfilComponent, canActivate: [AuthGuard]},
-  {path : '**',component:LoginComponent} // DIGITAR UM ENDPOINT "QUALQUER" VOLTA PARA LOGIN
+  // {path : '**',component:LoginComponent},
+  {path: 'editar-pet', component: EditarPetsComponent, canActivate: [AuthGuard]} // DIGITAR UM ENDPOINT "QUALQUER" VOLTA PARA LOGIN
 ];
 
 @NgModule({
