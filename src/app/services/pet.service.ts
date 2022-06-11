@@ -20,8 +20,12 @@ export class PetService {
       catchError(erro => this.exibeErro(erro))
     );
   }
-  cadastrar(pet: any) : Observable<any> {
-    return this.http.post<any>(this.URLCADASTRO, pet).pipe(
+  cadastrar(pet: any, imagemPet: any) : Observable<any> {
+    const formData: FormData = new FormData()
+    formData.append('imagem', imagemPet, imagemPet.name);
+    formData.append('ComponentId', pet);
+
+    return this.http.post<any>(this.URLCADASTRO, formData, pet).pipe(
       map(retorno => this.ToastSucess(pet.name)),
       catchError(erro => this.cadastroErro(pet.name))
     );
