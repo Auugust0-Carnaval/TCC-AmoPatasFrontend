@@ -17,16 +17,18 @@ export class HeaderComponent implements OnInit {
   exit(){
     Swal.fire({
       title: '<strong>QUER SAIR?</u></strong>',
-      icon: 'info',
+      imageUrl : 'https://img.freepik.com/vetores-gratis/cao-bonito-shiba-inu-com-ilustracao-dos-desenhos-animados-do-traje-japones_138676-2786.jpg?t=st=1654744620~exp=1654745220~hmac=04e632b264340206170321a1588cc78be5e5d80df46ea03058f6bb2bfb5bb1c7&w=740',
+      imageWidth: 390,
+      imageHeight: 330,
       html:
-        'GOSTOU DA EXPERIÊNCIA COM <b>AMOPATAS?</b>, ',
+        'GOSTOU DA EXPERIÊNCIA COM <b class = "text-danger">AMOPATAS</b>? ',
       showCloseButton: true,
       showCancelButton: true,
       focusConfirm: true,
       confirmButtonText:
-        '<i class="fa fa-thumbs-up"></i> ADOREI! 〜(￣▽￣〜)',
+        '<i class="thumbs up outline icon"></i> ADOREI!',
       cancelButtonText:
-        '<i class="fa fa-thumbs-down" aria-hidden="true"></i> ODIEI!（︶^︶)'
+        '<i class="thumbs down outline icon" aria-hidden="true"></i> ODIEI!'
     }).then((result)=>{
       if(result.isConfirmed){
         Swal.fire({
