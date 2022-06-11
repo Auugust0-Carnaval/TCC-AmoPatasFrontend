@@ -7,15 +7,14 @@
         <div class="blurring dimmable image">
           <img src="http://localhost:3333/files/{{pet.imagem}}" alt="Card image cap"  alt="">
         </div>
-        <div class="content">
+        <div class="content" style="margin-left: 4%;">
           <div class="row">
-          <span class="header">{{pet.name | uppercase}}</span>
-          <a  [routerLink]="['/editar-pet']" routerLinkActive="router-link-active">
-          <i class="fa fa-pencil-square fa-1x" style="margin-left:2% ; color: orange;" aria-hidden="true"></i>
-          </a>
-
+            <h2 class="header" style="margin-right: 4%;">{{pet.name | uppercase}}</h2>
+            <a  [routerLink]="['/editar-pet']" routerLinkActive="router-link-active">
+              <i class="paint brush icon" id="edit" style="margin-left:2% ;" aria-hidden="true"></i>
+            </a>
           </div>
-          <div class="meta">
+          <div class="row" style="margin-right:56%;">
             <span class="date">{{pet.createdAt | date : 'short' : '' : 'pt-BR'}} <i class="fa fa-clock-o" aria-hidden="true"></i></span>
           </div>
         </div>
@@ -27,8 +26,9 @@
               </div>
               <div class="col-6" id="teste">
                 <i class="bi bi-bookmark-plus" id="plus" style="margin-left:88% ; margin-top: 1px;" aria-hidden="true" (click)="collapse.toggle()">
-                  <h4 class="ui pointing orange basic label text-orange" id="hidden" style="width:100px ; margin-left:142px ;">
-                    VER MAIS
+
+                  <h4 class="ui pointing orange basic label text-orange text-center" id="hidden" style="width:115px ; margin-left:142px ;">
+                    VER MAIS <i class="notched circle loading icon"></i>
                   </h4>
                 </i>
               </div>
@@ -36,15 +36,15 @@
             <div #collapse="ngbCollapse" [(ngbCollapse)]="gfg"><br>
               <div class="card" style="width:460px ;">
                 <div class="card-body ui segment" id="pop">
-                  <!-- <a class="ui green ribbon label"><h4 class="text-white"><strong>{{pet.breed | uppercase}}</strong></h4></a><br>
-                  <a class="ui pink right ribbon label"><h4 class="text-white"><strong>{{pet.uf | uppercase}}</strong></h4></a><br><br>
-                  <a class="ui blue ribbon label"><h4 class = "text-white"><strong>IDADE: {{pet.age}}</strong></h4></a><br>
-                  <a class="ui teal right ribbon label"><h4 class="text-white"><strong>{{pet.sexo | uppercase}}</strong></h4></a><br><br>
-                  <a class="ui red ribbon label"><h4 class="text-white"><strong>{{pet.descricao | uppercase}}</strong></h4></a><br>
-                  <a class="ui yellow right ribbon label"><h4 class="text-white"><strong>{{pet.porte | uppercase}}</strong></h4></a><br><br>
-                  <a class="ui orange ribbon label"><h4 class="text-white"><strong>{{pet.situacao | uppercase}}</strong></h4></a> -->
+                  <a class="ui blue basic label ribbon text-primary">{{pet.breed | uppercase}}</a><br>
+                  <a class="ui pink basic label right ribbon text-pink ">{{pet.uf | uppercase}}</a><br><br>
+                  <a class="ui green basic label ribbon text-success ">IDADE: {{pet.age}}</a><br>
+                  <a class="ui red basic label right ribbon text-red">{{pet.sexo | uppercase}}</a><br><br>
+                  <a class="ui purple basic label ribbon">{{pet.descricao | uppercase}}</a><br>
+                  <a class="ui yellow basic label right ribbon">{{pet.porte | uppercase}}</a><br><br>
+                  <a class="ui teal  basic label ribbon">{{pet.situacao | uppercase}}</a>
 
-                <strong>
+                <!-- <strong>
                   <h4> Tipo de Raça: {{pet.breed | uppercase}}</h4>
                   <h4> Estado: {{pet.uf | uppercase}} </h4>
                   <h4> Idade do pet: {{pet.age}}</h4>
@@ -53,12 +53,14 @@
                   <h4> Descriçao: {{pet.descricao | uppercase}}</h4>
                   <h4> Situação do animal:{{pet.situacao | uppercase}}</h4>
                   <h4> @</h4>x
-                </strong>
+                </strong> -->
                 </div>
               </div><br><br>
-              <div class="ui two column centered grid">
-                <button class="ui inverted orange button" id="adotar" style="margin-bottom:3% ;">ADOTAR</button>
+              <div class="row ui two column centered grid">
+                  <button class="ui inverted orange button" id="adotar" style="margin-bottom:3% ;">ADOTAR</button>
               </div>
+
+
 
            </div>
           </div>
