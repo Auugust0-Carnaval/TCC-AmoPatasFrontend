@@ -13,11 +13,11 @@ import Swal from 'sweetalert2';
 })
 export class CardComponent implements OnInit {
 
-  @Input() imagem: string = '';
 
   Pets : Pet[] = []
 
-  Usuario : User[] = []
+  usuario : User[] = []
+
 
   public gfg = true;
 
@@ -25,24 +25,21 @@ export class CardComponent implements OnInit {
   constructor(private petService : PetService, private user : UserService) { }
 
   ngOnInit(): void {
-    this.BuscarPets(); // Ao iniciar a aplicação (COMPONENT) vai acionar o metodo de busca
-    this.buscarUserId();
-    console.log(this.Usuario);
+    this.BuscarPets(1);
+    console.log(this.usuario);
   }
 
-  BuscarPets() : void{
+  BuscarPets(usuarioPet : any) : void{
     this.petService.buscarTodos().subscribe(retorno =>
       this.Pets = retorno
     );
 
-    console.log(this.Pets)
-  }
+    this.user.buscardId(usuarioPet).subscribe(retorno =>{
+      this.usuario = retorno;
+    })
 
-   // AREA DE TESTE HEHE
-   buscarUserId(){
-    // const idUser = pets.user_id;
-    this.user.buscardId(1).subscribe(retorno =>
-      this.Usuario = retorno)
+    console.log(this.usuario);
+    console.log(this.Pets)
   }
 }
 
