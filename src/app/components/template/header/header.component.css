@@ -9,14 +9,8 @@ i{
   padding: 10px;
   width: 50px;
   color: #16479d;
-
 }
-#btnSair{
-  color: black;
-  font-size: 25px;
-  /* width: 100px; */
 
-}
 nav{
   /* background-color: rgb(255, 212, 0); */
   background-color: white;
@@ -27,7 +21,6 @@ nav{
 
 }
 .nav-link{
-
   color: #16479d;
   font-size: 260px;
   margin-left: 90px;
@@ -64,10 +57,10 @@ nav{
 #btnSair:hover{
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  color: #483D8B;
 }
 
 #btnSair{
+  font-size: 25px;
   -webkit-transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
 }
@@ -81,14 +74,13 @@ nav{
 
 }
 
-
 #BarraDePesquisa{
   -webkit-transition: 0.5s ease-in;
   -moz-transition: 0.5s ease-in;
   -o-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
   cursor: pointer;
-
-
 }
+
+
 
