@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-
+<!--
 <div class="container my-5 p-5 text-center"  >
   <h2 class="display-3">
     <span  style="color: #16479d; font-size: 30px">
@@ -8,7 +8,6 @@
     </span>
   </h2>
   <form class="p-3" id="form">
-    <!--inserir imagem-->
     <div class="form-row mb-2">
       <div class="form-group col-md-12">
         <label for="Perfil" style="margin-right:91% ;"><strong class="text-primary">Foto Perfil: </strong></label><br/>
@@ -80,4 +79,45 @@
     </div>
   </form>
 </div>
+ -->
 
+
+ <div class="container">
+  <form class="ui form segment">
+    <div class="two fields">
+      <div class="field">
+        <label>Name</label>
+        <input placeholder="First Name" name="name" type="text">
+      </div>
+      <div class="field">
+        <label>Gender</label>
+        <div class="ui selection dropdown">
+          <input name="gender" type="hidden">
+          <div class="default text">Gender</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item" data-value="male">Male</div>
+            <div class="item" data-value="female">Female</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Username</label>
+      <input placeholder="Username" name="username" type="text">
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input name="password" type="password">
+    </div>
+    <div class="inline field">
+      <div class="ui checkbox">
+        <input name="terms" type="checkbox">
+        <label>I agree to the terms and conditions</label>
+      </div>
+    </div>
+    <div class="ui primary submit button">Submit</div>
+    <div class="ui reset button">Reset</div>
+    <div class="ui clear button">Clear</div>
+  </form>
+ </div>
