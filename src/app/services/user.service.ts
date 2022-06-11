@@ -17,6 +17,9 @@ export class UserService {
 
   private URL: string = "http://localhost:3333/users"
 
+  private URLID: string = "http://localhost:3333/user"
+
+
   private URLEMAIL: string = "http://localhost:3333/busca"
 
 
@@ -41,7 +44,7 @@ export class UserService {
 
 
   buscardId(id: any) : Observable<User[]> {
-    return this.http.get<User[]>(`${this.URL}/${id}`).pipe(
+    return this.http.get<User[]>(`${this.URLID}/${id}`).pipe(
       map(retorno => retorno),
     );
   }
