@@ -119,8 +119,10 @@ export class CadastroPessoaComponent implements OnInit {
   ToastSucess(){
     Swal.fire({
       position: 'top-end',
-      icon: 'success',
-      title: `${this.user.name} cadastrado com sucesso (づ￣ 3￣)づ`,
+      imageUrl:'https://img.freepik.com/vetores-gratis/desenho-fofo-amigo-de-cao-e-gato_138676-2432.jpg?t=st=1654920826~exp=1654921426~hmac=c266c5284988baf3bd6cca8ed6796af063e502cfd42371c00ae4f6baf3a68837&w=740',
+      imageWidth: 400,
+      imageHeight: 320,
+      title: `<strong><span class="uk-text-primary">${this.user.name?.toUpperCase()}</span></strong><strong><span class="uk-text-success"> CADASTRADO COM SUCESSO</span></strong> `,
       showConfirmButton: false,
       timer: 4500
     })
