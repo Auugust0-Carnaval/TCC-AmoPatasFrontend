@@ -3,7 +3,7 @@ export interface User{
   name?: string;
   email?: any;
   senha?: string;
-  // imagem: string;
+  imagem?: FileList;
   telefone?: string;
   descricao?: string;
   data_nascimento?: Date;
