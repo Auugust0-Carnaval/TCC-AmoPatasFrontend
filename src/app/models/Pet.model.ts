@@ -1,9 +1,10 @@
 export interface Pet{
   //Propriedades mudadas
+  id?:any;
   name: string;
   age: any;
   breed: string;
-  imagem?: FileList;
+  imagem?: File;
   descricao: string;
   uf: string;
   sexo: string;
