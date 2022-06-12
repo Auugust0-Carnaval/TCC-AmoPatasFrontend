@@ -63,9 +63,6 @@ export class CadastrarPetsComponent implements OnInit {
         console.log(this.pets);
 
     }
-
-
-
   }
 
   selectedImage(event : any){
@@ -88,7 +85,5 @@ export class CadastrarPetsComponent implements OnInit {
       formData.append('imagem', foto);
     }
   }
-
-
 }
 

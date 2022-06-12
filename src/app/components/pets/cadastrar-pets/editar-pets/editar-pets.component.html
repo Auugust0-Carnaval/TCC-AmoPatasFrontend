@@ -1,10 +1,134 @@
 <app-header></app-header>
+<!-- TODO INICIO DO FORMULARIO -->
+<div class="container my-5 p-5">
+  <h2 class="display-3">
+    <span style="color: #16479d; font-size: 50px">Atualizar Pets</span>
+  </h2>
+  <form class="p-3" id="form" enctype="multipart/form-data" method="post">
+    <div class="form-row mb-2">
+      <div class="form-group col-md-12">
+        <label for="inputFoto">Foto do pet:</label>
+        <br />
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <i id="file" class="folder open outline icon" aria-hidden="true"></i>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" (change)="selectedImage($event)" />
+            <label class="custom-file-label text-left" id="customFileLabel" for="inputGroupFile01">
+              {{imagem.name | uppercase}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row mb-2">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Nome:</label>
+        <input type="text" class="form-control" name="senha" id="name" placeholder="Digite o nome do pet"
+          [(ngModel)]="pets.name" />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="exampleFormControlSelect1">Porte</label>
+        <select class="form-control" id="situacao" name="situacao" [(ngModel)]="pets.porte">
+          <option value="PEQUENO">PEQUENO</option>
+          <option value="MEDIO">MEDIO</option>
+          <option value="GRANDE">GRANDE</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row mb-2">
+      <div class="form-group col-md-6">
+        <label for="inputCity">Raça:</label>
+        <input type="text" class="form-control" name="senha" id="name" placeholder="Digite a raça do animal !"
+          [(ngModel)]="pets.breed" />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCity">UF:</label>
+        <select class="form-control" id="UF" name="UF" [(ngModel)]="pets.uf">
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+          <option value="EX">Estrangeiro</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row mb-2">
+      <div class="form-group col-md-6">
+        <label for="inputCity"> E a Cidade:</label>
+        <div class="ui fluid icon input">
+          <input type="text" placeholder="INSIRA SUA CIDADE" />
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCity">Idade:</label>
+        <input type="number" class="form-control" placeholder="Digite a idade do animal !" [(ngModel)]="pets.age" />
+      </div>
+    </div>
+    <div class="form-row mb-2">
+      <div class="form-group col-md-6">
+        <label for="inputituacao">Situacao:</label><br />
+        <div class="field">
+          <select class="form-control" id="situacao" name="situacao" [(ngModel)]="pets.situacao">
+            <option value="NÃO ADOTADO">NÃO ADOTADO</option>
+            <option value="ADOTADO">ADOTADO</option>
+          </select>
+          <div class="ui pointing red basic label">
+            obs:recomendamos que venha declarar a situação caso o animal seja
+            adotado, e nos informe o @ da pessoa que o adotou
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputCity">Sexo:</label>
+        <select class="form-control" id="situacao" name="situacao" [(ngModel)]="pets.sexo">
+          <option value="MACHO" selected>MACHO</option>
+          <option value="FEMEA">FEMEA</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-floating mb-4">
+      <label for="floatingTextarea2">Descrição:</label>
+      <input type="text" class="form-control" name="textarea" id="textarea" style="height:150px ;"
+        [(ngModel)]="pets.descricao" />
+    </div>
+    <div class="large ui buttons">
+      <button type="submit" class="btn cadastro" (click)="atualizar()">Atualizar</button>
+      <br />
+      <button class="btn cancelar">Cancelar</button>
+    </div>
+  </form>
+</div>
 
 <!--
-<div class="container my-5 p-5 text-center"  >
+  <div class="container my-5 p-5 text-center"  >
   <h2 class="display-3">
     <span  style="color: #16479d; font-size: 30px">
-      ATUALIZE SUAS INFORMAÇÕES
+      ATUALIZE AS INFORMAÇÕES DOS PETS
     </span>
   </h2>
   <form class="p-3" id="form">
@@ -78,10 +202,9 @@
       </a>
     </div>
   </form>
-</div>
- -->
+</div> -->
 
-
+<!--
  <div class="container">
   <form class="ui form segment">
     <div class="two fields">
@@ -120,4 +243,4 @@
     <div class="ui reset button">Reset</div>
     <div class="ui clear button">Clear</div>
   </form>
- </div>
+ </div> -->
