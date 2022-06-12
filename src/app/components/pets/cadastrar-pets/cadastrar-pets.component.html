@@ -4,7 +4,7 @@
   <div class="bg-container mb-5 p-3">
     <div class="ui small circular rotate left reveal image" style="margin-left: 45%">
       <img src="https://img.freepik.com/vetores-gratis/coelho-bebe-fofo-ou-animal-de-estimacao-de-lebre-para-design-de-pascoa-coelho-animal-em-estilo-de-desenho-animado-coelho-sentado_352905-774.jpg?w=740" class="visible content" />
-      <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGLsMukPtqqcg/profile-displayphoto-shrink_200_200/0/1622047474868?e=1654128000&v=beta&t=plOMn7tPhOA68SyzgoFm3cnToJ5L_F_q_rHeobt7NWs"  class="hidden content"/>
+      <img src="https://avatars.githubusercontent.com/u/86083736?v=4"  class="hidden content"/>
     </div>
     <h2 class="mt-3">Carlos Kauan Costa de Brito</h2>
     <p style="font-size: 15px;">Aqui é corinthians</p>
@@ -59,14 +59,14 @@
           <label for="inputFoto">Foto do pet:</label>
           <br/>
           <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">
-                <i class="fa fa-camera fa-2x" aria-hidden="true"></i>
-              </span>
+            <div class="input-group-prepend" >
+                <i id="file" class="folder open outline icon" aria-hidden="true"></i>
             </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="inputGroupFile01" (change)="selectedImage($event)"  />
-              <label class="custom-file-label" id="customFileLabel" for="inputGroupFile01"></label>
+              <input type="file" class="custom-file-input" id="inputGroupFile01" (change)="selectedImage($event)"/>
+              <label class="custom-file-label text-left" id="customFileLabel" for="inputGroupFile01">
+                {{imagem.name | uppercase}}
+              </label>
             </div>
           </div>
         </div>
