@@ -164,3 +164,18 @@ select option {
 select option :hover {
   color: orange;
 }
+
+#file{
+  color:#16479d;;
+  font-size: 34px;
+  margin-top: 9px;
+}
+
+#bordeFile{
+  border: solid rgb(73, 72, 72);
+  padding-top: 1%;
+  border-right: none;
+  border-color: #ced4da;
+  border-width: 1px;
+  margin-bottom: 3%;
+}
