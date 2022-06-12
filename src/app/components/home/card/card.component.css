@@ -88,3 +88,17 @@ a{
   color: orange;
   transition: all 0.7s ease-in-out 0s;
 }
+
+#lixerinha{
+  color: red;
+  font-size: 22px;
+  transition: all 0.7s ease-in-out 0s;
+
+}
+
+#lixerinha:hover{
+  transform: translateY(-1px);
+  color: orange;
+  transition: all 0.7s ease-in-out 0s;
+
+}

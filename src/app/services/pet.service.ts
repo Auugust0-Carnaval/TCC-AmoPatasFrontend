@@ -2,14 +2,17 @@ import Swal from 'sweetalert2';
 import { Pet } from './../models/Pet.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, EMPTY, empty, map, Observable } from 'rxjs';
+import { catchError, EMPTY, empty, map, Observable, take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PetService {
 
+
   private URL: string = "http://localhost:3333/users/pets" //TODO arrumar consumo da API (URL DO NODE)
+
+  private URLDELETE: string = "http://localhost:3333/pets" //TODO arrumar consumo da API (URL DO NODE)
 
   private URLCADASTRO : string = "http://localhost:3333/users/1/pets"
   constructor(private http: HttpClient) {}
@@ -35,6 +38,10 @@ export class PetService {
         map(retorno => this.ToastSucess(pet.name)),
         catchError(erro => this.cadastroErro(pet.name))
       );
+  }
+
+  DeletePet(pet :any){
+    return this.http.delete(`${this.URLDELETE}/${pet.id}`).pipe(take(1));
   }
 
   exibeErro(e: any): Observable<any>

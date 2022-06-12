@@ -2,8 +2,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="ui special cards" id="cardin"  *ngFor="let pet of Pets"  style="margin-left: 3%; margin-top:2% ; margin-bottom: 2%;" >
-      <div class="card" style="width: 30rem;" >
+    <div class="ui special cards" id="cardin"  *ngFor="let pet of Pets"  style="margin-left: 5%; margin-top:2% ; margin-bottom: 2%;" >
+      <div class="card" style="width: 31rem;" >
         <div class="blurring dimmable image">
           <img src="http://localhost:3333/files/{{pet.imagem}}" alt="Card image cap"  alt="">
         </div>
@@ -11,8 +11,9 @@
           <div class="row">
             <h2 class="header" style="margin-right: 4%;">{{pet.name | uppercase}}</h2>
             <a  [routerLink]="['/editar-pet']" routerLinkActive="router-link-active">
-              <i class="paint brush icon" id="edit" style="margin-left:2% ;" aria-hidden="true"></i>
+              <i  class="paint brush icon" id="edit" style="margin-left:2% ;" aria-hidden="true"></i>
             </a>
+            <i  id="lixerinha" class="trash alternate outline icon " (click)="deletePet(pet)"></i>
           </div>
           <div class="row" style="margin-right:56%;">
             <span class="date">{{pet.createdAt | date : 'short' : '' : 'pt-BR'}} <i class="fa fa-clock-o" aria-hidden="true"></i></span>
@@ -36,24 +37,24 @@
             <div #collapse="ngbCollapse" [(ngbCollapse)]="gfg"><br>
               <div class="card" style="width:460px ;">
                 <div class="card-body ui segment" id="pop">
-                  <a class="ui blue basic label ribbon text-primary">{{pet.breed | uppercase}}</a><br>
+                  <!-- <a class="ui blue basic label ribbon text-primary">{{pet.breed | uppercase}}</a><br>
                   <a class="ui pink basic label right ribbon text-pink ">{{pet.uf | uppercase}}</a><br><br>
                   <a class="ui green basic label ribbon text-success ">IDADE: {{pet.age}}</a><br>
                   <a class="ui red basic label right ribbon text-red">{{pet.sexo | uppercase}}</a><br><br>
                   <a class="ui purple basic label ribbon">{{pet.descricao | uppercase}}</a><br>
                   <a class="ui yellow basic label right ribbon">{{pet.porte | uppercase}}</a><br><br>
-                  <a class="ui teal  basic label ribbon">{{pet.situacao | uppercase}}</a>
+                  <a class="ui teal  basic label ribbon">{{pet.situacao | uppercase}}</a> -->
 
-                <!-- <strong>
-                  <h4> Tipo de Raça: {{pet.breed | uppercase}}</h4>
-                  <h4> Estado: {{pet.uf | uppercase}} </h4>
-                  <h4> Idade do pet: {{pet.age}}</h4>
-                  <h4> Sexo: {{pet.sexo | uppercase}}</h4>
-                  <h4> Porte: {{pet.porte | uppercase}}</h4>
-                  <h4> Descriçao: {{pet.descricao | uppercase}}</h4>
-                  <h4> Situação do animal:{{pet.situacao | uppercase}}</h4>
-                  <h4> @</h4>x
-                </strong> -->
+                <strong>
+                  <h3 class="text-left"> Tipo de Raça: {{pet.breed | uppercase}}</h3><br>
+                  <h3 class="text-left"> Estado: {{pet.uf | uppercase}} </h3><br>
+                  <h3 class="text-left"> Idade do pet: {{pet.age}}</h3><br>
+                  <h3 class="text-left"> Sexo: {{pet.sexo | uppercase}}</h3><br>
+                  <h3 class="text-left"> Porte: {{pet.porte | uppercase}}</h3><br>
+                  <h3 class="text-left"> Descriçao: {{pet.descricao | uppercase}}</h3><br>
+                  <h3 class="text-left"> Situação do animal:{{pet.situacao | uppercase}}</h3><br>
+                  <h3 class="text-left"> @</h3>
+                </strong>
                 </div>
               </div><br><br>
               <div class="row ui two column centered grid">
