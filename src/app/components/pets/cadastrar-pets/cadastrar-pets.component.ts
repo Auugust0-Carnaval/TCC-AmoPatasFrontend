@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
 import { Pet } from './../../../models/Pet.model';
@@ -13,13 +14,11 @@ import { FormsModule, FormGroup, FormControl } from '@angular/forms';
 })
 
 
-@Input()
 export class CadastrarPetsComponent implements OnInit {
   pets : any ={
     name: '',
     age : 0,
-    breed : "", // raca
-    imagem : File,//meu deus :9
+    breed : '', // raca
     descricao : '',
     uf : '',
     sexo : '',
@@ -27,36 +26,55 @@ export class CadastrarPetsComponent implements OnInit {
     situacao : ''
   }
 
- private imagens : any
+ public imagem : any
 
-  constructor(private PetService: PetService, private http: HttpClient) { }
+  constructor(private petService: PetService, private http: HttpClient) { }
   ngOnInit(): void {
 
   }
 
   cadastro(){
-    const formData = new FormData();
-    formData.append('imagem', this.pets.imagem[0]);
-    this.PetService.cadastrar(this.pets).subscribe(retorno =>{
-    this.pets = retorno;
-    }),
-    console.log(this.pets);
+
+    if(!this.imagem){
+      this.petService.NotImage();
+    }
+    else if(this.pets.name == ""){
+      this.petService.NameNull();
+    }
+    else if(this.pets.porte == ""){
+      this.petService.PorteNull();
+    }
+    else if(this.pets.breed == ""){
+      this.petService.BreedNull();
+    }
+    else if(this.pets.descricao == ""){
+      this.petService.TextAreaNull();
+    }
+    else if(this.pets.sexo == ""){
+      this.petService.SexNull();
+    }
+    else if(this.pets.uf == ""){
+      this.petService.UfNull();
+    }
+    else{
+      this.petService.cadastrar(this.pets, this.imagem).subscribe(retorno =>{
+        this.pets = retorno;
+        }),
+        console.log(this.pets);
+
+    }
+
+
+
   }
 
   selectedImage(event : any){
     if(event.target.files.length > 0){
       const file = event.target.files[0];
-      this.pets.imagem = file;
+      this.imagem = file;
     }
-    console.log(this.pets.imagem);
+    console.log(this.imagem);
   }
-
-
-  fileUpload(event : any){
-    this.pets.imagem = event.target.files[0];
-  }
-
-
 
   //METODO DE INSERIR IMAGEMa
   inputFileChange(event:any)
@@ -67,20 +85,10 @@ export class CadastrarPetsComponent implements OnInit {
 
       this.pets.imagem = foto;
       const formData = new FormData();
-      formData.append('foto', foto);
+      formData.append('imagem', foto);
     }
   }
 
 
-
-  enviarfoto(){
-    const formData = new FormData();
-
-    this.imagens = this.pets.imagem;
-    formData.append('imagem', this.imagens);
-    this.pets.imagem = this.imagens;
-
-    console.log(this.imagens);
-  }
 }
 
