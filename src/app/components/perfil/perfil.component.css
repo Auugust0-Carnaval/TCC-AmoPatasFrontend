@@ -7,13 +7,11 @@ h2{
   border-radius: 50%;
 }
 
-.bg-container{
-  /* background-color: #fff;s */
-}
-
-i{
+.fa{
   color: black;
   width: 80px;
+  cursor: pointer;
+
 }
 
 #edit{
@@ -28,9 +26,98 @@ i{
 }
 
 
-i:hover{
+.fa:hover{
   -webkit-animation: swing 1s ease;
   animation: swing 1s ease;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
+/* CARD DO USUARIO */
+
+
+.card-header img{
+  width: 50px;
+}
+.card{
+  width: 32rem;
+}
+
+#avatar{
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+#avatar :hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+a{
+  text-decoration: none;
+  cursor: auto;
+}
+
+#plus{
+  font-size: 27px;
+  color: blue;
+  transition: all 0.7s ease-in-out 0s;
+
+}
+
+#plus:hover{
+  transform: translateY(-4px);
+
+  color: orange;
+  transition: all 0.7s ease-in-out 0s;
+
+}
+
+#hidden{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+#teste i:hover h4{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+#adotar{
+  transition: all 0.4s ease-in-out 0s;
+}
+
+#adotar:hover{
+  transform: translateY(-4px);
+  transition: all 0.5s ease-in-out 0s;
+}
+
+#edita{
+  color: #16479d;
+  font-size: 22px;
+  transition: all 0.7s ease-in-out 0s;
+}
+
+#edita:hover{
+  transform: translateY(-1px);
+  color: orange;
+  transition: all 0.7s ease-in-out 0s;
+}
+
+#lixerinha{
+  color: red;
+  font-size: 22px;
+  transition: all 0.7s ease-in-out 0s;
+
+}
+
+#lixerinha:hover{
+  transform: translateY(-1px);
+  color: orange;
+  transition: all 0.7s ease-in-out 0s;
+
+}
+
