@@ -16,7 +16,7 @@
             <i  id="lixerinha" class="trash alternate outline icon " (click)="deletePet(pet)"></i>
           </div>
           <div class="row" style="margin-right:56%;">
-            <span class="date">{{pet.createdAt | date : 'short' : '' : 'pt-BR'}} <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+            <span class="date">{{pet.createdAt | date : 'short' : '' : 'pt-BR'}} <i class="clock outline icon" id="iconTime" aria-hidden="true"></i></span>
           </div>
         </div>
         <div class="extra content">
@@ -27,7 +27,6 @@
               </div>
               <div class="col-6" id="teste">
                 <i class="bi bi-bookmark-plus" id="plus" style="margin-left:88% ; margin-top: 1px;" aria-hidden="true" (click)="collapse.toggle()">
-
                   <h4 class="ui pointing orange basic label text-orange text-center" id="hidden" style="width:115px ; margin-left:142px ;">
                     VER MAIS <i class="notched circle loading icon"></i>
                   </h4>
@@ -37,14 +36,20 @@
             <div #collapse="ngbCollapse" [(ngbCollapse)]="gfg"><br>
               <div class="card" style="width:460px ;">
                 <div class="card-body ui segment" id="pop">
-                  <!-- <a class="ui blue basic label ribbon text-primary">{{pet.breed | uppercase}}</a><br>
+                  <a class="ui blue basic label ribbon text-primary">{{pet.breed | uppercase}}</a><br>
                   <a class="ui pink basic label right ribbon text-pink ">{{pet.uf | uppercase}}</a><br><br>
                   <a class="ui green basic label ribbon text-success ">IDADE: {{pet.age}}</a><br>
                   <a class="ui red basic label right ribbon text-red">{{pet.sexo | uppercase}}</a><br><br>
                   <a class="ui purple basic label ribbon">{{pet.descricao | uppercase}}</a><br>
                   <a class="ui yellow basic label right ribbon">{{pet.porte | uppercase}}</a><br><br>
-                  <a class="ui teal  basic label ribbon">{{pet.situacao | uppercase}}</a> -->
+                  <a class="ui orange basic label ribbon">{{pet.cidade | uppercase}}</a><br><br>
+                  <a class="ui teal  basic label right ribbon">{{pet.situacao | uppercase}}</a><br><br>
 
+                 <!-- TESTETESTE -->
+                  <h1>{{pet.user_id}}</h1>
+
+
+<!--
                 <strong>
                   <h3 class="text-left"> Tipo de Raça: {{pet.breed | uppercase}}</h3><br>
                   <h3 class="text-left"> Estado: {{pet.uf | uppercase}} </h3><br>
@@ -54,7 +59,7 @@
                   <h3 class="text-left"> Descriçao: {{pet.descricao | uppercase}}</h3><br>
                   <h3 class="text-left"> Situação do animal:{{pet.situacao | uppercase}}</h3><br>
                   <h3 class="text-left"> @</h3>
-                </strong>
+                </strong> -->
                 </div>
               </div><br><br>
               <div class="row ui two column centered grid">
