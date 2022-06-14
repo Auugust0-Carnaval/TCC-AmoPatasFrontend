@@ -12,4 +12,5 @@ export interface Pet{
   situacao: string;
   createdAt? : string;
   user_id?: any;
+  cidade?:any;
 }
