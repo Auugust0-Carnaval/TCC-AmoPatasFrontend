@@ -1,51 +1,51 @@
-
 <app-header></app-header>
 
-<div class="text-center">
-  <div class="bg-container mb-5 p-3">
-    <div class="ui small circular rotate left reveal image" style="margin-left:45% ;">
-      <img src="https://img.freepik.com/vetores-gratis/coelho-bebe-fofo-ou-animal-de-estimacao-de-lebre-para-design-de-pascoa-coelho-animal-em-estilo-de-desenho-animado-coelho-sentado_352905-774.jpg?w=740" class="visible content">
-      <img src="https://avatars.githubusercontent.com/u/86083736?s=400&u=9fc40d64310185b70af15fd02dc6be6f622d91a6&v=4" class="hidden content">
-    </div>
-    <h2 class="mt-3">Carlos Kauan Costa de Brito</h2>
-    <p>Aqui é corinthians</p>
-    <br>
-    <br>
-    <a [routerLink]="['/editar']">
-      <div class="ui animated button ui blue basic button" id="edit" tabindex="0" style="width: 150px; height: 40px;">
-        <div class="visible content">
-          <i class="fa fa-pencil" aria-hidden="true" style="color:blue ;"></i>
-        </div>
-        <div class="hidden content">
-          <span>EDITAR PERFIL</span>
-        </div>
+<div class="text-center" style="margin-top: 4%">
+  <div class="text-center">
+    <div class="bg-container mb-5 p-3">
+      <div class="ui small circular rotate left reveal image" style="margin-left:45% ;">
+        <img src="http://localhost:3333/files/{{user.imagem}}" class="ui medium circular image">
       </div>
-      <br><br>
-    </a>
-    <br>
-    <ul class="flex-row justify-content-center navbar-nav mr-auto">
-      <li class="nav-item p-3">
-        <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="router-link-active">
-          <i class="fa fa-bars fa-2x"></i>
-        </a>
-      </li>
-      <li class="nav-item p-3">
-        <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">
-          <i class="fa fa-plus fa-2x" aria-hidden="true" style="--fa-animation-duration: 0.5s;" ></i>
-        </a>
-      </li>
-      <li class="nav-item p-3">
-        <a class="nav-link" [routerLink]="['/notificacoes']" routerLinkActive="router-link-active">
-          <i class="fa fa-bell fa-2x"></i>
-        </a>
-      </li>
-      <li class="nav-item p-3">
-        <a class="nav-link " [routerLink]="['/favoritos']" routerLinkActive="router-link-active">
-          <i class="fa fa-heart fa-2x "></i>
-        </a>
-      </li>
-    </ul>
-    <hr>
+      <h2 class="mt-3">{{user.name | uppercase}}</h2>
+      <strong><p class="text-primary">{{user.descricao | uppercase}}</p></strong>
+      <br>
+      <br>
+      <a [routerLink]="['/editar']">
+        <div class="ui animated button ui blue basic button" id="edit" tabindex="0" style="width: 150px; height: 40px;">
+          <div class="visible content">
+            <i class="fa fa-pencil" aria-hidden="true" style="color:blue ;"></i>
+          </div>
+          <div class="hidden content">
+            <span>EDITAR PERFIL</span>
+          </div>
+        </div>
+        <br><br>
+      </a>
+      <br>
+      <ul class="flex-row justify-content-center navbar-nav mr-auto">
+        <li class="nav-item p-3">
+          <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="router-link-active">
+            <i class="fa fa-bars fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav-item p-3">
+          <a class="nav-link" [routerLink]="['/pets']" routerLinkActive="router-link-active">
+            <i class="fa fa-plus fa-2x" aria-hidden="true" style="--fa-animation-duration: 0.5s;" ></i>
+          </a>
+        </li>
+        <li class="nav-item p-3">
+          <a class="nav-link" [routerLink]="['/notificacoes']" routerLinkActive="router-link-active">
+            <i class="fa fa-bell fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav-item p-3">
+          <a class="nav-link " [routerLink]="['/favoritos']" routerLinkActive="router-link-active">
+            <i class="fa fa-heart fa-2x "></i>
+          </a>
+        </li>
+      </ul>
+      <hr>
+    </div>
   </div>
 </div>
 <div class="card-block">
