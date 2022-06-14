@@ -17,7 +17,9 @@ export class UserService {
 
   private URL: string = "http://localhost:3333/users"
 
-  private URLID: string = "http://localhost:3333/user"
+  private URLID: string = "http://localhost:3333/usuario"
+
+
 
 
   private URLEMAIL: string = "http://localhost:3333/busca"
@@ -42,9 +44,14 @@ export class UserService {
     );
   }
 
+  buscarName(name: any) : Observable<User[]> {
+    return this.http.get<User[]>(`${this.URLID}/${name}`).pipe(
+      map(retorno => retorno),
+    );
+  }
 
-  buscardId(id: any) : Observable<User[]> {
-    return this.http.get<User[]>(`${this.URLID}/${id}`).pipe(
+  buscardId(pets: any) : Observable<User[]> {
+    return this.http.get<User[]>(`${this.URLID}/${pets}`).pipe(
       map(retorno => retorno),
     );
   }
