@@ -1,3 +1,4 @@
+import { UserDataService } from './../../../services/user-data.service';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
@@ -17,19 +18,25 @@ import { FormsModule, FormGroup, FormControl } from '@angular/forms';
 export class CadastrarPetsComponent implements OnInit {
   pets : any ={
     name: '',
-    age : 0,
+    age : '',
     breed : '', // raca
     descricao : '',
     uf : '',
     sexo : '',
     porte :'',
-    situacao : ''
+    situacao : '',
+    cidade: '',
   }
 
- public imagem : any
 
-  constructor(private petService: PetService, private http: HttpClient) { }
+  public imagem : any
+
+  public user: any
+
+  constructor(private petService: PetService, private http: HttpClient, private userdata : UserDataService) { }
   ngOnInit(): void {
+    this.user = this.userdata.getData();
+    console.log(this.user);
 
   }
 
@@ -37,6 +44,7 @@ export class CadastrarPetsComponent implements OnInit {
 
     if(!this.imagem){
       this.petService.NotImage();
+      console.log(this.pets);
     }
     else if(this.pets.name == ""){
       this.petService.NameNull();
