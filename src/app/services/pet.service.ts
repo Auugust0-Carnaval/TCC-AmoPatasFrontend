@@ -17,11 +17,20 @@ export class PetService {
 
   private URLCADASTRO : string = "http://localhost:3333/users"
 
+
   constructor(private http: HttpClient, private userdata: UserDataService) {}
 
   buscarTodos() : Observable<Pet[]> {
     //Retornar e listar com Get.
     return this.http.get<Pet[]>(this.URL).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibeErro(erro))
+    );
+  }
+
+
+  buscarId(idUser: any) : Observable<Pet[]> {
+    return this.http.get<Pet[]>(`${this.URLCADASTRO}/${idUser}/pets`).pipe(
       map(retorno => retorno),
       catchError(erro => this.exibeErro(erro))
     );
