@@ -19,11 +19,7 @@ export class UserService {
 
   private URLID: string = "http://localhost:3333/usuario"
 
-
-
-
   private URLEMAIL: string = "http://localhost:3333/busca"
-
 
   private URLLOGIN : string = "http://localhost:3333/login"
 
