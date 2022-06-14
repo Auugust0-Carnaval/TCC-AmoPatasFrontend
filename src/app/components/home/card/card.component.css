@@ -18,6 +18,7 @@ i{
 }
 
 #avatar{
+  cursor: pointer;
   -webkit-transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
 }
@@ -102,3 +103,4 @@ a{
   transition: all 0.7s ease-in-out 0s;
 
 }
+
