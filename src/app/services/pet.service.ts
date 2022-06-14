@@ -1,3 +1,4 @@
+import { UserDataService } from './user-data.service';
 import Swal from 'sweetalert2';
 import { Pet } from './../models/Pet.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -14,8 +15,10 @@ export class PetService {
 
   private URLDELETE: string = "http://localhost:3333/pets" //TODO arrumar consumo da API (URL DO NODE)
 
-  private URLCADASTRO : string = "http://localhost:3333/users/1/pets"
-  constructor(private http: HttpClient) {}
+  private URLCADASTRO : string = "http://localhost:3333/users"
+
+  constructor(private http: HttpClient, private userdata: UserDataService) {}
+
   buscarTodos() : Observable<Pet[]> {
     //Retornar e listar com Get.
     return this.http.get<Pet[]>(this.URL).pipe(
@@ -25,6 +28,7 @@ export class PetService {
   }
 
   cadastrar(pet: any, imagemPet: any) : Observable<any> {
+    let PetUser = this.userdata.getData();
 
     const formData = new FormData();
 
@@ -34,7 +38,7 @@ export class PetService {
 
       Object.keys(pet).forEach((key) =>{formData.append(key,pet[key])});
 
-      return this.http.post<any>(this.URLCADASTRO, formData ).pipe(
+      return this.http.post<any>(`${this.URLCADASTRO}/${PetUser.id}/pets`, formData ).pipe(
         map(retorno => this.ToastSucess(pet.name)),
         catchError(erro => this.cadastroErro(pet.name))
       );
