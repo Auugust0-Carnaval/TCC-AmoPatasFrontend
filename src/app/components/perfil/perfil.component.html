@@ -48,8 +48,80 @@
     </div>
   </div>
 </div>
-<div class="card-block">
-  <div class="col">
-    <app-card></app-card>
+
+<div class="container">
+  <div class="row">
+    <div class="ui special cards" id="cardin"  *ngFor="let pet of Pets"  style="margin-left: 5%; margin-top:2% ; margin-bottom: 2%;" >
+      <div class="card" style="width: 31rem;" >
+        <div class="blurring dimmable image">
+          <img src="http://localhost:3333/files/{{pet.imagem}}" alt="Card image cap"  alt="">
+        </div>
+        <div class="content" style="margin-left: 4%;">
+          <div class="row">
+            <h2 class="header" style="margin-right: 4%;">{{pet.name | uppercase}}</h2>
+            <a  [routerLink]="['/editar-pet']" routerLinkActive="router-link-active">
+              <i  class="paint brush icon" id="edita" style="margin-left:2% ;" aria-hidden="true"></i>
+            </a>
+            <i  id="lixerinha" class="trash alternate outline icon " (click)="deletePet(pet)"></i>
+          </div>
+          <div class="row" style="margin-right:56%;">
+            <span class="date">{{pet.createdAt | date : 'short' : '' : 'pt-BR'}} <i class="clock outline icon" id="iconTime" aria-hidden="true"></i></span>
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="content" >
+            <div class="ui grid" id="row" style="padding: 2%; margin-top: 2%;">
+              <div class="col-6" >
+                <img class="ui avatar medium image " id="avatar" src="http://localhost:3333/files/{{user.imagem}}">
+              </div>
+              <div class="col-6" id="teste">
+                <i class="bi bi-bookmark-plus" id="plus" style="margin-left:88% ; margin-top: 1px;" aria-hidden="true" (click)="collapse.toggle()">
+                  <h4 class="ui pointing orange basic label text-orange text-center" id="hidden" style="width:115px ; margin-left:142px ;">
+                    VER MAIS <i class="notched circle loading icon"></i>
+                  </h4>
+                </i>
+              </div>
+            </div>
+            <div #collapse="ngbCollapse" [(ngbCollapse)]="gfg"><br>
+              <div class="card" style="width:460px ;">
+                <div class="card-body ui segment" id="pop">
+                  <a class="ui blue basic label ribbon text-primary">{{pet.breed | uppercase}}</a><br>
+                  <a class="ui pink basic label right ribbon text-pink ">{{pet.uf | uppercase}}</a><br><br>
+                  <a class="ui green basic label ribbon text-success ">IDADE: {{pet.age}}</a><br>
+                  <a class="ui red basic label right ribbon text-red">{{pet.sexo | uppercase}}</a><br><br>
+                  <a class="ui purple basic label ribbon">{{pet.descricao | uppercase}}</a><br>
+                  <a class="ui yellow basic label right ribbon">{{pet.porte | uppercase}}</a><br><br>
+                  <a class="ui orange basic label ribbon">{{pet.cidade | uppercase}}</a><br><br>
+                  <a class="ui teal  basic label right ribbon">{{pet.situacao | uppercase}}</a><br><br>
+
+                 <!-- TESTETESTE -->
+                  <h1>{{pet.user_id}}</h1>
+
+
+<!--
+                <strong>
+                  <h3 class="text-left"> Tipo de Raça: {{pet.breed | uppercase}}</h3><br>
+                  <h3 class="text-left"> Estado: {{pet.uf | uppercase}} </h3><br>
+                  <h3 class="text-left"> Idade do pet: {{pet.age}}</h3><br>
+                  <h3 class="text-left"> Sexo: {{pet.sexo | uppercase}}</h3><br>
+                  <h3 class="text-left"> Porte: {{pet.porte | uppercase}}</h3><br>
+                  <h3 class="text-left"> Descriçao: {{pet.descricao | uppercase}}</h3><br>
+                  <h3 class="text-left"> Situação do animal:{{pet.situacao | uppercase}}</h3><br>
+                  <h3 class="text-left"> @</h3>
+                </strong> -->
+                </div>
+              </div><br><br>
+              <div class="row ui two column centered grid">
+                  <button class="ui inverted orange button" id="adotar" style="margin-bottom:3% ;">ADOTAR</button>
+              </div>
+
+
+
+           </div>
+          </div>
+        </div>
+      </div>
+
+
   </div>
 </div>
