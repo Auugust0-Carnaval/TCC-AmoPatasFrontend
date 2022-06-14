@@ -1,3 +1,4 @@
+import { UserDataService } from './../../../services/user-data.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
@@ -9,9 +10,14 @@ import Swal from 'sweetalert2';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  public user: any;
+
+
+
+  constructor(private router : Router, private userdata : UserDataService) { }
 
   ngOnInit(): void {
+    this.user = this.userdata.getData();
   }
 
   exit(){
@@ -21,7 +27,7 @@ export class HeaderComponent implements OnInit {
       imageWidth: 390,
       imageHeight: 330,
       html:
-        'GOSTOU DA EXPERIÊNCIA COM <b class = "text-danger">AMOPATAS</b>? ',
+        `<span class="text-success">${this.user.name.toUpperCase()}</span> GOSTOU DA EXPERIÊNCIA COM <b class = "text-danger">AMOPATAS</b>?`,
       showCloseButton: true,
       showCancelButton: true,
       focusConfirm: true,
