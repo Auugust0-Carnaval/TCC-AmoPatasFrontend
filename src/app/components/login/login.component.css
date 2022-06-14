@@ -258,6 +258,10 @@ a{
 
 }
 
+#none{
+  display: none;
+}
+
 /* Caso precise do button instragram
 
 .icon .social-field.instagram{
