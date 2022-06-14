@@ -15,7 +15,7 @@ import Swal from 'sweetalert2';
 export class CardComponent implements OnInit {
 
 
-  Pets : Pet[] = []
+  Pets: Pet[] = []
 
   usuario : User[] = []
 
@@ -27,17 +27,20 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     this.BuscarPets();
-    console.log(this.usuario);
+    this.userId();
   }
 
   BuscarPets() : void{
     this.petService.buscarTodos().subscribe(retorno =>
       this.Pets = retorno
     );
+  }
 
+  userId(){
+    let petuser = 1;
+    this.user.buscardId(petuser).subscribe(retorno =>
+      this.usuario = retorno);
 
-    console.log(this.usuario);
-    console.log(this.Pets)
   }
 
   deletePet(petid: any){
