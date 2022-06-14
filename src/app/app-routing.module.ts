@@ -1,3 +1,4 @@
+import { AppComponent } from './app.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
@@ -16,15 +17,25 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  // { path: 'home', component: HomeComponent},
+
   { path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard] },
+  // { path: 'perfil', component: PerfilComponent },
+
   { path: 'pets', component: CadastrarPetsComponent, canActivate: [AuthGuard]},
+  // { path: 'pets', component: CadastrarPetsComponent},
+
   { path: 'favoritos', component: FavoritosComponent, canActivate: [AuthGuard]},
   { path: 'notificacoes', component: NotificacoesComponent , canActivate: [AuthGuard]},
   { path: 'cadastro', component: CadastroPessoaComponent},
   { path: 'sobre', component: SobreNosComponent, canActivate: [AuthGuard]},
+  // { path: 'sobre', component: SobreNosComponent},
+
   { path: 'editar', component: EditarPerfilComponent, canActivate: [AuthGuard]},
   // {path : '**',component:LoginComponent},
-  {path: 'editar-pet', component: EditarPetsComponent, canActivate: [AuthGuard]} // DIGITAR UM ENDPOINT "QUALQUER" VOLTA PARA LOGIN
+  {path: 'editar-pet', component: EditarPetsComponent, canActivate: [AuthGuard]},
+  // {path: 'editar-pet', component: EditarPetsComponent} // DIGITAR UM ENDPOINT "QUALQUER" VOLTA PARA LOGIN
+
 ];
 
 @NgModule({
