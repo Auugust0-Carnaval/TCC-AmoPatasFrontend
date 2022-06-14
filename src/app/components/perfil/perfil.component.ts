@@ -1,3 +1,4 @@
+import { UserDataService } from './../../services/user-data.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -8,8 +9,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor() { }
+  public user: any;
+
+  constructor(private userdata: UserDataService) { }
 
   ngOnInit(): void {
+    this.user = this.userdata.getData();
+    console.log(this.user);
   }
 }
