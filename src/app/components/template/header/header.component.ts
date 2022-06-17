@@ -1,3 +1,4 @@
+import { UserService } from './../../../services/user.service';
 import { UserDataService } from './../../../services/user-data.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
 
 
 
-  constructor(private router : Router, private userdata : UserDataService) { }
+  constructor(private router : Router, private userdata : UserDataService, private userservice: UserService) { }
 
   ngOnInit(): void {
     this.user = this.userdata.getData();
@@ -66,4 +67,34 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  deletePerfil(){
+    Swal.fire({
+      title: `<img class="ui small centered circular image" src="http://localhost:3333/files/${this.user.imagem}">`,
+      html : `<strong><span class="text-danger">${this.user.name.toUpperCase()}</span><span class="text-muted"> QUER DELETAR SEU PERFIL?</span></strong>`,
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: true,
+      confirmButtonText:
+        '<i class="thumbs up outline icon"></i> SIM!',
+      cancelButtonText:
+        '<i class="thumbs down outline icon" aria-hidden="true"></i> NAO!'
+    }).then((result)=>{
+
+      if(result.isConfirmed){
+        this.userservice.DeleteUser(this.user.id).subscribe(dados =>{console.log(dados);});
+        Swal.fire({
+          imageUrl : 'assets/img/notfound.jpg',
+          imageWidth: 300,
+          imageHeight: 240,
+          title: `<span class = "text-success"><span class="text-danger">${this.user.name.toUpperCase()}</span> APAGADO COM SUCESSO</span>`,
+          timer: 3000,
+          showCancelButton: false,
+          showConfirmButton :false
+        })
+        this.router.navigate(['login']);
+
+      }
+    })
+
+  }
 }
