@@ -11,14 +11,31 @@ import { catchError, EMPTY, empty, map, Observable, take } from 'rxjs';
 export class PetService {
 
 
+
+
   private URL: string = "http://localhost:3333/users/pets" //TODO arrumar consumo da API (URL DO NODE)
 
   private URLDELETE: string = "http://localhost:3333/pets" //TODO arrumar consumo da API (URL DO NODE)
 
   private URLCADASTRO : string = "http://localhost:3333/users"
 
+  private dataUserPet: any;
+
 
   constructor(private http: HttpClient, private userdata: UserDataService) {}
+
+  //TODO GETS ANS SETS
+
+  setData(newData: any){
+    this.dataUserPet = newData;
+  }
+
+  getData(){
+    return this.dataUserPet;
+  }
+
+
+
 
   buscarTodos() : Observable<Pet[]> {
     //Retornar e listar com Get.
