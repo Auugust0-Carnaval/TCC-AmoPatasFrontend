@@ -60,7 +60,6 @@ nav{
 }
 
 #btnSair{
-  font-size: 25px;
   -webkit-transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
 }
@@ -81,6 +80,41 @@ nav{
   transition: 0.5s ease-in;
   cursor: pointer;
 }
+
+
+#hidden:hover div{
+  visibility: visible;
+  opacity: 1;
+}
+
+#excloi{
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+#out{
+  font-size: 39px;
+  cursor: pointer;
+}
+
+#excluPerfil strong{
+  color: #16479d;
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+#excluPerfil:hover strong{
+  color: red;
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+
+}
+
 
 
 
