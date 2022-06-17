@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpEvent, HttpHandler, HttpRequest } from '@angular/common/http';
-import { catchError, EMPTY, empty, map, Observable } from 'rxjs';
+import { catchError, elementAt, EMPTY, empty, map, Observable, take } from 'rxjs';
 import { User } from './../models/User.model';
 import Swal from 'sweetalert2';
 
@@ -23,10 +23,34 @@ export class UserService {
 
   private URLLOGIN : string = "http://localhost:3333/login"
 
+  private URLDELETE: string = "http://localhost:3333/users"
+
+  public dataUserPet: any;
+
+
   constructor(private http: HttpClient) { }
 
-  cadastrarUsuario(user: any) : Observable<User> {
-    return this.http.post<User>(this.URL, user).pipe(
+
+  setData(newData: any){
+    this.dataUserPet = newData.user_id;
+  }
+
+  getData(){
+    return this.dataUserPet;
+  }
+
+
+  cadastrarUsuario(user: any, imageUser: any) : Observable<User> {
+
+    const formData = new FormData();
+
+    if(imageUser){
+      formData.append('imagem',imageUser, imageUser.name);
+    }
+    Object.keys(user).forEach((key) =>{formData.append(key,user[key])});
+
+
+    return this.http.post<User>(this.URL, formData).pipe(
       map(retorno => retorno),
       catchError(erro => this.exibeErro(erro))
     );
@@ -46,8 +70,10 @@ export class UserService {
     );
   }
 
-  buscardId(pets: any) : Observable<User[]> {
-    return this.http.get<User[]>(`${this.URLID}/${pets}`).pipe(
+  buscardId(userPetId: any) : Observable<User[]> {
+
+    let idUser = userPetId[0].user_id;
+    return this.http.get<User[]>(`${this.URLID}/${idUser}`).pipe(
       map(retorno => retorno),
     );
   }
@@ -82,6 +108,11 @@ export class UserService {
     );
 
   }
+
+  DeleteUser(User :any){
+    return this.http.delete(`${this.URLDELETE}/${User}`).pipe(take(1));
+  }
+
 
 
 
