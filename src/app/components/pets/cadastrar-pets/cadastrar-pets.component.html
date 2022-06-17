@@ -63,7 +63,7 @@
                 <i id="file" class="folder open outline icon" aria-hidden="true"></i>
             </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="inputGroupFile01" (change)="selectedImage($event)"/>
+              <input type="file" accept="image/*" class="custom-file-input" id="inputGroupFile01" (change)="selectedImage($event)"/>
               <label class="custom-file-label text-left" id="customFileLabel" for="inputGroupFile01">
                 {{imagem.name | uppercase}}
               </label>
