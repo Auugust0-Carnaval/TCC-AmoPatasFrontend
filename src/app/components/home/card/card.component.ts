@@ -2,7 +2,7 @@ import { Router } from '@angular/router';
 import { User } from './../../../models/User.model';
 import { UserService } from './../../../services/user.service';
 import { UpperCasePipe } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Pet } from 'src/app/models/Pet.model';
 import { PetService } from 'src/app/services/pet.service';
 import Swal from 'sweetalert2';
@@ -15,12 +15,13 @@ import Swal from 'sweetalert2';
 export class CardComponent implements OnInit {
 
 
-  Pets: Pet[] = []
+  public Pets: any;
 
-  usuario : User[] = []
+  public usuario: any;
 
 
   public gfg = true;
+
 
 
   constructor(private petService : PetService, private user : UserService, private router : Router) { }
@@ -30,17 +31,25 @@ export class CardComponent implements OnInit {
     this.userId();
   }
 
-  BuscarPets() : void{
+   BuscarPets(): void{
     this.petService.buscarTodos().subscribe(retorno =>
       this.Pets = retorno
     );
   }
 
-  userId(){
-    let petuser = 1;
-    this.user.buscardId(petuser).subscribe(retorno =>
-      this.usuario = retorno);
+   async userId(){
+    await this.delay(200);
 
+    this.user.buscardId(this.Pets).subscribe(retorno =>
+      this.usuario = retorno);
+  }
+
+  private delay(ms: number): Promise<boolean> {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(true);
+      }, ms);
+    });
   }
 }
 
