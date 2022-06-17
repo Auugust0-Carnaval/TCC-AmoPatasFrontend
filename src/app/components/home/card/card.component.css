@@ -63,7 +63,7 @@ a{
   transition: visibility 0s, opacity 0.5s linear;
 }
 
-#teste i:hover h4{
+#plus:hover h4{
   visibility: visible;
   opacity: 1;
 }
@@ -104,3 +104,25 @@ a{
 
 }
 
+#infoUser:hover div{
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .5s linear;
+
+}
+
+#infoUser{
+  position: absolute;
+}
+
+#info{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.4s linear;
+}
+
+
+#info{
+  position: absolute;
+  z-index: 50;
+}
