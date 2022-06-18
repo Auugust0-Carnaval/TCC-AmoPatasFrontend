@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { PetService } from './../../../services/pet.service';
 import { UserService } from './../../../services/user.service';
 import { User } from './../../../models/User.model';
 import { Component, ElementRef, OnInit, ViewChild, Input } from '@angular/core';
@@ -18,51 +20,81 @@ export class CadastroPessoaComponent implements OnInit {
     name : '',
     email : '',
     senha : '',
-    // descricao : '',
-    // telefone : '',
+    descricao : '',
+    telefone : '',
     data_nascimento : new Date(),
     // rede_social : '',
   }
 
   public senhaConf : any;
 
-  constructor(private userService : UserService) {
+  public imagem: any;
+
+
+  constructor(private userService : UserService, private route: Router) {
   }
 
   ngOnInit(): void {
+  }
+
+  selectedImage(event : any){
+    if(event.target.files.length > 0){
+      const file = event.target.files[0];
+      this.imagem = file;
+    }
+    console.log(this.imagem);
   }
 
   criar(){
     this.user.data_nascimento?.valueOf
     console.log(this.user.data_nascimento)
 
-    if(this.user.name == "" && this.user.senha == "" && this.user.email == ""){
-      this.formNot();
+    if(!this.imagem){
+      this.imageNull();
+    }
+    else if(this.user.name == ""){
+        this.inputName();
     }
     else if(this.user.senha == ""){
       this.userService.senhaInvalida();
     }
-    else if(this.user.senha != this.senhaConf){
-      console.log(this.senhaConf);
+    else if(this.senhaConf != this.user.senha || this.user.senha != this.senhaConf){
       this.senhaDiferente();
     }
-    else if(this.user.name == ""){
-      this.inputName();
-    }
-    else if(this.user.email == "" ){
+    else if(this.user.email == ""){
       this.InputEmail();
     }
+    else if(this.user.telefone == ""){
+    }
     else{
-      this.userService.cadastrarUsuario(this.user).subscribe(retorno =>{
+      this.userService.cadastrarUsuario(this.user, this.imagem).subscribe(retorno =>{
         this.user = retorno;
       });
+      this.route.navigate(['/login'])
       this.ToastSucess();
-      console.log(this.user);
-
     }
+  }
 
+  TelNull(){
+    Swal.fire({
+      imageUrl : 'https://img.freepik.com/vetores-gratis/telefone_53876-25489.jpg?t=st=1655409585~exp=1655410185~hmac=5eef5e3882d44c5dbe71ab1353e555ab396e730f70da6019045aa71593ec2bb0&w=740',
+      imageWidth: 400,
+      imageHeight: 340,
+      title: `<strong><SPAN class ="text-danger">INSIRA SEU TELEFONE <span class="text-primary">${this.user.name?.toUpperCase()}</span></SPAN></strong> `,
+      showConfirmButton: false,
+      timer: 3000
+    })
+  }
 
-
+  imageNull(){
+    Swal.fire({
+      imageUrl : 'https://img.freepik.com/vetores-gratis/cute-boy-fotografo-segurando-a-camera-desenho-animado-vetor-icone-ilustracao-pessoas-tecnologia-isolado_138676-4822.jpg?t=st=1655407539~exp=1655408139~hmac=23399b11da193f0afd6cf1805d9fbd442bf0dbe950f91ce4de3cd40e54b85fae&w=740',
+      imageWidth: 400,
+      imageHeight: 340,
+      title: `<strong><SPAN class ="text-danger">INSIRA SUA FOTO DE PERFIL <span class="text-primary">${this.user.name?.toUpperCase()}</span></SPAN></strong> `,
+      showConfirmButton: false,
+      timer: 3000
+    })
   }
 
  senhaDiferente(){
@@ -99,7 +131,6 @@ export class CadastroPessoaComponent implements OnInit {
 
  }
 
-
  formNot(){
   Swal.fire({
     imageUrl : 'https://img.freepik.com/vetores-gratis/gato-bonito-pulando-com-ilustracao-do-icone-do-arco-iris-e-da-nuvem-dos-desenhos-animados_138676-2822.jpg?t=st=1654011905~exp=1654012505~hmac=27efe8453b3c936f7347ba3b03c6dcce310c98e9f725c6ba47e696529cc4d66a&w=740',
@@ -109,12 +140,7 @@ export class CadastroPessoaComponent implements OnInit {
     showConfirmButton: false,
     timer: 3000
   });
-
  }
-
-
-
-
 
   ToastSucess(){
     Swal.fire({
