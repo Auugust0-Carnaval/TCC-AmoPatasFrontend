@@ -23,19 +23,19 @@ export class HeaderComponent implements OnInit {
 
   exit(){
     Swal.fire({
-      title: '<strong>QUER SAIR?</u></strong>',
+      title: `<span class="text-success">${this.user.name.toUpperCase()}</span> QUER SAIR DO <b class = "text-danger">AMOPATAS</b>?`,
       imageUrl : 'https://img.freepik.com/vetores-gratis/cao-bonito-shiba-inu-com-ilustracao-dos-desenhos-animados-do-traje-japones_138676-2786.jpg?t=st=1654744620~exp=1654745220~hmac=04e632b264340206170321a1588cc78be5e5d80df46ea03058f6bb2bfb5bb1c7&w=740',
       imageWidth: 390,
       imageHeight: 330,
-      html:
-        `<span class="text-success">${this.user.name.toUpperCase()}</span> GOSTOU DA EXPERIÊNCIA COM <b class = "text-danger">AMOPATAS</b>?`,
       showCloseButton: true,
       showCancelButton: true,
       focusConfirm: true,
       confirmButtonText:
-        '<i class="thumbs up outline icon"></i> ADOREI!',
+        '<i class="thumbs up outline icon"></i>SIM',
+      confirmButtonColor: '#16479d',
       cancelButtonText:
-        '<i class="thumbs down outline icon" aria-hidden="true"></i> ODIEI!'
+      '<i class="thumbs down outline icon" aria-hidden="true"></i> NAO!',
+      cancelButtonColor: '#d33',
     }).then((result)=>{
       if(result.isConfirmed){
         Swal.fire({
@@ -49,19 +49,6 @@ export class HeaderComponent implements OnInit {
           showConfirmButton :false
         }),
         this.router.navigate(['login']);
-
-      }
-      else if(result.isDismissed){
-        Swal.fire({
-          imageUrl : '/assets/img/cat.jpg',
-          imageWidth: 450,
-          imageHeight: 340,
-          title: 'IREMOS MELHORAR NOSSO PROJETO (。_。)',
-          timer: 4000,
-          showCancelButton: false,
-          showConfirmButton :false
-        })
-        this.router.navigate(['login']); // ROUTERLINK
       }
     })
 
@@ -75,9 +62,11 @@ export class HeaderComponent implements OnInit {
       showCancelButton: true,
       focusConfirm: true,
       confirmButtonText:
-        '<i class="thumbs up outline icon"></i> SIM!',
+        '<i class="times icon"></i> SIM!',
+      confirmButtonColor: '#d33',
       cancelButtonText:
-        '<i class="thumbs down outline icon" aria-hidden="true"></i> NAO!'
+      '<i class="flag outline icon" aria-hidden="true"></i> NAO!',
+      cancelButtonColor: '#16479d',
     }).then((result)=>{
 
       if(result.isConfirmed){
