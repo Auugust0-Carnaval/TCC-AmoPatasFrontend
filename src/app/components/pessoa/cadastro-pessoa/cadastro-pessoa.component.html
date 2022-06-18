@@ -1,85 +1,59 @@
 
 <div class="cadastro">
   <!--div de conteudo-->
-  <div class="card" style="width: 30rem; height: 50rem; margin-top: 08%;">
+  <div class="card" style="width: 30rem; height: 46rem; margin-top: 08%;">
+    <div data-tooltip="INSIRA SUA FOTO DE PERFIL" data-position="top center">
+      <i class="user outline icon" id="image">
+        <input type="file" accept="image/*" class="custom-file-input" id="inputGroupFile01" (change)="selectedImage($event)" >
+      </i>
+    </div>
 
-    <a [routerLink]="['/']">
-      <button type="button" id="back" class="btn" style=" margin: 1%;">
-        <i class="fa fa-chevron-left" aria-hidden="true" style="margin-right:8px ;"></i>
-        <span style="text-align: center; font-size: 12px; color: blue;">
-            Voltar ao login
-        </span>
-      </button>
-    </a>
-    <img
-      class="card-img-top"
-      src="/assets/img/logo.png" id="logo" style="width:150px;height: 130px; margin-left: 30%; margin-top: 6%;"
-    />
     <div class="card-body">
       <form >
-       <div class="form-group">
-          <h3 class="">Crie sua conta para acessar as informaçoes</h3>
-       </div>
-        <div class="txt_field">
+        <div class="ui large fluid left  icon input">
           <input type="text" class="form-control" name="senha" id="name" placeholder="Nome:"  [(ngModel)]="user.name">
-          <div class="underline"></div>
-        </div>
-        <div class="txt_field">
-          <input type="email" class="form-control" name="senha" id="email" placeholder="E-mail:" [(ngModel)]="user.email">
-          <div class="underline"></div>
-        </div>
-        <!-- <div class="txt_field">
-          <input type="tel" class="form-control" name="senha" id="senha" placeholder="Telefone:" [(ngModel)]="user.telefone"/>
-          <div class="underline"></div>
-        </div> -->
-        <!-- <div class="txt_field">
-          <input type="text" class="form-control" name="senha" id="senha" placeholder="Sua descricao:" [(ngModel)]="user.descricao" />
-          <div class="underline"></div>
-        </div> -->
-        <!-- <div class="txt_field">
-          <input type="text" class="form-control" name="senha" id="senha"  placeholder="Rede social: " [(ngModel)]="user.rede_social"/>
-          <div class="underline"></div>
-        </div> -->
-        <div class="txt_field">
-          <label id="date"> Data de Nascimento : </label>
-          <input type="date" class="form-control" name="senha" id="data" placeholder="xx/xx/xxxx"  [(ngModel)]="user.data_nascimento"/>
-        </div>
-        <div class="txt_field">
-          <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha:"  [(ngModel)]="user.senha"/>
-        </div>
-        <div class="txt_field">
-          <input type="password"  class="form-control" name="senha" id="confirmPassword" placeholder="Confirmar Senha: " [(ngModel)]="senhaConf"/>
-        </div>
-        <!-- <a [routerLink]="['/home']"> -->
+          <i class="users icon" style="font-size:18px ;" ></i>
+        </div><br>
+        <div class="ui large fluid left  icon input">
+            <input type="email" class="form-control" name="senha" id="name" placeholder="E-mail" [(ngModel)]="user.email"/>
+            <i class="envelope outline icon" style="font-size:18px ;"></i>
+        </div><br>
+        <div class="ui large fluid left  icon input">
+            <input type="text" class="form-control" name="senha" id="name" placeholder="instagram" [(ngModel)]="user.rede_social"/>
+            <i class="instagram icon" style="font-size:18px ;"></i>
+        </div><br>
+        <div class="ui large fluid left  icon input">
+          <input type="tel" class="form-control" name="senha" id="name" placeholder="Telefone" [(ngModel)]="user.telefone"/>
+          <i class="mobile icon" style="font-size:18px ;"></i>
+      </div><br>
+        <div class="ui large fluid left  icon input">
+            <input type="text" class="form-control" name="senha" id="name" placeholder="Descricao" [(ngModel)]="user.descricao"/>
+            <i class="edit icon" style="font-size:18px ;"></i>
+        </div><br>
+        <div class="ui large fluid left  icon input">
+            <input type="date" class="form-control" name="senha" id="name" placeholder="instagram" [(ngModel)]="user.data_nascimento"/>
+            <i class="calendar outline icon" style="font-size:18px ;"></i>
+        </div><br>
+        <div class="ui large fluid left  icon input">
+            <input type="password" class="form-control" name="senha" id="name" placeholder="Senha" [(ngModel)]="user.senha"/>
+            <i class="unlock icon" style="font-size:18px ;"></i>
+        </div><br>
+        <div class="ui large fluid left  icon input">
+            <input type="password" class="form-control" name="senha" id="name" placeholder="Confirmar senha" [(ngModel)]="senhaConf"/>
+            <i class="unlock icon" style="font-size:18px ;"></i>
+        </div><br>
+          <!-- <a [routerLink]="['/home']"> -->
         <button type="submit" id="submit" class="button" style="width: 230px; height: 40px; margin-top: 5%;"(click)="criar()">
           CRIAR CONTA
         </button>
-        <!-- <button type="button" class="btn text-white" style="width: 200px; height: 40px;"> CRIAR CONTA</button> -->
-        <!-- </a> -->
-
         <br/>
         <br/>
-        <!-- <span> Ou Cadastra-se com </span>
-        <div class="container">
-          <div class="icon">
-            <div class="social-fields">
-              <div class="social-field facebook">
-                <a href="#">
-                  <i class="fa fa-facebook"></i>
-                  Sign up with Facebook
-                </a>
-              </div>
-
-              <div class="social-field google">
-                <a href="#">
-                  <i class="fa fa-google"></i>
-                  Sign up with Google
-                </a>
-              </div>
-            </div>
+        <a [routerLink]="['/login']">
+          <div class="signup_link">
+            Já tem conta no AMOPATAS? <a href="#">Faça login</a>
           </div>
-        </div> -->
-      </form>
+        </a>
+    </form>
     </div>
   </div>
 </div>
