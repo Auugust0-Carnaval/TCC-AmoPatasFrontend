@@ -68,6 +68,7 @@ a{
 
 #plus:hover{
   transform: translateY(-4px);
+  cursor: pointer;
 
   color: orange;
   transition: all 0.7s ease-in-out 0s;
