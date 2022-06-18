@@ -1,5 +1,7 @@
 .cadastro{
-    background-image: url('/assets/img/cadastro.jpg');
+    /* background-image: url('/assets/img/cadastro.jpg'); */
+    /* background-image: url('/assets/img/login.jpg'); */
+    background-color: #80d6f7;
     background-repeat: no-repeat;
     background-size:100%;
     bottom: 0;
@@ -95,7 +97,36 @@ form .txt_field {
   border-width: 1px;
 }
 
+#image{
+  font-size:60px ;
+  margin-top: 10%;
+  /* margin-left: 42%; */
+}
 
+i:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #16479d;
+  transition: transform .5s ease;
+
+}
+
+i{
+  color: rgb(109, 109, 109);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+.signup_link {
+  text-align: center;
+  font-size: 16px;
+  color: #6666;
+}
+
+a{
+  color: #2691d9;
+  text-decoration: none;
+}
 
 
 /*input::placeholder {
