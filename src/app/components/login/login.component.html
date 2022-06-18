@@ -4,15 +4,20 @@
     <div class="card" style="height: 33rem;">
       <form method="post" >
         <!-- Titulo do Form -->
-        <img src="/assets/img/logo.png"  class="img-fluid" id="logo">
+        <!-- <img src="/assets/img/logo.png"  class="img-fluid" id="logo"><br><br> -->
+
+          <i class="user outline icon" id="iconLogin"></i>
+
         <!-- input Email -->
-        <div class="txt_field">
-          <input type="email" class="form-control" name="email" id="Email" placeholder="E-mail"  [(ngModel)]="user.email"/>
-        </div>
+        <div class="ui large left  icon input">
+          <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" [(ngModel)]="user.email"/>
+          <i class="users icon" style="font-size:18px ;" ></i>
+        </div><br>
         <!-- Input de Senha -->
-        <div class="txt_field">
-          <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha:"  [(ngModel)]="user.senha"/>
-        </div>
+        <div class="ui large left  icon input">
+          <input type="password" class="form-control" name="senha" id="name" placeholder="Senha" [(ngModel)]="user.senha"/>
+          <i class="unlock icon" style="font-size:18px ;"></i>
+        </div><br>
 
         <div class="pass">
           <a href="#"> Esqueceu a senha ? </a>
@@ -22,7 +27,7 @@
         </a>
         <a [routerLink]="['/cadastro']">
           <div class="signup_link">
-           Não tem uma conta? <a href="#">Cadastre-se</a>
+          Não tem uma conta? <a href="#">Cadastre-se</a>
           </div>
         </a>
       </form>
