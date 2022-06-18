@@ -261,6 +261,14 @@ a{
 #none{
   display: none;
 }
+#iconLogin{
+  margin-top: 15%;
+  margin-bottom: 5%;
+  font-size: 60px;
+  margin-left: 40%;
+  color: rgb(139, 138, 138);
+
+}
 
 /* Caso precise do button instragram
 
