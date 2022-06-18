@@ -21,7 +21,7 @@ export class PerfilComponent implements OnInit {
   constructor(private userdata: UserDataService, private petservice: PetService ) { }
 
   ngOnInit(): void {
-    this.user = this.userdata.getData();
+    this.user = this.userdata.getData(); // no perfil retorno ele no get
     this.GetPeUser();
   }
 
@@ -39,9 +39,11 @@ export class PerfilComponent implements OnInit {
       showCancelButton: true,
       focusConfirm: true,
       confirmButtonText:
-        '<i class="thumbs up outline icon"></i> SIM!',
+        '<i class="times icon"></i>SIM!',
+      confirmButtonColor: '#d33',
       cancelButtonText:
-        '<i class="thumbs down outline icon" aria-hidden="true"></i> NAO!'
+      '<i class="flag outline icon" aria-hidden="true"></i>NAO!',
+      cancelButtonColor: '#16479d',
     }).then((result)=>{
 
       if(result.isConfirmed){
