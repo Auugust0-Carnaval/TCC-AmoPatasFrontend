@@ -38,7 +38,6 @@ export class LoginComponent implements OnInit {
   LoginUser(){
 
     this.userdata.setData(this.usuario);
-
     this.userService.loginUsuario(this.user).subscribe(retorno =>{
       this.token = retorno;
     })
