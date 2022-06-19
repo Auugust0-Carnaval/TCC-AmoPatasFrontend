@@ -4,9 +4,9 @@
     <div class="card" style="height: 33rem;">
       <form method="post" >
         <!-- Titulo do Form -->
-        <!-- <img src="/assets/img/logo.png"  class="img-fluid" id="logo"><br><br> -->
+        <img src="/assets/img/logo.png"  class="img-fluid" id="logo">
 
-          <i class="user outline icon" id="iconLogin"></i>
+          <!-- <i class="user outline icon" id="iconLogin"></i> -->
 
         <!-- input Email -->
         <div class="ui large left  icon input">
@@ -20,7 +20,7 @@
         </div><br>
 
         <div class="pass">
-          <a href="#"> Esqueceu a senha ? </a>
+          <a (click)="RememberPass()"> Esqueceu a senha ? </a>
         </div>
         <a [routerLink]="['/home']">
           <input type="submit" value="Login" id="submit" class="btnlogin" (click)="LoginUser()"><br><br>
