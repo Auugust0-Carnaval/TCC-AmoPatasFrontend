@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div class="ui special cards" id="cardin" *ngFor="let pet of Pets"  style="margin-left: 5%; margin-top:2% ; margin-bottom: 2%;">
-      <div class="ui link card blue card" style="width: 31rem;" (mouseover)="userId(pet.user_id)" >
+      <div class="ui link card blue card" style="width: 31rem;" (mouseenter)="userId(pet.user_id)" >
         <div class="blurring dimmable image">
           <img src="http://localhost:3333/files/{{pet.imagem}}" alt="Card image cap"  alt="">
         </div>
