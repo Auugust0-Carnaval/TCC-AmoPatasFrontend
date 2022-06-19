@@ -6,6 +6,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Pet } from 'src/app/models/Pet.model';
 import { PetService } from 'src/app/services/pet.service';
 import Swal from 'sweetalert2';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-card',
@@ -18,9 +19,6 @@ export class CardComponent implements OnInit {
   public Pets: any;
 
   public usuario: any;
-
-  public usuarioID: any;
-
 
   public gfg = true;
 
@@ -45,6 +43,38 @@ export class CardComponent implements OnInit {
 
     return this.usuario;
   }
+
+
+  AdotarPet(Pet: any, UserPet: any){
+    Swal.fire({
+      title:`
+      <strong class="text-danger"><span class="text-primary">QUER SOLICITAR ADOÇÃO DO </span>${Pet.name.toUpperCase()}?</strong>`,
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: true,
+      confirmButtonText:
+        '<i class="share icon"></i>SIM!',
+      confirmButtonColor: '#16479d',
+      cancelButtonText:
+      '<i class="times icon" aria-hidden="true"></i>NAO!',
+      cancelButtonColor: '#d33'
+    }).then((result)=>{
+      if(result.isConfirmed){
+        Swal.fire({
+        title:`
+        <strong class="text-sucess"><span class="text-primary">SOLICITAÇÃO ENVIADA PARA </span>${UserPet.name.toUpperCase()}!!</strong>`,
+        showCloseButton: false,
+        showCancelButton: false,
+        showConfirmButton:false,
+        timer:1450
+        })
+
+      }
+    })
+
+  }
+
+
 
 
   //TODO DEIXA ESSE METODO AQUI
