@@ -65,11 +65,15 @@ form .txt_field {
   transform: translateY(-6px);
 }
 
+
 #logo{
-  width: 100px;
-  height: 85px;
   -webkit-transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
+  height: 90px;
+  width: 140px;
+  margin-top:5% ;
+  margin-left: 34%;
+  margin-bottom: 10%;
   /* margin-top: 1%; */
   /* float: left; */
 }
@@ -98,10 +102,10 @@ form .txt_field {
 }
 
 #image{
-  font-size:60px ;
-  margin-top: 10%;
-  /* margin-left: 42%; */
+  font-size:41px ;
+  margin-top: 5%;
 }
+
 
 i:hover{
   -webkit-transform: scale(1.1);
@@ -127,7 +131,6 @@ a{
   color: #2691d9;
   text-decoration: none;
 }
-
 
 /*input::placeholder {
   color: white;
