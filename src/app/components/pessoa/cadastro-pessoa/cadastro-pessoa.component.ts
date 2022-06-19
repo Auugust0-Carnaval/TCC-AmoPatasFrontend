@@ -37,12 +37,23 @@ export class CadastroPessoaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectedImage(event : any){
+  async selectedImage(event : any){
     if(event.target.files.length > 0){
       const file = event.target.files[0];
       this.imagem = file;
     }
     console.log(this.imagem);
+    await this.delay(1200);
+    Swal.fire({
+      icon:'success',
+      iconColor:'#16479d',
+      position:'top' ,
+      title: `<strong><span class= "uk-text-warning">FOTO INSERIDA COM SUCESSO</span><span class="text-danger"> ${this.user.name?.toUpperCase()}</span></strong>`,
+      timer: 1700,
+      showCloseButton: false,
+      showConfirmButton: false
+    })
+
   }
 
   criar(){
@@ -152,5 +163,13 @@ export class CadastroPessoaComponent implements OnInit {
       showConfirmButton: false,
       timer: 4500
     })
+  }
+
+  private delay(ms: number): Promise<boolean> {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(true);
+      }, ms);
+    });
   }
 }
