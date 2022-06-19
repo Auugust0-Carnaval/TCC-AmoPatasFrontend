@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="ui special cards" id="cardin"  *ngFor="let pet of Pets"  style="margin-left: 5%; margin-top:2% ; margin-bottom: 2%;" >
+    <div class="ui special cards" id="cardin" *ngFor="let pet of Pets"  style="margin-left: 5%; margin-top:2% ; margin-bottom: 2%;">
       <div class="ui link card blue card" style="width: 31rem;" (mouseover)="userId(pet.user_id)" >
         <div class="blurring dimmable image">
           <img src="http://localhost:3333/files/{{pet.imagem}}" alt="Card image cap"  alt="">
@@ -24,7 +24,7 @@
                     <img class="ui avatar image visible content" src="https://img.freepik.com/vetores-gratis/gato-bonito-que-joga-o-telefone-da-mao-ilustracao-do-icone-do-vetor-dos-desenhos-animados-conceito-de-icone-de-tecnologia-animal-isolado-de-vetor-premium-estilo-de-desenho-animado-plano_138676-4231.jpg?w=2000" >
                     <img class="ui avatar image hidden content" id="avatar" src="http://localhost:3333/files/{{usuario.imagem}}" >
                   </div>
-                  <div class="ui vertical menu" id="info">
+                  <div class="ui vertical menu" id="info" *ngIf="pet.user_id != userAutentic.id">
                     <a class="teal item active">
                       <span>
                         {{usuario.name | uppercase}}
@@ -33,16 +33,13 @@
                     <a class="item ">
                       {{usuario.telefone}}
                     </a>
-                    <!-- <a class="item">
-                      {{usuario.descricao | uppercase}}
-                    </a> -->
-                    <!-- <a class="item">
-                      <div>
-                        <a href="https://www.instagram.com/{{usuario.rede_social}}/">
-                          <i class="instagram icon"></i> {{usuario.rede_social}}
-                        </a>
-                      </div>
-                    </a> -->
+                  </div>
+                  <div class="ui vertical menu" id="info" *ngIf="pet.user_id == userAutentic.id">
+                    <a class="teal item active">
+                      <span>
+                        VOCÊ
+                      </span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -75,14 +72,20 @@
                     <h3 class="text-left"> Situação do animal:{{pet.situacao | uppercase}}</h3><br>
                     <h3 class="text-left"> @</h3>
                   </strong> -->
+
                 </div>
               </div><br><br>
-              <div class="row ui two column centered grid">
+              <div class="row ui two column centered grid" *ngIf="pet.user_id != userAutentic.id" >
                   <button class="ui inverted orange button" id="adotar" style="margin-bottom:3% ;" (click)="AdotarPet(pet, usuario)">ADOTAR</button>
               </div>
-           </div>
+              <div class="row ui two column centered grid" *ngIf="pet.user_id == userAutentic.id">
+                <div class="ui floating message">
+                  <strong class="text-primary"><p>O {{pet.name | uppercase}} É SEU !</p></strong>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-  </div>
+</div>
 </div>
