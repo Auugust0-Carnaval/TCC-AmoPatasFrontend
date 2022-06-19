@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
   }
 
  public token : any;
+ public newPass: any;
 
 
 
@@ -57,6 +58,32 @@ export class LoginComponent implements OnInit {
 
     })
   }
+
+
+  RememberPass(){
+    Swal.fire({
+      title:`<h2>ESQUECI SENHA</h2><hr>`,
+      focusConfirm: true,
+      html: `
+              <div class="ui large left  icon input">
+                <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" [(ngModel)]="user.email"/>
+                <i class="users icon" style="font-size:18px ;" ></i>
+              </div><br><br>
+              <div class="ui large left  icon input">
+                <input type="password" class="form-control" name="senha" id="name" placeholder="Nova senha" [(ngModel)]="this.newPass"/>
+                <i class="unlock icon" style="font-size:18px ;"></i>
+              </div><br>`,
+      confirmButtonText:'ENVIAR',
+      confirmButtonColor:'orange'
+
+    }).then((result)=>{
+      if(result.isConfirmed){
+        Swal.fire(`pora da senha ${this.newPass}`)
+      }
+    })
+  }
+
+
 
 
 
