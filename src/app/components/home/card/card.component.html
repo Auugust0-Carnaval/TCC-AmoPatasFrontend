@@ -10,10 +10,6 @@
         <div class="content" style="margin-left: 4%;">
           <div class="row">
             <h2 class="header" style="margin-right: 4%;">{{pet.name | uppercase}}</h2>
-            <!-- <a  [routerLink]="['/editar-pet']" routerLinkActive="router-link-active">
-              <i  class="paint brush icon" id="edit" style="margin-left:2% ;" aria-hidden="true"></i>
-            </a>
-            <i  id="lixerinha" class="trash alternate outline icon " (click)="deletePet(pet)"></i> -->
           </div>
           <div class="row" style="margin-right:56%;">
             <span class="date">{{pet.createdAt | date : 'short' : '' : 'pt-BR'}} <i class="clock outline icon" id="iconTime" aria-hidden="true"></i></span>
@@ -69,13 +65,6 @@
                   <a class="ui yellow basic label right ribbon">{{pet.porte | uppercase}}</a><br><br>
                   <a class="ui orange basic label ribbon">{{pet.cidade | uppercase}}</a><br><br>
                   <a class="ui teal  basic label right ribbon">{{pet.situacao | uppercase}}</a><br><br>
-
-                  <div *ngIf="usuarioID">
-                    <h1>{{usuarioID.name}}</h1>
-                  </div>
-
-
-
                   <!-- <strong>
                     <h3 class="text-left"> Tipo de Raça: {{pet.breed | uppercase}}</h3><br>
                     <h3 class="text-left"> Estado: {{pet.uf | uppercase}} </h3><br>
@@ -89,7 +78,7 @@
                 </div>
               </div><br><br>
               <div class="row ui two column centered grid">
-                  <button class="ui inverted orange button" id="adotar" style="margin-bottom:3% ;">ADOTAR</button>
+                  <button class="ui inverted orange button" id="adotar" style="margin-bottom:3% ;" (click)="AdotarPet(pet, usuario)">ADOTAR</button>
               </div>
            </div>
           </div>
