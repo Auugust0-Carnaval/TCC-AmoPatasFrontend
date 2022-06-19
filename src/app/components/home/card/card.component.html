@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div class="ui special cards" id="cardin"  *ngFor="let pet of Pets"  style="margin-left: 5%; margin-top:2% ; margin-bottom: 2%;" >
-      <div class="card" style="width: 31rem;" >
+      <div class="ui link card blue card" style="width: 31rem;" (mouseover)="userId(pet.user_id)" >
         <div class="blurring dimmable image">
           <img src="http://localhost:3333/files/{{pet.imagem}}" alt="Card image cap"  alt="">
         </div>
@@ -23,8 +23,11 @@
           <div class="content" >
             <div class="ui grid" id="row" style="padding: 2%; margin-top: 2%;">
               <div class="col-6" id="teste" >
-                <div id="infoUser">
-                  <img class="ui avatar image" id="avatar" src="http://localhost:3333/files/{{usuario.imagem}}">
+                <div *ngIf="usuario" id="infoUser">
+                  <div class="ui small circular rotate reveal image">
+                    <img class="ui avatar image visible content" src="https://img.freepik.com/vetores-gratis/gato-bonito-que-joga-o-telefone-da-mao-ilustracao-do-icone-do-vetor-dos-desenhos-animados-conceito-de-icone-de-tecnologia-animal-isolado-de-vetor-premium-estilo-de-desenho-animado-plano_138676-4231.jpg?w=2000" >
+                    <img class="ui avatar image hidden content" id="avatar" src="http://localhost:3333/files/{{usuario.imagem}}" >
+                  </div>
                   <div class="ui vertical menu" id="info">
                     <a class="teal item active">
                       <span>
@@ -34,16 +37,16 @@
                     <a class="item ">
                       {{usuario.telefone}}
                     </a>
-                    <a class="item">
+                    <!-- <a class="item">
                       {{usuario.descricao | uppercase}}
-                    </a>
-                    <a class="item">
+                    </a> -->
+                    <!-- <a class="item">
                       <div>
                         <a href="https://www.instagram.com/{{usuario.rede_social}}/">
                           <i class="instagram icon"></i> {{usuario.rede_social}}
                         </a>
                       </div>
-                    </a>
+                    </a> -->
                   </div>
                 </div>
               </div>
@@ -67,7 +70,11 @@
                   <a class="ui orange basic label ribbon">{{pet.cidade | uppercase}}</a><br><br>
                   <a class="ui teal  basic label right ribbon">{{pet.situacao | uppercase}}</a><br><br>
 
-                  <h1>{{pet.user_id}}</h1>
+                  <div *ngIf="usuarioID">
+                    <h1>{{usuarioID.name}}</h1>
+                  </div>
+
+
 
                   <!-- <strong>
                     <h3 class="text-left"> Tipo de Raça: {{pet.breed | uppercase}}</h3><br>
