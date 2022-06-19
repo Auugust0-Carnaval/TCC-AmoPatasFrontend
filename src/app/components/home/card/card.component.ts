@@ -7,6 +7,7 @@ import { Pet } from 'src/app/models/Pet.model';
 import { PetService } from 'src/app/services/pet.service';
 import Swal from 'sweetalert2';
 import { timer } from 'rxjs';
+import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
   selector: 'app-card',
@@ -20,14 +21,19 @@ export class CardComponent implements OnInit {
 
   public usuario: any;
 
+  public userAutentic: any;
+
   public gfg = true;
 
+  public templateName = true;
 
 
-  constructor(private petService : PetService, private user : UserService, private router : Router) { }
+
+  constructor(private petService : PetService, private user : UserService, private router : Router, private userdata: UserDataService) { }
 
   ngOnInit(): void {
     this.BuscarPets();
+    this.userAutentic = this.userdata.getData();
   }
 
    BuscarPets(): void{
