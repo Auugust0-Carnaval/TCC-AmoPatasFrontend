@@ -196,7 +196,7 @@ export class UserService {
       imageUrl : 'https://img.freepik.com/vetores-gratis/ilustracao-de-icone-dos-desenhos-animados-de-cacto-de-gato-bonito_138676-2692.jpg?w=740&t=st=1654012860~exp=1654013460~hmac=aa94c63844b8327194b7da691d1ea9ce17d6fbe089a8bcae9cffed1bfcceeef2',
       imageWidth: 370,
       imageHeight: 300,
-      title: `<strong class = "text-warning"><span class = "text-primary">SENHA DEVE TER AO MENOS</span> 6 LETRINHAS</strong>`,
+      title: `<strong class = "text-warning"><span class = "text-primary">SENHA DEVE TER AO MENOS</span> 6 CARACTERES</strong>`,
       showConfirmButton: false,
       timer: 3500
     });
