@@ -19,6 +19,8 @@ export class CardComponent implements OnInit {
 
   public usuario: any;
 
+  public usuarioID: any;
+
 
   public gfg = true;
 
@@ -28,7 +30,6 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     this.BuscarPets();
-    this.userId();
   }
 
    BuscarPets(): void{
@@ -37,19 +38,23 @@ export class CardComponent implements OnInit {
     );
   }
 
-   async userId(){
-    await this.delay(200);
-
-    this.user.buscardId(this.Pets).subscribe(retorno =>
-      this.usuario = retorno);
-  }
-
-  private delay(ms: number): Promise<boolean> {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(true);
-      }, ms);
+   async userId(userId:any){
+    this.user.buscardId(userId).subscribe(retorno =>{
+      this.usuario = retorno;
     });
+
+    return this.usuario;
   }
+
+
+  //TODO DEIXA ESSE METODO AQUI
+  // private delay(ms: number): Promise<boolean> {
+  //   return new Promise(resolve => {
+  //     setTimeout(() => {
+  //       resolve(true);
+  //     }, ms);
+  //   });
+  // }
+
 }
 
