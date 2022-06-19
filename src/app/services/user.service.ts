@@ -71,9 +71,7 @@ export class UserService {
   }
 
   buscardId(userPetId: any) : Observable<User[]> {
-
-    let idUser = userPetId[0].user_id;
-    return this.http.get<User[]>(`${this.URLID}/${idUser}`).pipe(
+    return this.http.get<User[]>(`${this.URLID}/${userPetId}`).pipe(
       map(retorno => retorno),
     );
   }
