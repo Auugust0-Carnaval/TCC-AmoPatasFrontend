@@ -119,10 +119,32 @@ a{
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.4s linear;
+  position: absolute;
+  z-index: 50;
 }
 
 
-#info{
-  position: absolute;
-  z-index: 50;
+#pesquisa{
+  color:#16479d ;
+  cursor: pointer;
+}
+
+#reload{
+  color:#16479d ;
+  cursor: pointer;
+  margin-left: 2%;
+  font-size: 25px;
+  transition: all 0.7s ease-in-out 0s;
+}
+
+#reload:hover{
+  color:orange ;
+  transition: all 0.7s ease-in-out 0s;
+
+}
+
+
+input:active{
+  width: 100;
+  transition: all 0.7s ease-in-out 0s;
 }
