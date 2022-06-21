@@ -1,3 +1,4 @@
+import { PetService } from 'src/app/services/pet.service';
 import { UserService } from './../../../services/user.service';
 import { UserDataService } from './../../../services/user-data.service';
 import { Component, OnInit } from '@angular/core';
@@ -13,13 +14,46 @@ export class HeaderComponent implements OnInit {
 
   public user: any;
 
+  public search: any;
+
+  public category: any;
 
 
-  constructor(private router : Router, private userdata : UserDataService, private userservice: UserService) { }
+
+  constructor(private router : Router, private userdata : UserDataService, private userservice: UserService, private petservice: PetService) { }
 
   ngOnInit(): void {
     this.user = this.userdata.getData();
   }
+
+  async SelectCategory(){
+
+    this.petservice.buscarCategory(this.search.toUpperCase()).subscribe(retorno =>{
+     this.category = retorno;
+    });
+
+    await this.delay(1000);
+
+    this.petservice.setData(this.category);
+  }
+
+
+
+
+  private delay(ms: number): Promise<boolean> {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(true);
+      }, ms);
+    });
+  }
+
+
+
+
+
+
+
 
   exit(){
     Swal.fire({
