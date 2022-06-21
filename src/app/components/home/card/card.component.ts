@@ -6,7 +6,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Pet } from 'src/app/models/Pet.model';
 import { PetService } from 'src/app/services/pet.service';
 import Swal from 'sweetalert2';
-import { timer } from 'rxjs';
+import { timer, empty, EMPTY } from 'rxjs';
 import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
@@ -25,9 +25,11 @@ export class CardComponent implements OnInit {
 
   public gfg = true;
 
-  public templateName = true;
+  public search: any;
 
+  public PetCategory: any;
 
+  public category: any;
 
   constructor(private petService : PetService, private user : UserService, private router : Router, private userdata: UserDataService) { }
 
@@ -35,6 +37,31 @@ export class CardComponent implements OnInit {
     this.BuscarPets();
     this.userAutentic = this.userdata.getData();
   }
+
+  async SelectCategory(){
+    this.petService.buscarCategory(this.search.toUpperCase()).subscribe(retorno =>{
+     this.category = retorno;
+    });
+
+    await this.delay(5);
+
+    if(!this.category){
+    }
+    else{
+      this.Pets = this.category
+    }
+  }
+
+  private delay(ms: number): Promise<boolean> {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(true);
+      }, ms);
+    });
+  }
+
+
+
 
    BuscarPets(): void{
     this.petService.buscarTodos().subscribe(retorno =>
