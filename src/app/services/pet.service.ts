@@ -19,7 +19,9 @@ export class PetService {
 
   private URLCADASTRO : string = "http://localhost:3333/users"
 
-  private dataUserPet: any;
+  private URLCATEGORY: string = "http://localhost:3333"
+
+  private PetCategory: any;
 
 
   constructor(private http: HttpClient, private userdata: UserDataService) {}
@@ -27,14 +29,32 @@ export class PetService {
   //TODO GETS ANS SETS
 
   setData(newData: any){
-    this.dataUserPet = newData;
+    this.PetCategory = newData;
   }
 
   getData(){
-    return this.dataUserPet;
+    return this.PetCategory;
   }
 
 
+  buscarCategory(category: any) : Observable<any[]> {
+
+    let categoria;
+
+    if(category == "PEQUENO"){
+      categoria = "portes1";
+    }
+    else if(category == "MEDIO"){
+      categoria = "portes2";
+    }
+    else{
+      categoria = "portes3";
+    }
+
+    return this.http.get<any[]>(`${this.URLCATEGORY}/${categoria}/pets`).pipe(
+      map(retorno => retorno),
+    );
+  }
 
 
   buscarTodos() : Observable<Pet[]> {
