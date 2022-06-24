@@ -16,8 +16,4 @@ export class UserDataService {
   getData(){
     return this.dataUser;
   }
-
-
-
-
 }

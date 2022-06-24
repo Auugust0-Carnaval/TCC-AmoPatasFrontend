@@ -12,9 +12,6 @@ import Swal from 'sweetalert2';
 
 
 export class UserService {
-
-
-
   private URL: string = "http://localhost:3333/users"
 
   private URLID: string = "http://localhost:3333/usuario"
@@ -111,29 +108,7 @@ export class UserService {
     return this.http.delete(`${this.URLDELETE}/${User}`).pipe(take(1));
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //TOASTS = MENSAGENS DE SUCESSO OU ERRO
+  // TOASTS = MENSAGENS DE SUCESSO OU ERRO
 
   exibeErro(e: any): Observable<any>
   {

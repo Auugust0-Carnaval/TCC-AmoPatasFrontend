@@ -9,10 +9,6 @@ import { catchError, EMPTY, empty, map, Observable, take } from 'rxjs';
   providedIn: 'root'
 })
 export class PetService {
-
-
-
-
   private URL: string = "http://localhost:3333/users/pets" //TODO arrumar consumo da API (URL DO NODE)
 
   private URLDELETE: string = "http://localhost:3333/pets" //TODO arrumar consumo da API (URL DO NODE)
@@ -23,11 +19,9 @@ export class PetService {
 
   private PetCategory: any;
 
-
   constructor(private http: HttpClient, private userdata: UserDataService) {}
 
   //TODO GETS ANS SETS
-
   setData(newData: any){
     this.PetCategory = newData;
   }
@@ -219,7 +213,4 @@ export class PetService {
       timer: 3000
     })
   }
-
-
-
 }
