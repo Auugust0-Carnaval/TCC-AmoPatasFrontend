@@ -1,0 +1,26 @@
+<div class="container" style="margin-left:20% " *ngFor="let pets  of pet" >
+  <div class="ui link cards" *ngIf="aprovado != true">
+    <div class="ui card">
+      <img src="http://localhost:3333/files/{{userSolicitado.imagem}}">
+      <div class="content text-left">
+        <span class="header" href="#">{{userSolicitado.name | uppercase}}</span>
+        <div class="meta">
+        <strong>
+          <span class="text-primary">QUER ADOTAR</span><span class="text-warning"> {{pets.name | uppercase}}</span><br>
+          <span class="text-primary">TELEFONE</span><span class="text-success"> {{userSolicitado.telefone}}</span>
+        </strong>
+        </div>
+      </div>
+      <div class="ui buttons">
+        <button class="ui positive button" (click)="TrueSoli()" >ACEITAR</button>
+        <div class="or" data-text="ou"></div>
+        <button class="ui negative button">REJEITAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
