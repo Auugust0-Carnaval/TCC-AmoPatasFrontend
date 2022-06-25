@@ -7,7 +7,7 @@
         <img src="http://localhost:3333/files/{{user.imagem}}" class="ui medium circular image">
       </div>
       <h2 class="mt-3">{{user.name | uppercase}}</h2>
-      <strong><p class="text-primary">{{user.descricao | uppercase}}</p></strong>
+      <strong><p class="text-primary">{{user.telefone | uppercase}}</p></strong>
       <br>
       <br>
       <a [routerLink]="['/editar']">
@@ -38,11 +38,11 @@
             <i class="fa fa-bell fa-2x"></i>
           </a>
         </li>
-        <li class="nav-item p-3">
+        <!-- <li class="nav-item p-3">
           <a class="nav-link " [routerLink]="['/favoritos']" routerLinkActive="router-link-active">
             <i class="fa fa-heart fa-2x "></i>
           </a>
-        </li>
+        </li> -->
       </ul>
       <hr>
     </div>
