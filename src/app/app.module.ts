@@ -24,7 +24,6 @@ import { LoginComponent } from './components/login/login.component';
 import { CadastrarPetsComponent } from './components/pets/cadastrar-pets/cadastrar-pets.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { CarrosselComponent } from './components/home/carrossel/carrossel.component';
-import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
 import { CadastroPessoaComponent } from './components/pessoa/cadastro-pessoa/cadastro-pessoa.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -34,8 +33,6 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { HttpClientModule }from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HttpInterceptor } from '@angular/common/http';
-
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -46,6 +43,7 @@ registerLocaleData(localePT);
 
 import { EditarPerfilComponent } from './components/pessoa/editar-perfil/editar-perfil.component';
 import { EditarPetsComponent } from './components/pets/cadastrar-pets/editar-pets/editar-pets.component';
+import { SolicitacaoComponent } from './components/solicitacao/solicitacao.component';
 
 
 @NgModule({
@@ -58,13 +56,13 @@ import { EditarPetsComponent } from './components/pets/cadastrar-pets/editar-pet
     CadastrarPetsComponent,
     PerfilComponent,
     CarrosselComponent,
-    FavoritosComponent,
     NotificacoesComponent,
     CadastroPessoaComponent,
     SobreNosComponent,
     CardComponent,
     EditarPerfilComponent,
-    EditarPetsComponent
+    EditarPetsComponent,
+    SolicitacaoComponent
   ],
   imports: [
     BrowserModule,
