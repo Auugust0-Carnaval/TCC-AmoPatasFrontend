@@ -1,3 +1,4 @@
+import { SolicitacaoService } from './../../../services/solicitacao.service';
 import { Router } from '@angular/router';
 import { User } from './../../../models/User.model';
 import { UserService } from './../../../services/user.service';
@@ -31,7 +32,9 @@ export class CardComponent implements OnInit {
 
   public category: any;
 
-  constructor(private petService : PetService, private user : UserService, private router : Router, private userdata: UserDataService) { }
+  public solicitacaoPet: any;
+
+  constructor(private petService : PetService, private user : UserService, private router : Router, private userdata: UserDataService, private solicitaService: SolicitacaoService) { }
 
   ngOnInit(): void {
     this.BuscarPets();
@@ -59,8 +62,6 @@ export class CardComponent implements OnInit {
       }, ms);
     });
   }
-
-
 
 
    BuscarPets(): void{
@@ -93,6 +94,9 @@ export class CardComponent implements OnInit {
       cancelButtonColor: '#d33'
     }).then((result)=>{
       if(result.isConfirmed){
+        this.solicitaService.cadastrar(this.userAutentic.id,Pet).subscribe(retorno =>{
+          this.solicitacaoPet = retorno
+        });
         Swal.fire({
         title:`
         <strong class="text-sucess"><span class="text-primary">SOLICITAÇÃO ENVIADA PARA </span>${UserPet.name.toUpperCase()}!!</strong>`,
@@ -101,11 +105,12 @@ export class CardComponent implements OnInit {
         showConfirmButton:false,
         timer:1450
         })
-
       }
     })
 
   }
+
+
 
 
 
