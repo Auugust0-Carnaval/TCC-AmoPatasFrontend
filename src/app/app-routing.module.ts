@@ -1,7 +1,6 @@
 import { AppComponent } from './app.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { NotificacoesComponent } from './components/notificacoes/notificacoes.component';
-import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { CadastrarPetsComponent } from './components/pets/cadastrar-pets/cadastrar-pets.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { NgModule } from '@angular/core';
@@ -25,7 +24,6 @@ const routes: Routes = [
   { path: 'pets', component: CadastrarPetsComponent, canActivate: [AuthGuard]},
   // { path: 'pets', component: CadastrarPetsComponent},
 
-  { path: 'favoritos', component: FavoritosComponent, canActivate: [AuthGuard]},
   { path: 'notificacoes', component: NotificacoesComponent , canActivate: [AuthGuard]},
   { path: 'cadastro', component: CadastroPessoaComponent},
   { path: 'sobre', component: SobreNosComponent, canActivate: [AuthGuard]},
