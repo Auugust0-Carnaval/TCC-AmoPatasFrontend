@@ -50,6 +50,13 @@ export class SolicitacaoService {
     );
   }
 
+  RecuSolici(idsolicitacao: any) : Observable<any> {
+    return this.http.post<any>(`${this.URLAP}/${idsolicitacao}/reprovados`,EMPTY).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.mensagemErro(erro))
+    );
+  }
+
 
 
   mensagemErro(erro: any):Observable<any>
