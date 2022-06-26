@@ -19,6 +19,9 @@ export class SolicitacaoService {
 
   private URLAP: any = "http://localhost:3333/solicitacao"
 
+  private URLUSERSOLI: any = "http://localhost:3333/users"
+
+
   private URLSOLI: any = "http://localhost:3333/pets"
 
 
@@ -50,6 +53,13 @@ export class SolicitacaoService {
     );
   }
 
+
+  SoliUser(userAutentic: any) : Observable<any> {
+    return this.http.get<any>(`${this.URLUSERSOLI}/${userAutentic}/solicitacao`).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.mensagemErro(erro))
+    );
+  }
 
 
   mensagemErro(erro: any):Observable<any>
