@@ -53,6 +53,13 @@ export class SolicitacaoService {
     );
   }
 
+  RecuSolici(idsolicitacao: any) : Observable<any> {
+    return this.http.post<any>(`${this.URLAP}/${idsolicitacao}/reprovados`,EMPTY).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.mensagemErro(erro))
+    );
+  }
+
 
   SoliUser(userAutentic: any) : Observable<any> {
     return this.http.get<any>(`${this.URLUSERSOLI}/${userAutentic}/solicitacao`).pipe(

@@ -41,7 +41,6 @@ export class SolicitacaoComponent implements OnInit {
     if(this.solicitacao[0] == undefined){
       this.approvedBollean();
     }
-
     else if(this.solicitacao == 0 || this.solicitacao == null){
       this.approvedBollean();
     }
@@ -72,6 +71,23 @@ export class SolicitacaoComponent implements OnInit {
     Swal.fire({
       title: '<br><i class="handshake outline icon" style="color:blue; font-size:55px"></i>',
       html: `<strong class = "text-primary">SOLICITAÇÃO DE ADOÇÃO DE <span class="text-danger">${this.userSolicitado.name.toUpperCase()}</span> FOI ACEITA</strong>`,
+      showConfirmButton: false,
+      timer: 3000
+    })
+
+    await this.delay(3500);
+    this.SelectSolic();
+  }
+
+  async FalseSoli(){
+    this.solicitacaoservice.RecuSolici(this.solicitacao[0].id).subscribe(retono=>{
+      retono = retono;
+    })
+
+    Swal.fire({
+      title: '<br><i class="handshake outline icon" style="color:blue; font-size:55px"></i>',
+      html: `<strong class = "text-primary">VOCE RECUSOU SOLICITAÇÃO DE ADOCAO DO <span class="text-danger">
+      ${this.userSolicitado.name.toUpperCase()}</span></strong>`,
       showConfirmButton: false,
       timer: 3000
     })
