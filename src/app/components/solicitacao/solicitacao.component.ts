@@ -62,16 +62,19 @@ export class SolicitacaoComponent implements OnInit {
   }
 
  async TrueSoli(userSolicita: any){
-    this.solicitacaoservice.AproSolici(userSolicita).subscribe(retono=>{
-      retono = retono;
-    })
 
-    Swal.fire({
-      title: '<br><i class="handshake outline icon" style="color:blue; font-size:55px"></i>',
-      html: `<strong class = "text-primary">SOLICITAÇÃO DE ADOÇÃO DE <span class="text-danger">${this.userSolicitado.name.toUpperCase()}</span> FOI ACEITA</strong>`,
-      showConfirmButton: false,
-      timer: 3000
-    })
+  Swal.fire({
+    title: '<br><i class="handshake outline icon" style="color:blue; font-size:55px"></i>',
+    html: `<strong class = "text-primary">SOLICITAÇÃO DE ADOÇÃO DE <span class="text-danger">${this.userSolicitado.name.toUpperCase()}</span> FOI ACEITA</strong>`,
+    showConfirmButton: false,
+    timer: 3000
+  })
+
+  this.solicitacaoservice.AproSolici(userSolicita).subscribe(retono=>{
+    retono = retono;
+  }),
+
+
 
     await this.delay(3500);
     this.SelectSolic();
