@@ -94,7 +94,7 @@ export class CardComponent implements OnInit {
       cancelButtonColor: '#d33'
     }).then((result)=>{
       if(result.isConfirmed){
-        this.solicitaService.cadastrar(this.userAutentic.id,Pet).subscribe(retorno =>{
+        this.solicitaService.cadastrar(this.userAutentic,Pet,this.usuario).subscribe(retorno =>{
           this.solicitacaoPet = retorno
         });
         Swal.fire({
