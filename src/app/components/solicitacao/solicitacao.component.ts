@@ -19,6 +19,8 @@ export class SolicitacaoComponent implements OnInit {
   public pet: any;
   public aprovado: any;
 
+  public usuario: any;
+
 
   constructor(private solicitacaoservice:  SolicitacaoService,private userservice: UserService, private UserdataService: UserDataService, private petservice: PetService) { }
 
@@ -38,33 +40,29 @@ export class SolicitacaoComponent implements OnInit {
 
 
     await this.delay(300);
-    if(this.solicitacao[0] == undefined){
+    if(this.solicitacao == undefined){
       this.approvedBollean();
     }
     else if(this.solicitacao == 0 || this.solicitacao == null){
       this.approvedBollean();
     }
 
-    else if(this.solicitacao[0].aprovado == true){
+    else if(this.solicitacao.aprovado == true){
       this.approvedBollean();
     }
 
-    this.aprovado = this.solicitacao[0].aprovado;
-
-
-    this.userservice.buscardId(this.solicitacao[0].user_solicita).subscribe(retorno =>{
-      this.userSolicitado = retorno
-    })
-
-    await this.delay(300);
-
-    this.petservice.buscarId(this.solicitacao[0].user_id).subscribe(retorno=>{
-      this.pet = retorno
-    })
   }
 
- async TrueSoli(){
-    this.solicitacaoservice.AproSolici(this.solicitacao[0].id).subscribe(retono=>{
+  async userId(userId:any){
+    this.userservice.buscardId(userId).subscribe(retorno =>{
+      this.usuario = retorno;
+    });
+
+    return this.usuario;
+  }
+
+ async TrueSoli(userSolicita: any){
+    this.solicitacaoservice.AproSolici(userSolicita).subscribe(retono=>{
       retono = retono;
     })
 
@@ -94,6 +92,10 @@ export class SolicitacaoComponent implements OnInit {
 
     await this.delay(3500);
     this.SelectSolic();
+
+    return this.solicitacao[0].aprovado = true;
+
+
   }
 
   approvedBollean(){
