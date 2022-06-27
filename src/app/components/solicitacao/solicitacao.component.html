@@ -1,24 +1,32 @@
-<div class="container" style="margin-left:20% " *ngFor="let pets  of pet" >
-  <div class="ui link cards" *ngIf="aprovado != true">
-    <div class="ui card">
-      <img src="http://localhost:3333/files/{{userSolicitado.imagem}}">
-      <div class="content text-left">
-        <span class="header" href="#">{{userSolicitado.name | uppercase}}</span>
-        <div class="meta">
-        <strong>
-          <span class="text-primary">QUER ADOTAR</span><span class="text-warning"> {{pets.name | uppercase}}</span><br>
-          <span class="text-primary">TELEFONE</span><span class="text-success"> {{userSolicitado.telefone}}</span>
-        </strong>
+<div class="ui three column grid">
+  <div *ngFor="let soli of solicitacao" >
+    <div *ngIf="aprovado != true" >
+      <div class="ui link card orange card" style="margin-bottom:5% ;" >
+        <div class="ui slide masked reveal image" (mouseenter)="userId(soli.user_solicita)">
+          <img src="https://img.freepik.com/vetores-gratis/avatar-de-personagem-de-empresario-isolado_24877-60111.jpg?t=st=1656289781~exp=1656290381~hmac=e1ccfc4fb19a17bdd09aba9e795de9847af91e251bd62666d2464ab86877080b&w=740" class="visible content">
+          <img src="http://localhost:3333/files/{{usuario.imagem}}" class="hidden content">
         </div>
-      </div>
-      <div class="ui buttons">
-        <button class="ui positive button" (click)="TrueSoli()" >ACEITAR</button>
-        <div class="or" data-text="ou"></div>
-        <button class="ui negative button" (click)="FalseSoli()" >REJEITAR</button>
+        <div class="content text-left">
+          <span class="header" href="#">{{soli.name_solicita | uppercase}}</span>
+          <div class="meta">
+          <strong>
+            <span class="text-primary">QUER ADOTAR</span><span class="text-warning"> {{soli.name_pet | uppercase}}</span><br>
+            <span class="text-primary">TELEFONE</span><span class="text-success"> {{soli.telefone_solicita}}</span>
+          </strong>
+          </div>
+        </div>
+        <div class="ui buttons">
+          <button class="ui positive button" (click)="TrueSoli(soli.user_solicita)" >ACEITAR</button>
+          <div class="or" data-text="ou"></div>
+          <button class="ui negative button" (click)="FalseSoli()" >REJEITAR</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<br>
+<br>
+<br>
 
 
 
