@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, EMPTY, map, Observable, empty } from 'rxjs';
 import Swal from 'sweetalert2';
@@ -11,9 +11,18 @@ export class SolicitacaoService {
 
 
   body: any={
-    user_solicita: '',
-    user_id: '',
+    // user_solicita: '',
+    // user_id: '',
+    name_solicita: '',
+    name_dono:'',
+    name_pet:'',
+    telefone_solicita:'',
+    telefone_dono:'',
+    imagem_solicita:'',
+
   }
+
+
 
   private URL: any = "http://localhost:3333/solici";
 
@@ -28,12 +37,29 @@ export class SolicitacaoService {
   constructor(private http: HttpClient,  private userdata: UserDataService) { }
 
 
-  cadastrar(userSolicita: any, pet: any) : Observable<any> {
+  cadastrar(userSolicita: any, pet: any, userdono:any) : Observable<any> {
 
-    this.body.user_solicita = userSolicita;
-    this.body.user_id = pet.user_id;
+    const formData = new FormData();
 
-    return this.http.post<any>(`${this.URLSOLI}/${pet.id}/solicitacao`, this.body).pipe(
+    this.body.name_solicita = userSolicita.name;
+    this.body.name_dono = userdono.name;
+    this.body.name_pet = pet.name;
+    this.body.telefone_solicita = userSolicita.telefone;
+    this.body.telefone_dono = userdono.telefone;
+    // this.body.imagem_solicita = userSolicita.imagem
+
+    let headers = new HttpHeaders({
+      'Content-Type':'application/json',
+      'user_solicita' : `${userSolicita.id}`,
+      'user_id' : `${userdono.id}`});
+
+
+    let options = {headers: headers}
+    // headers.append('Content-Type','application/json');
+    // headers.append('user_solicita', `${userSolicita.id}`);
+    // headers.append('user_id', `${userdono.id}`);
+
+    return this.http.post<any>(`${this.URLSOLI}/${pet.id}/solicitacao`, this.body, options).pipe(
       map(retorno => retorno),
       catchError(erro => this.mensagemErro(erro))
     );
