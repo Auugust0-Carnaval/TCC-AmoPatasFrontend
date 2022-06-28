@@ -22,8 +22,6 @@ export class SolicitacaoService {
 
   }
 
-
-
   private URL: any = "http://localhost:3333/solici";
 
   private URLAP: any = "http://localhost:3333/solicitacao"
@@ -72,6 +70,13 @@ export class SolicitacaoService {
     );
   }
 
+  UserIdSolic(userAutentic: any) : Observable<any> {
+    return this.http.get<any>(`${this.URLUSERSOLI}/${userAutentic}/solicitacao`).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.mensagemErro(erro))
+    );
+  }
+
   AproSolici(idsolicitacao: any) : Observable<any> {
     return this.http.post<any>(`${this.URLAP}/${idsolicitacao}/aprovados`,EMPTY).pipe(
       map(retorno => retorno),
@@ -92,6 +97,12 @@ export class SolicitacaoService {
       map(retorno => retorno),
       catchError(erro => this.mensagemErro(erro))
     );
+  }
+
+  deleteSoli(soliId: any): Observable<any> {
+    return this.http.delete<any>(`${this.URLAP}/${soliId}`).pipe(
+      map(retorno=> retorno)
+    )
   }
 
 
