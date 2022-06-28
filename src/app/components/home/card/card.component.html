@@ -1,14 +1,14 @@
 
 
 <div class="container">
-  <div class="ui large icon input" id="cardin" style="margin-bottom:5% ; margin-left: 5%;">
+  <div class="ui large icon input" id="cardin" style="margin-bottom:5% ; margin-left: 5%;"   >
     <input  type="text" class="form-control" name="cidade" id="search" placeholder="Pesquisar..." [(ngModel)]="search">
     <i class="search link icon" id="pesquisa" (click)="SelectCategory()" ></i>
   </div>
   <i class="undo alternate icon" id="reload" (click)="BuscarPets()"></i>
   <div class="row">
     <div class="ui special cards" id="cardin" *ngFor="let pet of Pets"  style="margin-left: 5%; margin-top:2% ; margin-bottom: 2%;">
-      <div class="ui link card blue card" style="width: 31rem;" (mouseenter)="userId(pet.user_id)" >
+      <div class="ui link card blue card" style="width: 31rem;" (mouseenter)="userId(pet.user_id)" *ngIf="pet.situacao == 'Disponível para Adoção' || pet.situacao == null">
         <div class="blurring dimmable image">
           <img src="http://localhost:3333/files/{{pet.imagem}}" alt="Card image cap"  alt="">
         </div>
