@@ -32,14 +32,19 @@ export class SolicitacaoComponent implements OnInit {
 
   async SelectSolic(){
 
-    var buscaSolicitado;
 
     this.solicitacaoservice.BuscaSolici(this.usuarioAutentic.id).subscribe(retorno =>{
       this.solicitacao = retorno;
     })
 
 
+
     await this.delay(300);
+
+    this.aprovado = this.solicitacao[0].aprovado;
+
+
+
     if(this.solicitacao == undefined){
       this.approvedBollean();
     }
@@ -47,10 +52,9 @@ export class SolicitacaoComponent implements OnInit {
       this.approvedBollean();
     }
 
-    else if(this.solicitacao.aprovado == true){
+    else if(this.aprovado == true){
       this.approvedBollean();
     }
-
   }
 
   async userId(userId:any){
@@ -61,45 +65,66 @@ export class SolicitacaoComponent implements OnInit {
     return this.usuario;
   }
 
- async TrueSoli(userSolicita: any){
+  async TrueSoli(userSolicita: any){
+    this.aprovadoTrue(userSolicita.name_solicita);
 
-  Swal.fire({
-    title: '<br><i class="handshake outline icon" style="color:blue; font-size:55px"></i>',
-    html: `<strong class = "text-primary">SOLICITAÇÃO DE ADOÇÃO DE <span class="text-danger">${this.userSolicitado.name.toUpperCase()}</span> FOI ACEITA</strong>`,
-    showConfirmButton: false,
-    timer: 3000
-  })
+    this.solicitacaoservice.AproSolici(userSolicita.id).subscribe(retono=>{
+      retono = retono
+    })
 
-  this.solicitacaoservice.AproSolici(userSolicita).subscribe(retono=>{
-    retono = retono;
-  }),
+    // this.petservice.DeletePet(userSolicita.pets_id).subscribe(retorno =>{
+    //   retorno = retorno
+    // })
 
+    // await this.delay(400);
 
+    // this.solicitacaoservice.deleteSoli(userSolicita.id).subscribe(retorno =>{
+    //   retorno = retorno
+    // })
 
     await this.delay(3500);
     this.SelectSolic();
+
+
   }
 
-  async FalseSoli(){
-    this.solicitacaoservice.RecuSolici(this.solicitacao[0].id).subscribe(retono=>{
-      retono = retono;
+  async FalseSoli(user: any){
+    this.reprovadoTrue(user.name_solicita);
+
+    this.solicitacaoservice.RecuSolici(user.id).subscribe(retono=>{
+      retono = retono
     })
 
+    this.solicitacaoservice.deleteSoli(user.id).subscribe(retorno =>{
+      retorno = retorno
+    })
+
+    await this.delay(3500);
+    this.SelectSolic();
+
+  }
+
+
+  reprovadoTrue(name: any){
     Swal.fire({
       title: '<br><i class="handshake outline icon" style="color:blue; font-size:55px"></i>',
       html: `<strong class = "text-primary">VOCE RECUSOU SOLICITAÇÃO DE ADOCAO DO <span class="text-danger">
-      ${this.userSolicitado.name.toUpperCase()}</span></strong>`,
+      ${name.toUpperCase()}</span></strong>`,
       showConfirmButton: false,
       timer: 3000
     })
+  }
 
-    await this.delay(3500);
-    this.SelectSolic();
-
-    return this.solicitacao[0].aprovado = true;
-
+  aprovadoTrue(name: any){
+    Swal.fire({
+      title: '<br><i class="handshake outline icon" style="color:blue; font-size:55px"></i>',
+      html: `<strong class = "text-primary">SOLICITAÇÃO DE ADOÇÃO DE <span class="text-danger">${name.toUpperCase()}</span> FOI ACEITA</strong>`,
+      timer: 3000,
+      showConfirmButton: false,
+    })
 
   }
+
 
   approvedBollean(){
     Swal.fire({
